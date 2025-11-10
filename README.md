@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # EPISD Free and Reduced Lunch Eligibility Application
 
 A comprehensive Vue.js-based web application designed for the El Paso Independent School District (EPISD) to manage and process free and reduced lunch eligibility applications.
@@ -222,3 +223,7 @@ This is an internal EPISD project. For contributions or modifications, please co
 ---
 
 **Note**: This application is specifically designed for the El Paso Independent School District's meal eligibility program. Ensure proper configuration and compliance with federal nutrition program requirements before deployment.
+=======
+# episd-meal-eligibility-app
+Free and Reduced
+>>>>>>> 19e1e7098842f900e5c94e50594f6c681b78f2df
