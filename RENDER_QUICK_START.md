@@ -11,7 +11,7 @@ git add .
 git commit -m "Ready for Render deployment"
 
 # Create a new repo on GitHub, then:
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
+git remote add origin https://github.com/mccabo/YOUR_REPO.git
 git push -u origin main
 ```
 
