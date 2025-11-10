@@ -5,13 +5,237 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="**** PrimeVue is an open source UI library for Vue featuring a rich set of 80+ components, a theme designer, various theme alternatives such as Material, Bootstrap, Tailwind, premium templates and professional support. In addition, it integrates with PrimeBlock, which has 400+ ready to use UI blocks to build spectacular applications in no time." />
+    <!-- Added to show icons in the editor -->
+    <link rel="stylesheet" href="https://unpkg.com/primeicons@6.0.1/primeicons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+    <script src="https://unpkg.com/musicgenres-json@latest/dist/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
+    <script src="https://unpkg.com/vue@2.4.4/dist/vue.js"></script>
+    <script language="javascript" src="https://maps.google.com/maps/api/js?sensor=false"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.0.272/jspdf.debug.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+      integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <title>PrimeVue App</title>
+    <script> 
+            
+      function setBGColor(color) {
+        //var inputElement = document.getElementById("myInput");
+        //var bodyElement = document.body;
+        //bodyElement.style.backgroundColor = color;
+      } 
+      
+      function clickMe(name,sound) {
+        //alert(name);
+        var mainImg = document.getElementById("imgMain");                
+        var imageName = name+".jpg"
+        //alert(imageName);
+        mainImg.src = imageName  
+        audMain.src = sound;
+        audMain.play();      
+      }
+    </script>
+    <style>
+      @media all {
+        .page-break  { display: none; }
+      }
+
+      @media print {
+        .page-break  { display: block; page-break-before: always; }
+      }
+    </style>
   </head>
-  <body>
+  <body style="background-color: #ffffff;border: solid black 0px;overflow-y: auto;">
+    <script>               
+
+      function GetNameClient() {
+        //alert("GetNameClient");
+        PageMethods.sendEmail(OnSuccess, OnFail);
+      }      
+
+      function OnSuccess(response) {
+        alert(response);
+      }
+
+      function OnFailure(error) {
+        alert(error);
+      }
+
+      function toTitleCase(str) {
+        return str.replace(
+          /\w\S*/g,
+          function(txt) {			
+            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();			
+          }
+        );
+      }
+
+      function showProps(id,innerHTML) {
+        //alert('showProps: '+id);
+        //alert('curField = ' + curField.id);
+        $("#divProps").show();
+        txtId.value = id;
+        txtValue.innerHTML = innerHTML;
+        //$("#"+id).css("background-color","lightyellow")
+        $(".prop").css("background-color","white")
+        $("#"+id).css("background-color","lightyellow")
+      }
+
+      function update(key, property, value) {
+        alert("key = " + key);
+        alert("property = " + property);
+        alert("value = " + value);
+
+        //indexData.Data[0].Industries[curIndIndex].Forms[curFrmIndex].Fontsize = value;
+      }
+
+      /*
+      function updatex(key, property, value) {
+        //alert("key = " + key);
+        //alert("property = " + property);
+        //alert("value = " + value);        
+        IndexIndex = $("#lblIndIndex").text();
+        curFrmdIndex = $("#lblFrmIndex").text();
+        curSecIndex = $("#lblSecIndex").text();
+        curFldIndex = $("#lblFldIndex").text();
+        curSubIndex = $("#lblSubIndex").text();
+        curLstIndex = $("#lblLstIndex").text();
+
+        var fontSize = $("#Fontsize").val();
+
+        //alert("curSec = " + curSec);
+        //alert("curFld = " + curFld);
+        //alert("curSub = " + curSub);
+        //alert("curLst = " + curLst);
+
+        if ($("#Subfield").val() == "Logo") {
+          //alert("Subfield = " + Subfield);
+          //alert("key = " + key);
+          indexData.Data[0].Industries[curIndIndex].Forms[curFrmIndex].align = value;
+          localStorage.setItem(key, JSON.stringify(indexData));
+          retrievedObjectdefault = localStorage.getItem("index");
+          indexData = JSON.parse(retrievedObjectdefault);
+          var newAlign =
+            indexData.Data[0].Industries[curIndIndex].Forms[curFrmIndex].align;
+          //alert("value = " + value);
+          $("#imgLogo1").align(value);
+        } else {
+          //alert("Not Logo");
+          for (
+            var i = 0;
+            i <
+            indexData.Data[0].Industries[curIndIndex].Forms[curFrmIndex].Sections
+              .length;
+            i++
+          ) {
+            if (i == curSecIndex) {
+              //alert("match on Sec " + curSecIndex);
+              // handle the section updates
+              for (
+                var j = 0;
+                j <
+                indexData.Data[0].Industries[curIndIndex].Forms[curFrmIndex].Sections[
+                  i
+                ].Fields.length;
+                j++
+              ) {
+                if (j == curFldIndex) {
+                  //alert("match on Fld " + curFld);
+                  // handle the field updates
+                  for (
+                    var k = 0;
+                    k <
+                    indexData.Data[0].Industries[curIndIndex].Forms[curFrmIndex]
+                      .Sections[i].Fields[j].Subfields.length;
+                    k++
+                  ) {
+                    //alert("curK = " + k);
+                    if (k == curSubIndex) {
+                      //alert("match on Sub " + curSub);
+                      //alert("Updating indexData.Data[0].Industries[curIndIndex].Forms[curFrmIndex].Sections[" + i + "].Fields[" + j + "].Subfields[" + k + "]." + property);
+                      //alert("Updating " + indexData.Data[0].Industries[curIndIndex].Forms[curFrmIndex].Sections[i].Fields[j].Subfields[k].Id);
+                      //alert("Updating " + indexData.Data[0].Industries[curIndIndex].Forms[curFrmIndex].Sections[i].Fields[j].Subfields[k].Subfield);
+                      // handle the subfield updates
+
+                      var required = "";
+
+                      if (value == true) {
+                        required = "Required";
+                      }
+                      //alert("Required = " + required);
+
+                      indexData.Data[0].Industries[curIndIndex].Forms[
+                        curFrmIndex
+                      ].Sections[i].Fields[j].Subfields[k].Required = required;
+                      localStorage.setItem(key, JSON.stringify(indexData));
+                      //alert("New Width = " + indexData.Data[0].Industries[curIndIndex].Forms[curFrmIndex].Sections[i].Fields[j].Subfields[k].Width);
+                      var newWidth =
+                        indexData.Data[0].Industries[curIndIndex].Forms[curFrmIndex]
+                          .Sections[i].Fields[j].Subfields[k].Width;
+                      //$("#sub" + curSec + curFld + curSub + curLst).Width(newWidth);
+                      for (
+                        var l = 0;
+                        l <
+                        indexData.Data[0].Industries[curIndIndex].Forms[curFrmIndex]
+                          .Sections[i].Fields[j].Subfields[k].Lists.length;
+                        l++
+                      ) {
+                        //alert("match on " + curLst);
+                        // handle the list updates
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          indexData.Data[0].Industries[curIndIndex].Forms[curFrmIndex].Fontsize =
+            fontSize;
+          localStorage.setItem("index", JSON.stringify(indexData));
+          addDD(curSecIndex);
+        }        
+      }
+      */
+
+      function download(url) {
+        const a = document.createElement('a')
+        a.href = url
+        a.download = url.split('/').pop()
+        document.body.appendChild(a)
+        a.click()
+        document.body.removeChild(a)
+      }
+
+      function onFocus() {
+        alert("onFocus")
+      }
+    </script>
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
-    <div id="app"></div>
+    
+    <div id="app" style="margin-top: 0px"></div>
+    <input id="txtSelected" type="text" value="" class="hidden">
+    <!-- <script type="script" src="autoPrinter.js">     
+    </script>
+    
+    <script src="<%= BASE_URL %>js/app.js"></script> -->
     <!-- built files will be auto injected -->
   </body>
 </html>

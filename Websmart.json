@@ -1,0 +1,1798 @@
+{
+    "recordsets": [
+        [
+            {
+                "SchemaName": "dbo",
+                "TableName": "__EFMigrationsHistory",
+                "ColumnName": "MigrationId",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "__EFMigrationsHistory",
+                "ColumnName": "ProductVersion",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "AspNetRoleClaims",
+                "ColumnName": "Id",
+                "DataType": "int"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "AspNetRoleClaims",
+                "ColumnName": "RoleId",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "AspNetRoleClaims",
+                "ColumnName": "ClaimType",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "AspNetRoleClaims",
+                "ColumnName": "ClaimValue",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "AspNetRoles",
+                "ColumnName": "Id",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "AspNetRoles",
+                "ColumnName": "Name",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "AspNetRoles",
+                "ColumnName": "NormalizedName",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "AspNetRoles",
+                "ColumnName": "ConcurrencyStamp",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "AspNetUserClaims",
+                "ColumnName": "Id",
+                "DataType": "int"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "AspNetUserClaims",
+                "ColumnName": "UserId",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "AspNetUserClaims",
+                "ColumnName": "ClaimType",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "AspNetUserClaims",
+                "ColumnName": "ClaimValue",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "AspNetUserLogins",
+                "ColumnName": "LoginProvider",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "AspNetUserLogins",
+                "ColumnName": "ProviderKey",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "AspNetUserLogins",
+                "ColumnName": "ProviderDisplayName",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "AspNetUserLogins",
+                "ColumnName": "UserId",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "AspNetUserRoles",
+                "ColumnName": "UserId",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "AspNetUserRoles",
+                "ColumnName": "RoleId",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "AspNetUsers",
+                "ColumnName": "Id",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "AspNetUsers",
+                "ColumnName": "UserName",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "AspNetUsers",
+                "ColumnName": "NormalizedUserName",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "AspNetUsers",
+                "ColumnName": "Email",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "AspNetUsers",
+                "ColumnName": "NormalizedEmail",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "AspNetUsers",
+                "ColumnName": "EmailConfirmed",
+                "DataType": "bit"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "AspNetUsers",
+                "ColumnName": "PasswordHash",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "AspNetUsers",
+                "ColumnName": "SecurityStamp",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "AspNetUsers",
+                "ColumnName": "ConcurrencyStamp",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "AspNetUsers",
+                "ColumnName": "PhoneNumber",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "AspNetUsers",
+                "ColumnName": "PhoneNumberConfirmed",
+                "DataType": "bit"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "AspNetUsers",
+                "ColumnName": "TwoFactorEnabled",
+                "DataType": "bit"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "AspNetUsers",
+                "ColumnName": "LockoutEnd",
+                "DataType": "datetimeoffset"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "AspNetUsers",
+                "ColumnName": "LockoutEnabled",
+                "DataType": "bit"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "AspNetUsers",
+                "ColumnName": "AccessFailedCount",
+                "DataType": "int"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "AspNetUsers",
+                "ColumnName": "Discriminator",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "AspNetUsers",
+                "ColumnName": "City",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "AspNetUsers",
+                "ColumnName": "Name",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "AspNetUsers",
+                "ColumnName": "PostalCode",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "AspNetUsers",
+                "ColumnName": "State",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "AspNetUsers",
+                "ColumnName": "StreetAddress",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "AspNetUserTokens",
+                "ColumnName": "UserId",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "AspNetUserTokens",
+                "ColumnName": "LoginProvider",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "AspNetUserTokens",
+                "ColumnName": "Name",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "AspNetUserTokens",
+                "ColumnName": "Value",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "Category",
+                "ColumnName": "Id",
+                "DataType": "int"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "Category",
+                "ColumnName": "Name",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "Coupon",
+                "ColumnName": "Id",
+                "DataType": "int"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "Coupon",
+                "ColumnName": "Name",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "Coupon",
+                "ColumnName": "CouponType",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "Coupon",
+                "ColumnName": "Discount",
+                "DataType": "float"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "Coupon",
+                "ColumnName": "MinimumAmount",
+                "DataType": "float"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "Coupon",
+                "ColumnName": "Picture",
+                "DataType": "varbinary"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "Coupon",
+                "ColumnName": "IsActive",
+                "DataType": "bit"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "MenuItem",
+                "ColumnName": "Id",
+                "DataType": "int"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "MenuItem",
+                "ColumnName": "Name",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "MenuItem",
+                "ColumnName": "Description",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "MenuItem",
+                "ColumnName": "Spicyness",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "MenuItem",
+                "ColumnName": "Image",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "MenuItem",
+                "ColumnName": "CategoryId",
+                "DataType": "int"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "MenuItem",
+                "ColumnName": "SubCategoryId",
+                "DataType": "int"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "MenuItem",
+                "ColumnName": "Price",
+                "DataType": "float"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "MenuItem",
+                "ColumnName": "Selected",
+                "DataType": "bit"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "OrderDetails",
+                "ColumnName": "Id",
+                "DataType": "int"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "OrderDetails",
+                "ColumnName": "OrderId",
+                "DataType": "int"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "OrderDetails",
+                "ColumnName": "MenuItemId",
+                "DataType": "int"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "OrderDetails",
+                "ColumnName": "Count",
+                "DataType": "int"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "OrderDetails",
+                "ColumnName": "Name",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "OrderDetails",
+                "ColumnName": "Description",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "OrderDetails",
+                "ColumnName": "Price",
+                "DataType": "float"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "OrderHeader",
+                "ColumnName": "Id",
+                "DataType": "int"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "OrderHeader",
+                "ColumnName": "UserId",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "OrderHeader",
+                "ColumnName": "OrderDate",
+                "DataType": "datetime2"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "OrderHeader",
+                "ColumnName": "OrderTotalOriginal",
+                "DataType": "float"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "OrderHeader",
+                "ColumnName": "OrderTotal",
+                "DataType": "float"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "OrderHeader",
+                "ColumnName": "PickUpTime",
+                "DataType": "datetime2"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "OrderHeader",
+                "ColumnName": "CouponCode",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "OrderHeader",
+                "ColumnName": "CouponCodeDiscount",
+                "DataType": "float"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "OrderHeader",
+                "ColumnName": "Status",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "OrderHeader",
+                "ColumnName": "PaymentStatus",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "OrderHeader",
+                "ColumnName": "Comments",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "OrderHeader",
+                "ColumnName": "PickupName",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "OrderHeader",
+                "ColumnName": "PhoneNumber",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "OrderHeader",
+                "ColumnName": "TransactionId",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "ShoppingCart",
+                "ColumnName": "Id",
+                "DataType": "int"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "ShoppingCart",
+                "ColumnName": "ApplicationUserId",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "ShoppingCart",
+                "ColumnName": "MenuItemId",
+                "DataType": "int"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "ShoppingCart",
+                "ColumnName": "Count",
+                "DataType": "int"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "SubCategory",
+                "ColumnName": "Id",
+                "DataType": "int"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "SubCategory",
+                "ColumnName": "Name",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "SubCategory",
+                "ColumnName": "CategoryId",
+                "DataType": "int"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "SubCategory",
+                "ColumnName": "Selected",
+                "DataType": "bit"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "sysdiagrams",
+                "ColumnName": "name",
+                "DataType": "nvarchar"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "sysdiagrams",
+                "ColumnName": "principal_id",
+                "DataType": "int"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "sysdiagrams",
+                "ColumnName": "diagram_id",
+                "DataType": "int"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "sysdiagrams",
+                "ColumnName": "version",
+                "DataType": "int"
+            },
+            {
+                "SchemaName": "dbo",
+                "TableName": "sysdiagrams",
+                "ColumnName": "definition",
+                "DataType": "varbinary"
+            },
+            {
+                "SchemaName": "production",
+                "TableName": "brands",
+                "ColumnName": "brand_id",
+                "DataType": "int"
+            },
+            {
+                "SchemaName": "production",
+                "TableName": "brands",
+                "ColumnName": "brand_name",
+                "DataType": "varchar"
+            },
+            {
+                "SchemaName": "production",
+                "TableName": "categories",
+                "ColumnName": "category_id",
+                "DataType": "int"
+            },
+            {
+                "SchemaName": "production",
+                "TableName": "categories",
+                "ColumnName": "category_name",
+                "DataType": "varchar"
+            },
+            {
+                "SchemaName": "production",
+                "TableName": "products",
+                "ColumnName": "product_id",
+                "DataType": "int"
+            },
+            {
+                "SchemaName": "production",
+                "TableName": "products",
+                "ColumnName": "product_name",
+                "DataType": "varchar"
+            },
+            {
+                "SchemaName": "production",
+                "TableName": "products",
+                "ColumnName": "brand_id",
+                "DataType": "int"
+            },
+            {
+                "SchemaName": "production",
+                "TableName": "products",
+                "ColumnName": "category_id",
+                "DataType": "int"
+            },
+            {
+                "SchemaName": "production",
+                "TableName": "products",
+                "ColumnName": "model_year",
+                "DataType": "smallint"
+            },
+            {
+                "SchemaName": "production",
+                "TableName": "products",
+                "ColumnName": "list_price",
+                "DataType": "decimal"
+            },
+            {
+                "SchemaName": "production",
+                "TableName": "stocks",
+                "ColumnName": "store_id",
+                "DataType": "int"
+            },
+            {
+                "SchemaName": "production",
+                "TableName": "stocks",
+                "ColumnName": "product_id",
+                "DataType": "int"
+            },
+            {
+                "SchemaName": "production",
+                "TableName": "stocks",
+                "ColumnName": "quantity",
+                "DataType": "int"
+            },
+            {
+                "SchemaName": "sales",
+                "TableName": "customers",
+                "ColumnName": "customer_id",
+                "DataType": "int"
+            },
+            {
+                "SchemaName": "sales",
+                "TableName": "customers",
+                "ColumnName": "first_name",
+                "DataType": "varchar"
+            },
+            {
+                "SchemaName": "sales",
+                "TableName": "customers",
+                "ColumnName": "last_name",
+                "DataType": "varchar"
+            },
+            {
+                "SchemaName": "sales",
+                "TableName": "customers",
+                "ColumnName": "phone",
+                "DataType": "varchar"
+            },
+            {
+                "SchemaName": "sales",
+                "TableName": "customers",
+                "ColumnName": "email",
+                "DataType": "varchar"
+            },
+            {
+                "SchemaName": "sales",
+                "TableName": "customers",
+                "ColumnName": "street",
+                "DataType": "varchar"
+            },
+            {
+                "SchemaName": "sales",
+                "TableName": "customers",
+                "ColumnName": "city",
+                "DataType": "varchar"
+            },
+            {
+                "SchemaName": "sales",
+                "TableName": "customers",
+                "ColumnName": "state",
+                "DataType": "varchar"
+            },
+            {
+                "SchemaName": "sales",
+                "TableName": "customers",
+                "ColumnName": "zip_code",
+                "DataType": "varchar"
+            },
+            {
+                "SchemaName": "sales",
+                "TableName": "order_items",
+                "ColumnName": "order_id",
+                "DataType": "int"
+            },
+            {
+                "SchemaName": "sales",
+                "TableName": "order_items",
+                "ColumnName": "item_id",
+                "DataType": "int"
+            },
+            {
+                "SchemaName": "sales",
+                "TableName": "order_items",
+                "ColumnName": "product_id",
+                "DataType": "int"
+            },
+            {
+                "SchemaName": "sales",
+                "TableName": "order_items",
+                "ColumnName": "quantity",
+                "DataType": "int"
+            },
+            {
+                "SchemaName": "sales",
+                "TableName": "order_items",
+                "ColumnName": "list_price",
+                "DataType": "decimal"
+            },
+            {
+                "SchemaName": "sales",
+                "TableName": "order_items",
+                "ColumnName": "discount",
+                "DataType": "decimal"
+            },
+            {
+                "SchemaName": "sales",
+                "TableName": "orders",
+                "ColumnName": "order_id",
+                "DataType": "int"
+            },
+            {
+                "SchemaName": "sales",
+                "TableName": "orders",
+                "ColumnName": "customer_id",
+                "DataType": "int"
+            },
+            {
+                "SchemaName": "sales",
+                "TableName": "orders",
+                "ColumnName": "order_status",
+                "DataType": "tinyint"
+            },
+            {
+                "SchemaName": "sales",
+                "TableName": "orders",
+                "ColumnName": "order_date",
+                "DataType": "date"
+            },
+            {
+                "SchemaName": "sales",
+                "TableName": "orders",
+                "ColumnName": "required_date",
+                "DataType": "date"
+            },
+            {
+                "SchemaName": "sales",
+                "TableName": "orders",
+                "ColumnName": "shipped_date",
+                "DataType": "date"
+            },
+            {
+                "SchemaName": "sales",
+                "TableName": "orders",
+                "ColumnName": "store_id",
+                "DataType": "int"
+            },
+            {
+                "SchemaName": "sales",
+                "TableName": "orders",
+                "ColumnName": "staff_id",
+                "DataType": "int"
+            },
+            {
+                "SchemaName": "sales",
+                "TableName": "staffs",
+                "ColumnName": "staff_id",
+                "DataType": "int"
+            },
+            {
+                "SchemaName": "sales",
+                "TableName": "staffs",
+                "ColumnName": "first_name",
+                "DataType": "varchar"
+            },
+            {
+                "SchemaName": "sales",
+                "TableName": "staffs",
+                "ColumnName": "last_name",
+                "DataType": "varchar"
+            },
+            {
+                "SchemaName": "sales",
+                "TableName": "staffs",
+                "ColumnName": "email",
+                "DataType": "varchar"
+            },
+            {
+                "SchemaName": "sales",
+                "TableName": "staffs",
+                "ColumnName": "phone",
+                "DataType": "varchar"
+            },
+            {
+                "SchemaName": "sales",
+                "TableName": "staffs",
+                "ColumnName": "active",
+                "DataType": "tinyint"
+            },
+            {
+                "SchemaName": "sales",
+                "TableName": "staffs",
+                "ColumnName": "store_id",
+                "DataType": "int"
+            },
+            {
+                "SchemaName": "sales",
+                "TableName": "staffs",
+                "ColumnName": "manager_id",
+                "DataType": "int"
+            },
+            {
+                "SchemaName": "sales",
+                "TableName": "stores",
+                "ColumnName": "store_id",
+                "DataType": "int"
+            },
+            {
+                "SchemaName": "sales",
+                "TableName": "stores",
+                "ColumnName": "store_name",
+                "DataType": "varchar"
+            },
+            {
+                "SchemaName": "sales",
+                "TableName": "stores",
+                "ColumnName": "phone",
+                "DataType": "varchar"
+            },
+            {
+                "SchemaName": "sales",
+                "TableName": "stores",
+                "ColumnName": "email",
+                "DataType": "varchar"
+            },
+            {
+                "SchemaName": "sales",
+                "TableName": "stores",
+                "ColumnName": "street",
+                "DataType": "varchar"
+            },
+            {
+                "SchemaName": "sales",
+                "TableName": "stores",
+                "ColumnName": "city",
+                "DataType": "varchar"
+            },
+            {
+                "SchemaName": "sales",
+                "TableName": "stores",
+                "ColumnName": "state",
+                "DataType": "varchar"
+            },
+            {
+                "SchemaName": "sales",
+                "TableName": "stores",
+                "ColumnName": "zip_code",
+                "DataType": "varchar"
+            }
+        ]
+    ],
+    "recordset": [
+        {
+            "SchemaName": "dbo",
+            "TableName": "__EFMigrationsHistory",
+            "ColumnName": "MigrationId",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "__EFMigrationsHistory",
+            "ColumnName": "ProductVersion",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "AspNetRoleClaims",
+            "ColumnName": "Id",
+            "DataType": "int"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "AspNetRoleClaims",
+            "ColumnName": "RoleId",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "AspNetRoleClaims",
+            "ColumnName": "ClaimType",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "AspNetRoleClaims",
+            "ColumnName": "ClaimValue",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "AspNetRoles",
+            "ColumnName": "Id",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "AspNetRoles",
+            "ColumnName": "Name",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "AspNetRoles",
+            "ColumnName": "NormalizedName",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "AspNetRoles",
+            "ColumnName": "ConcurrencyStamp",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "AspNetUserClaims",
+            "ColumnName": "Id",
+            "DataType": "int"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "AspNetUserClaims",
+            "ColumnName": "UserId",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "AspNetUserClaims",
+            "ColumnName": "ClaimType",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "AspNetUserClaims",
+            "ColumnName": "ClaimValue",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "AspNetUserLogins",
+            "ColumnName": "LoginProvider",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "AspNetUserLogins",
+            "ColumnName": "ProviderKey",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "AspNetUserLogins",
+            "ColumnName": "ProviderDisplayName",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "AspNetUserLogins",
+            "ColumnName": "UserId",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "AspNetUserRoles",
+            "ColumnName": "UserId",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "AspNetUserRoles",
+            "ColumnName": "RoleId",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "AspNetUsers",
+            "ColumnName": "Id",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "AspNetUsers",
+            "ColumnName": "UserName",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "AspNetUsers",
+            "ColumnName": "NormalizedUserName",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "AspNetUsers",
+            "ColumnName": "Email",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "AspNetUsers",
+            "ColumnName": "NormalizedEmail",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "AspNetUsers",
+            "ColumnName": "EmailConfirmed",
+            "DataType": "bit"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "AspNetUsers",
+            "ColumnName": "PasswordHash",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "AspNetUsers",
+            "ColumnName": "SecurityStamp",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "AspNetUsers",
+            "ColumnName": "ConcurrencyStamp",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "AspNetUsers",
+            "ColumnName": "PhoneNumber",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "AspNetUsers",
+            "ColumnName": "PhoneNumberConfirmed",
+            "DataType": "bit"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "AspNetUsers",
+            "ColumnName": "TwoFactorEnabled",
+            "DataType": "bit"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "AspNetUsers",
+            "ColumnName": "LockoutEnd",
+            "DataType": "datetimeoffset"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "AspNetUsers",
+            "ColumnName": "LockoutEnabled",
+            "DataType": "bit"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "AspNetUsers",
+            "ColumnName": "AccessFailedCount",
+            "DataType": "int"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "AspNetUsers",
+            "ColumnName": "Discriminator",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "AspNetUsers",
+            "ColumnName": "City",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "AspNetUsers",
+            "ColumnName": "Name",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "AspNetUsers",
+            "ColumnName": "PostalCode",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "AspNetUsers",
+            "ColumnName": "State",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "AspNetUsers",
+            "ColumnName": "StreetAddress",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "AspNetUserTokens",
+            "ColumnName": "UserId",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "AspNetUserTokens",
+            "ColumnName": "LoginProvider",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "AspNetUserTokens",
+            "ColumnName": "Name",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "AspNetUserTokens",
+            "ColumnName": "Value",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "Category",
+            "ColumnName": "Id",
+            "DataType": "int"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "Category",
+            "ColumnName": "Name",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "Coupon",
+            "ColumnName": "Id",
+            "DataType": "int"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "Coupon",
+            "ColumnName": "Name",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "Coupon",
+            "ColumnName": "CouponType",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "Coupon",
+            "ColumnName": "Discount",
+            "DataType": "float"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "Coupon",
+            "ColumnName": "MinimumAmount",
+            "DataType": "float"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "Coupon",
+            "ColumnName": "Picture",
+            "DataType": "varbinary"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "Coupon",
+            "ColumnName": "IsActive",
+            "DataType": "bit"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "MenuItem",
+            "ColumnName": "Id",
+            "DataType": "int"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "MenuItem",
+            "ColumnName": "Name",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "MenuItem",
+            "ColumnName": "Description",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "MenuItem",
+            "ColumnName": "Spicyness",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "MenuItem",
+            "ColumnName": "Image",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "MenuItem",
+            "ColumnName": "CategoryId",
+            "DataType": "int"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "MenuItem",
+            "ColumnName": "SubCategoryId",
+            "DataType": "int"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "MenuItem",
+            "ColumnName": "Price",
+            "DataType": "float"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "MenuItem",
+            "ColumnName": "Selected",
+            "DataType": "bit"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "OrderDetails",
+            "ColumnName": "Id",
+            "DataType": "int"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "OrderDetails",
+            "ColumnName": "OrderId",
+            "DataType": "int"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "OrderDetails",
+            "ColumnName": "MenuItemId",
+            "DataType": "int"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "OrderDetails",
+            "ColumnName": "Count",
+            "DataType": "int"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "OrderDetails",
+            "ColumnName": "Name",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "OrderDetails",
+            "ColumnName": "Description",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "OrderDetails",
+            "ColumnName": "Price",
+            "DataType": "float"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "OrderHeader",
+            "ColumnName": "Id",
+            "DataType": "int"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "OrderHeader",
+            "ColumnName": "UserId",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "OrderHeader",
+            "ColumnName": "OrderDate",
+            "DataType": "datetime2"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "OrderHeader",
+            "ColumnName": "OrderTotalOriginal",
+            "DataType": "float"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "OrderHeader",
+            "ColumnName": "OrderTotal",
+            "DataType": "float"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "OrderHeader",
+            "ColumnName": "PickUpTime",
+            "DataType": "datetime2"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "OrderHeader",
+            "ColumnName": "CouponCode",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "OrderHeader",
+            "ColumnName": "CouponCodeDiscount",
+            "DataType": "float"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "OrderHeader",
+            "ColumnName": "Status",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "OrderHeader",
+            "ColumnName": "PaymentStatus",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "OrderHeader",
+            "ColumnName": "Comments",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "OrderHeader",
+            "ColumnName": "PickupName",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "OrderHeader",
+            "ColumnName": "PhoneNumber",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "OrderHeader",
+            "ColumnName": "TransactionId",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "ShoppingCart",
+            "ColumnName": "Id",
+            "DataType": "int"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "ShoppingCart",
+            "ColumnName": "ApplicationUserId",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "ShoppingCart",
+            "ColumnName": "MenuItemId",
+            "DataType": "int"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "ShoppingCart",
+            "ColumnName": "Count",
+            "DataType": "int"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "SubCategory",
+            "ColumnName": "Id",
+            "DataType": "int"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "SubCategory",
+            "ColumnName": "Name",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "SubCategory",
+            "ColumnName": "CategoryId",
+            "DataType": "int"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "SubCategory",
+            "ColumnName": "Selected",
+            "DataType": "bit"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "sysdiagrams",
+            "ColumnName": "name",
+            "DataType": "nvarchar"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "sysdiagrams",
+            "ColumnName": "principal_id",
+            "DataType": "int"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "sysdiagrams",
+            "ColumnName": "diagram_id",
+            "DataType": "int"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "sysdiagrams",
+            "ColumnName": "version",
+            "DataType": "int"
+        },
+        {
+            "SchemaName": "dbo",
+            "TableName": "sysdiagrams",
+            "ColumnName": "definition",
+            "DataType": "varbinary"
+        },
+        {
+            "SchemaName": "production",
+            "TableName": "brands",
+            "ColumnName": "brand_id",
+            "DataType": "int"
+        },
+        {
+            "SchemaName": "production",
+            "TableName": "brands",
+            "ColumnName": "brand_name",
+            "DataType": "varchar"
+        },
+        {
+            "SchemaName": "production",
+            "TableName": "categories",
+            "ColumnName": "category_id",
+            "DataType": "int"
+        },
+        {
+            "SchemaName": "production",
+            "TableName": "categories",
+            "ColumnName": "category_name",
+            "DataType": "varchar"
+        },
+        {
+            "SchemaName": "production",
+            "TableName": "products",
+            "ColumnName": "product_id",
+            "DataType": "int"
+        },
+        {
+            "SchemaName": "production",
+            "TableName": "products",
+            "ColumnName": "product_name",
+            "DataType": "varchar"
+        },
+        {
+            "SchemaName": "production",
+            "TableName": "products",
+            "ColumnName": "brand_id",
+            "DataType": "int"
+        },
+        {
+            "SchemaName": "production",
+            "TableName": "products",
+            "ColumnName": "category_id",
+            "DataType": "int"
+        },
+        {
+            "SchemaName": "production",
+            "TableName": "products",
+            "ColumnName": "model_year",
+            "DataType": "smallint"
+        },
+        {
+            "SchemaName": "production",
+            "TableName": "products",
+            "ColumnName": "list_price",
+            "DataType": "decimal"
+        },
+        {
+            "SchemaName": "production",
+            "TableName": "stocks",
+            "ColumnName": "store_id",
+            "DataType": "int"
+        },
+        {
+            "SchemaName": "production",
+            "TableName": "stocks",
+            "ColumnName": "product_id",
+            "DataType": "int"
+        },
+        {
+            "SchemaName": "production",
+            "TableName": "stocks",
+            "ColumnName": "quantity",
+            "DataType": "int"
+        },
+        {
+            "SchemaName": "sales",
+            "TableName": "customers",
+            "ColumnName": "customer_id",
+            "DataType": "int"
+        },
+        {
+            "SchemaName": "sales",
+            "TableName": "customers",
+            "ColumnName": "first_name",
+            "DataType": "varchar"
+        },
+        {
+            "SchemaName": "sales",
+            "TableName": "customers",
+            "ColumnName": "last_name",
+            "DataType": "varchar"
+        },
+        {
+            "SchemaName": "sales",
+            "TableName": "customers",
+            "ColumnName": "phone",
+            "DataType": "varchar"
+        },
+        {
+            "SchemaName": "sales",
+            "TableName": "customers",
+            "ColumnName": "email",
+            "DataType": "varchar"
+        },
+        {
+            "SchemaName": "sales",
+            "TableName": "customers",
+            "ColumnName": "street",
+            "DataType": "varchar"
+        },
+        {
+            "SchemaName": "sales",
+            "TableName": "customers",
+            "ColumnName": "city",
+            "DataType": "varchar"
+        },
+        {
+            "SchemaName": "sales",
+            "TableName": "customers",
+            "ColumnName": "state",
+            "DataType": "varchar"
+        },
+        {
+            "SchemaName": "sales",
+            "TableName": "customers",
+            "ColumnName": "zip_code",
+            "DataType": "varchar"
+        },
+        {
+            "SchemaName": "sales",
+            "TableName": "order_items",
+            "ColumnName": "order_id",
+            "DataType": "int"
+        },
+        {
+            "SchemaName": "sales",
+            "TableName": "order_items",
+            "ColumnName": "item_id",
+            "DataType": "int"
+        },
+        {
+            "SchemaName": "sales",
+            "TableName": "order_items",
+            "ColumnName": "product_id",
+            "DataType": "int"
+        },
+        {
+            "SchemaName": "sales",
+            "TableName": "order_items",
+            "ColumnName": "quantity",
+            "DataType": "int"
+        },
+        {
+            "SchemaName": "sales",
+            "TableName": "order_items",
+            "ColumnName": "list_price",
+            "DataType": "decimal"
+        },
+        {
+            "SchemaName": "sales",
+            "TableName": "order_items",
+            "ColumnName": "discount",
+            "DataType": "decimal"
+        },
+        {
+            "SchemaName": "sales",
+            "TableName": "orders",
+            "ColumnName": "order_id",
+            "DataType": "int"
+        },
+        {
+            "SchemaName": "sales",
+            "TableName": "orders",
+            "ColumnName": "customer_id",
+            "DataType": "int"
+        },
+        {
+            "SchemaName": "sales",
+            "TableName": "orders",
+            "ColumnName": "order_status",
+            "DataType": "tinyint"
+        },
+        {
+            "SchemaName": "sales",
+            "TableName": "orders",
+            "ColumnName": "order_date",
+            "DataType": "date"
+        },
+        {
+            "SchemaName": "sales",
+            "TableName": "orders",
+            "ColumnName": "required_date",
+            "DataType": "date"
+        },
+        {
+            "SchemaName": "sales",
+            "TableName": "orders",
+            "ColumnName": "shipped_date",
+            "DataType": "date"
+        },
+        {
+            "SchemaName": "sales",
+            "TableName": "orders",
+            "ColumnName": "store_id",
+            "DataType": "int"
+        },
+        {
+            "SchemaName": "sales",
+            "TableName": "orders",
+            "ColumnName": "staff_id",
+            "DataType": "int"
+        },
+        {
+            "SchemaName": "sales",
+            "TableName": "staffs",
+            "ColumnName": "staff_id",
+            "DataType": "int"
+        },
+        {
+            "SchemaName": "sales",
+            "TableName": "staffs",
+            "ColumnName": "first_name",
+            "DataType": "varchar"
+        },
+        {
+            "SchemaName": "sales",
+            "TableName": "staffs",
+            "ColumnName": "last_name",
+            "DataType": "varchar"
+        },
+        {
+            "SchemaName": "sales",
+            "TableName": "staffs",
+            "ColumnName": "email",
+            "DataType": "varchar"
+        },
+        {
+            "SchemaName": "sales",
+            "TableName": "staffs",
+            "ColumnName": "phone",
+            "DataType": "varchar"
+        },
+        {
+            "SchemaName": "sales",
+            "TableName": "staffs",
+            "ColumnName": "active",
+            "DataType": "tinyint"
+        },
+        {
+            "SchemaName": "sales",
+            "TableName": "staffs",
+            "ColumnName": "store_id",
+            "DataType": "int"
+        },
+        {
+            "SchemaName": "sales",
+            "TableName": "staffs",
+            "ColumnName": "manager_id",
+            "DataType": "int"
+        },
+        {
+            "SchemaName": "sales",
+            "TableName": "stores",
+            "ColumnName": "store_id",
+            "DataType": "int"
+        },
+        {
+            "SchemaName": "sales",
+            "TableName": "stores",
+            "ColumnName": "store_name",
+            "DataType": "varchar"
+        },
+        {
+            "SchemaName": "sales",
+            "TableName": "stores",
+            "ColumnName": "phone",
+            "DataType": "varchar"
+        },
+        {
+            "SchemaName": "sales",
+            "TableName": "stores",
+            "ColumnName": "email",
+            "DataType": "varchar"
+        },
+        {
+            "SchemaName": "sales",
+            "TableName": "stores",
+            "ColumnName": "street",
+            "DataType": "varchar"
+        },
+        {
+            "SchemaName": "sales",
+            "TableName": "stores",
+            "ColumnName": "city",
+            "DataType": "varchar"
+        },
+        {
+            "SchemaName": "sales",
+            "TableName": "stores",
+            "ColumnName": "state",
+            "DataType": "varchar"
+        },
+        {
+            "SchemaName": "sales",
+            "TableName": "stores",
+            "ColumnName": "zip_code",
+            "DataType": "varchar"
+        }
+    ],
+    "output": {},
+    "rowsAffected": []
+}

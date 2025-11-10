@@ -1,0 +1,123 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "email": "admin@episd.com",
+      "password": "admin123",
+      "role": "admin",
+      "permissions": {
+        "canCreate": true,
+        "canRead": true,
+        "canUpdate": true,
+        "canDelete": true,
+        "canManageUsers": true,
+        "canAccessReports": true,
+        "canConfigureSystem": true
+      },
+      "displayName": "System Administrator"
+    },
+    {
+      "id": 2,
+      "username": "developer",
+      "email": "dev@episd.com",
+      "password": "dev123",
+      "role": "developer",
+      "permissions": {
+        "canCreate": true,
+        "canRead": true,
+        "canUpdate": true,
+        "canDelete": true,
+        "canManageUsers": false,
+        "canAccessReports": true,
+        "canConfigureSystem": true
+      },
+      "displayName": "Developer User"
+    },
+    {
+      "id": 3,
+      "username": "user",
+      "email": "user@episd.com",
+      "password": "user123",
+      "role": "user",
+      "permissions": {
+        "canCreate": true,
+        "canRead": true,
+        "canUpdate": false,
+        "canDelete": false,
+        "canManageUsers": false,
+        "canAccessReports": false,
+        "canConfigureSystem": false
+      },
+      "displayName": "Regular User"
+    },
+    {
+      "id": 4,
+      "username": "jdoe",
+      "email": "john.doe@episd.com",
+      "password": "password123",
+      "role": "user",
+      "permissions": {
+        "canCreate": true,
+        "canRead": true,
+        "canUpdate": false,
+        "canDelete": false,
+        "canManageUsers": false,
+        "canAccessReports": false,
+        "canConfigureSystem": false
+      },
+      "displayName": "John Doe"
+    },
+    {
+      "id": 5,
+      "username": "supervisor",
+      "email": "supervisor@episd.com",
+      "password": "super123",
+      "role": "developer",
+      "permissions": {
+        "canCreate": true,
+        "canRead": true,
+        "canUpdate": true,
+        "canDelete": false,
+        "canManageUsers": false,
+        "canAccessReports": true,
+        "canConfigureSystem": false
+      },
+      "displayName": "Supervisor"
+    },
+    {
+      "username": "Marylou",
+      "email": "marylou@episd.com",
+      "password": "marylou123",
+      "role": "admin",
+      "permissions": {
+        "canCreate": true,
+        "canRead": true,
+        "canUpdate": true,
+        "canDelete": true,
+        "canManageUsers": true,
+        "canAccessReports": true,
+        "canConfigureSystem": true
+      },
+      "displayName": "Marylou",
+      "id": 6
+    },
+    {
+      "username": "mario",
+      "email": "mario@episd.com",
+      "password": "mario123",
+      "role": "admin",
+      "permissions": {
+        "canCreate": true,
+        "canRead": true,
+        "canUpdate": true,
+        "canDelete": true,
+        "canManageUsers": true,
+        "canAccessReports": true,
+        "canConfigureSystem": true
+      },
+      "displayName": "Mario Camarena",
+      "id": 7
+    }
+  ]
+}

@@ -1,0 +1,957 @@
+{
+    "Searches": [
+        {
+            "id": "divSent",
+            "name": "divSent",
+            "label": "Emailed",
+            "divMain": "divMainSent",
+            "divSearch": "divSearch",
+            "divMainStyle": "display: flex;margin: 5px auto;margin-left: 0px;margin-right: 25px;flex-direction: column;border: solid rgb(48, 178, 74) 0px;text-align: center;color: #0a58ca;font-weight: bold;font-size: 18px;",
+            "divSearchStyle": "display: flex;margin: 5px auto;justify-content: center;border: solid rgb(0, 0, 0) 0px",
+            "divInput": "divFilter",
+            "FilterType": "TF",
+            "class": "divSent",
+            "style": "display: flex:margin: auto;font-size: 18px;",
+            "inputs": [
+                {
+                    "id": "btnSentTrue",
+                    "name": "btnSentTrue",
+                    "searchType": "sentTrue",
+                    "value": "",
+                    "label": "Yes",
+                    "type": "button",
+                    "class": "w3-btn",
+                    "placeholder": "",
+                    "style": "display: flex;margin: auto;margin-right: 5px;font-size: 18px;background-color: green;color: white;border: solid black 1px;border-radius: 5px",
+                    "filter": "filteredSentTrue",
+                    "tooltipTitle": "Sent 'Yes'",
+                    "tooltip": "Select all applications that have been sent."
+                },
+                {
+                    "id": "btnSentFalse",
+                    "name": "btnSentFalse",
+                    "searchType": "sentFalse",
+                    "value": "",
+                    "label": "No",
+                    "type": "button",
+                    "class": "w3-btn",
+                    "placeholder": "",
+                    "style": "display: flex;margin: auto;font-size: 18px;background-color: red;color: white;border: solid black 1px;border-radius: 5px",
+                    "filter": "filteredSentFalse",
+                    "tooltipTitle": "Sent 'No'",
+                    "tooltip": "Select all applications that have NOT been sent"
+                }
+            ]
+        },
+        {
+            "id": "divPrinted",
+            "name": "divPrinted",
+            "label": "Printed",
+            "divMain": "divMainPrinted",
+            "divSearch": "divPrinted",
+            "divMainStyle": "display: flex;margin: 5px auto;margin-left: 0px;margin-right: 25px;flex-direction: column;border: solid rgb(48, 178, 74) 0px;text-align: center;color: #0a58ca;font-weight: bold;font-size: 18px;",
+            "divSearchStyle": "display: flex;margin: 5px auto;margin-right:justify-content: center;border: solid rgb(0, 0, 0) 0px",
+            "divInput": "divFilter",
+            "FilterType": "TF",
+            "class": "divPrinted",
+            "style": "display: flex;margin: 0px auto;border: solid rgb(48, 178, 74) 0px;text-align: center;color: blue;font-weight: bold;",
+            "inputs": [
+                {
+                    "id": "btnPrintedTrue",
+                    "name": "btnPrintedTrue",
+                    "searchType": "printedTrue",
+                    "value": "",
+                    "type": "button",
+                    "label": "Yes",
+                    "class": "w3-btn",
+                    "placeholder": "",
+                    "style": "display: flex;margin: auto;margin-right: 5px;font-size: 18px;background-color: green;color: white;border: solid black 1px;border-radius: 5px",
+                    "filter": "printedSentTrue",
+                    "tooltipTitle": "Printed 'Yes'",
+                    "tooltip": "Select all applications that have been printed."
+                },
+                {
+                    "id": "btnPrintedFalse",
+                    "name": "btnPrintedFalse",
+                    "searchType": "printedFalse",
+                    "value": "",
+                    "type": "button",
+                    "label": "No",
+                    "class": "w3-btn",
+                    "placeholder": "",
+                    "style": "display: flex;margin: auto;font-size: 18px;background-color: red;color: white;border: solid black 1px;border-radius: 5px",
+                    "filter": "printedSentFalse",
+                    "tooltipTitle": "Printed 'No'",
+                    "tooltip": "Select all applications that have NOT been printed."
+                }
+            ]
+        },
+        {
+            "id": "divAppId",
+            "name": "divAppId",
+            "label": "Application",
+            "divMain": "divMainAppId",
+            "divSearch": "divAppId",
+            "divMainStyle": "display: block;margin: 5px auto;margin-left: 0px;margin-right: 25px;border: solid rgb(48, 178, 74) 0px;text-align: center;color: #0a58ca;font-weight: bold;font-size: 18px;",
+            "divSearchStyle": "display: flex;margin: 5px auto;border: solid rgb(0, 0, 0) 0px",
+            "divInput": "divFilter",
+            "FilterType": "TF",
+            "class": "",
+            "style": "display: block;margin: 5px auto;border: solid rgb(48, 178, 74) 0px;text-align: center;color: blue;font-weight: bold",
+            "model": "Id",
+            "inputs": [
+                {
+                    "id": "inpId",
+                    "name": "inpId",
+                    "searchType": "id",
+                    "label": "",
+                    "type": "text",
+                    "value": "",
+                    "class": "input form-control search",
+                    "placeholder": "Enter Id",
+                    "style": "display: flex;margin: auto;font-size: 18px;border: solid black 1px;border-radius: 5px;height: 45px;width: 180px;font-weight: 600",
+                    "onchange": "filterByAppId",
+                    "filter": "printedSentTrue",
+                    "tooltipTitle": "Application ID",
+                    "tooltip": "Select an application by entering the entire app id or return all applcations which which contain the number entered as you add digits"
+                }
+            ]
+        },
+        {
+            "id": "divGuardian",
+            "name": "divGuardian",
+            "label": "Guardian Name",
+            "divMain": "divMaininpGuardian",
+            "divSearch": "divAppinpGuardian",
+            "divMainStyle": "display: block;margin: 5px auto;margin-left: 0px;margin-right: 25px;border: solid rgb(48, 178, 74) 0px;text-align: center;color: #0a58ca;font-weight: bold;font-size: 18px;",
+            "divSearchStyle": "display: flex;margin: 5px auto;border: solid rgb(0, 0, 0) 0px",
+            "divInput": "divFilter",
+            "FilterType": "TF",
+            "class": "",
+            "style": "display: block;margin: 0px auto;border: solid rgb(48, 178, 74) 0px;text-align: center;color: blue;font-weight: bold;",
+            "model": "Guardian",
+            "inputs": [
+                {
+                    "id": "inpGuardian",
+                    "name": "inGuardian",
+                    "searchType": "guardian",
+                    "label": "",
+                    "type": "text",
+                    "value": "",
+                    "class": "input form-control search",
+                    "placeholder": "Enter First or Last Name",
+                    "style": "display: flex;margin: auto;font-size: 18px;border: solid black 1px;border-radius: 5pxw;width: 225px;height: 45px;font-weight: 600",
+                    "onchange": "filterByGuardianName",
+                    "tooltipTitle": "Guardian Name",
+                    "tooltip": "Select an application by entering the guardian first or last name.  Multiple rows will be returned if mutliple matches are found"
+                }
+            ]
+        },
+        {
+            "id": "divStudent",
+            "name": "divStudent",
+            "label": "Student Name",
+            "divMain": "divMainAppStudent",
+            "divSearch": "divAppStudent",
+            "divMainStyle": "display: block;margin: 5px auto;margin-left: 0px;margin-right: 25px;border: solid rgb(48, 178, 74) 0px;text-align: center;color: #0a58ca;font-weight: bold;font-size: 18px;",
+            "divSearchStyle": "display: flex;margin: 5px auto;border: solid rgb(0, 0, 0) 0px",
+            "divInput": "divFilter",
+            "FilterType": "TF",
+            "class": "",
+            "style": "display: block;margin: 0px auto;border: solid rgb(48, 178, 74) 0px;text-align: center;color: blue;font-weight: bold;",
+            "inputs": [
+                {
+                    "id": "inpStudent",
+                    "name": "inpStudent",
+                    "searchType": "student",
+                    "label": "",
+                    "type": "text",
+                    "value": "",
+                    "class": "input form-control search",
+                    "placeholder": "Enter Last Name",
+                    "style": "display: flex;margin: auto;font-size: 18px;border: solid black 1px;border-radius: 5px;width: 180px;height: 45px;font-weight: 600",
+                    "onchange": "filterByStudentName",
+                    "tooltipTitle": "Student Name",
+                    "tooltip": "Select an application by entering the student last name. Multiple rows will be returned if mutliple matches are found"
+                }
+            ]
+        },
+        {
+            "id": "divCampus",
+            "name": "divAppCampus",
+            "label": "Campus",
+            "divMain": "divMainCampus",
+            "divSearch": "divCampus",
+            "divMainStyle": "display: block;margin: 5px auto;margin-left: 0px;margin-right: 25px;border: solid rgb(48, 178, 74) 0px;text-align: center;color: #0a58ca;font-weight: bold;font-size: 18px;",
+            "divSearchStyle": "display: flex;margin: 5px auto;border: solid rgb(0, 0, 0) 0px",
+            "divInput": "divFilter",
+            "FilterType": "TF",
+            "class": "",
+            "style": "display: block;margin: 0px auto;border: solid rgb(48, 178, 74) 0px;text-align: center;color: blue;font-weight: bold;",
+            "model": "Student",
+            "inputs": [
+                {
+                    "id": "inpCampus",
+                    "name": "inpCampus",
+                    "searchType": "campus",
+                    "label": "",
+                    "type": "text",
+                    "value": "",
+                    "class": "input form-control search",
+                    "placeholder": "Enter School Name",
+                    "style": "display: flex;margin: auto;font-size: 18px;border: solid black 1px;border-radius: 5px;width: 180px;height: 45px;font-weight: 600",
+                    "onchange": "filterByCampusName",
+                    "tooltipTitle": "Campus Name",
+                    "tooltip": "Select all applications which include a student who attends the campus name entered"
+                }
+            ]
+        },
+        {
+            "id": "divApproved",
+            "name": "divApproved",
+            "label": "Approved",
+            "divMain": "divMainApproved",
+            "divSearch": "divSearch",
+            "divMainStyle": "display: block;margin: 5px auto;margin-left: 0px;margin-right: 25px;border: solid rgb(48, 178, 74) 0px;text-align: center;color: #0a58ca;font-weight: bold;font-size: 18px;",
+            "divSearchStyle": "display: flex;margin: 5px auto;border: solid rgb(0, 0, 0) 0px",
+            "divInput": "divFilter",
+            "FilterType": "TF",
+            "class": "",
+            "style": "display: block;margin: 0px auto;border: solid rgb(48, 178, 74) 0px;text-align: center;color: green;font-weight: bold;",
+            "model": "Campus",
+            "inputs": [
+                {
+                    "id": "btnApproved",
+                    "name": "btnApproved",
+                    "searchType": "approved",
+                    "value": "",
+                    "label": "",
+                    "type": "text",
+                    "class": "input form-control search",
+                    "placeholder": "Status",
+                    "style": "display: flex;margin: auto;font-size: 18px;border: solid black 1px;border-radius: 5px;height: 45px",
+                    "filter": "filterByApprovedStatus",
+                    "tooltipTitle": "Approved Applications",
+                    "tooltip": "Select all applications which have been approved for 'Free' or 'Reduced Price' depending on the selection made from the dropdown list"
+                }
+            ]
+        },
+        {
+            "id": "divDenied",
+            "name": "divDenied",
+            "label": "Denied",
+            "divMain": "divMainDenied",
+            "divSearch": "divSearch",
+            "divMainStyle": "display: block;margin: 5px auto;margin-left: 0px;margin-right: 0px;border: solid rgb(48, 178, 74) 0px;text-align: center;color: #0a58ca;font-weight: bold;font-size: 18px;",
+            "divSearchStyle": "display: flex;margin: 5px auto;border: solid rgb(0, 0, 0) 0px",
+            "divInput": "divFilter",
+            "FilterType": "TF",
+            "class": "",
+            "style": "display: block;margin: 0px auto;border: solid rgb(48, 178, 74) 0px;text-align: center;color: green;font-weight: bold;",
+            "inputs": [
+                {
+                    "id": "btnDenied",
+                    "name": "btnDenied",
+                    "searchType": "denied",
+                    "value": "Denied",
+                    "label": "Denied",
+                    "type": "button",
+                    "class": "w3-btn",
+                    "placeholder": "",
+                    "style": "display: flex;margin: auto;margin-right: 5px;font-size: 18px;background-color: red;color: white;border: solid black 1px;border-radius: 5px",
+                    "filter": "searchApps('denied','divSearchDenied','inpSearchDenied','filteredDenied')",
+                    "tooltipTitle": "Denied Applications",
+                    "tooltip": "Select all applications which have been 'Denied'"
+                }
+            ]
+        },
+        {
+            "id": "divRecords",
+            "name": "divRecordId",
+            "label": "Record Id",
+            "divMain": "divMainRecordID",
+            "divSearch": "divRecordId",
+            "divMainStyle": "display: block;margin: 5px auto;margin-left: 20px;margin-right: 0px;border: solid rgb(48, 178, 74) 0px;text-align: center;color: #0a58ca;font-weight: bold;font-size: 18px;",
+            "divSearchStyle": "display: flex;margin: 5px auto;border: solid rgb(0, 0, 0) 0px",
+            "divInput": "divFilter",
+            "FilterType": "RecordId",
+            "class": "hidden",
+            "style": "display: block;margin: 0px auto;border: solid rgb(48, 178, 74) 0px;text-align: center;color: blue;font-weight: bold;width: 0px",
+            "inputs": [
+                {
+                    "id": "inpRecordId",
+                    "name": "inpRecordId",
+                    "searchType": "record",
+                    "label": "",
+                    "type": "text",
+                    "value": "",
+                    "class": "input form-control search",
+                    "placeholder": "Record Id",
+                    "style": "display: flex;margin: auto;font-size: 18px;border: solid black 1px;border-radius: 5px;height: 45px;width: 100px",
+                    "onchange": "filterByRecordId",
+                    "help": "Help on Record Id"
+                }
+            ]
+        },
+        {
+            "id": "divBatch",
+            "name": "divBatch",
+            "label": "Batch #",
+            "divMain": "divMainBatch",
+            "divSearch": "divBatch",
+            "divMainStyle": "display: block;margin: 5px auto;margin-left: 0px;margin-right: 25px;border: solid rgb(48, 178, 74) 0px;text-align: center;color: #0a58ca;font-weight: bold;font-size: 18px;",
+            "divSearchStyle": "display: flex;margin: 5px auto;border: solid rgb(0, 0, 0) 0px",
+            "divInput": "divFilter",
+            "FilterType": "Batch",
+            "class": "",
+            "style": "display: block;margin: 5px auto;border: solid rgb(48, 178, 74) 0px;text-align: center;color: blue;font-weight: bold",
+            "inputs": [
+                {
+                    "id": "inpBatch",
+                    "name": "inpBatch",
+                    "searchType": "batch",
+                    "label": "",
+                    "type": "text",
+                    "value": "",
+                    "class": "input form-control search",
+                    "placeholder": "Batch #",
+                    "style": "display: flex;margin: auto;font-size: 18px;border: solid black 1px;border-radius: 5px;height: 45px;width: 70px;font-weight: 600",
+                    "onchange": "filterByBatch",
+                    "tooltipTitle": "Batch #",
+                    "tooltip": "Selects all applications processed by 'Batch #'"
+                }
+            ]
+        },
+        {
+            "id": "divLanguage",
+            "name": "divLanguage",
+            "label": "Language",
+            "divMain": "divMainLanguage",
+            "divSearch": "divLanguage",
+            "divMainStyle": "display: flex;margin: 5px auto;margin-left: 0px;margin-right: 25px;flex-direction: column;border: solid rgb(48, 178, 74) 0px;text-align: center;color: #0a58ca;font-weight: bold;font-size: 18px;",
+            "divSearchStyle": "display: flex;margin: 5px auto;margin-right:justify-content: center;border: solid rgb(0, 0, 0) 0px",
+            "divInput": "divFilter",
+            "FilterType": "TF",
+            "class": "divLanguage",
+            "style": "display: flex;margin: 0px auto;border: solid rgb(48, 178, 74) 0px;text-align: center;color: blue;font-weight: bold;",
+            "inputs": [
+                {
+                    "id": "btnEnglish",
+                    "name": "btnEnglish",
+                    "searchType": "english",
+                    "value": "",
+                    "type": "button",
+                    "label": "English",
+                    "class": "w3-btn",
+                    "placeholder": "",
+                    "style": "display: flex;margin: auto;margin-right: 10px;font-size: 18px;font-weight: 400;background-color: #e1e5e9;color: black;border: solid black 1px;border-radius: 5px",
+                    "filter": "search('english','divSearchEnglish','inpSearchEnglish','filteredEnglish')",
+                    "tooltipTitle": "English Applications",
+                    "tooltip": "Select all applications submitted in 'English'"
+                },
+                {
+                    "id": "btnSpanish",
+                    "name": "btnSpanish",
+                    "searchType": "spanish",
+                    "value": "",
+                    "type": "button",
+                    "label": "Spanish",
+                    "class": "w3-btn",
+                    "placeholder": "",
+                    "style": "display: flex;margin: auto;margin-right: 5px;font-size: 18px;font-weight: 400;background-color: #e1e5e9;color: black;border: solid black 1px;border-radius: 5px",
+                    "filter": "search('spanish','divSearchSpanish','inpSearchSpanish','filteredSpanish')",
+                    "tooltipTitle": "Spanish Applications",
+                    "tooltip": "Select all applications submitted in 'Spanish'"
+                }
+            ]
+        },
+        {
+            "id": "divPDFs",
+            "name": "divPDFs",
+            "label": "Show",
+            "divMain": "divMainPDFs",
+            "divSearch": "divPDFs",
+            "divMainStyle": "",
+            "divSearchStyle": "display: flex;margin: 5px auto;border: solid rgb(0, 0, 0) 0px",
+            "divInput": "divFilter",
+            "FilterType": "TF",
+            "class": "",
+            "style": "display: flex;margin: 0px auto;border: solid rgb(48, 178, 74) 0px;justify-content-center;text-align: center;color: green;font-weight: bold;",
+            "inputs": [
+                {
+                    "id": "btnPDFs",
+                    "name": "btnPDFs",
+                    "value": "PDFs",
+                    "label": "PDFs",
+                    "type": "submit",
+                    "class": "w3-btn",
+                    "placeholder": "",
+                    "style": "display: flex;margin: auto;width: 100px;font-size: 18px;background-color: #e1e5e9;color: black;border: solid black 1px;border-radius: 5px",
+                    "filter": "searchApps('PDFs','divSearchPDFs','inpSearchPDFs','filteredPDFs')",
+                    "tooltipTitle": "Show 'Eligibility Letters'",
+                    "tooltip": "Display eligibility letters in PDF format for all applications which have been selected",
+                    "formaction": "http://localhost:3000/appIndex?frmData=2025951,2025952"
+                }
+            ]
+        },
+        {
+            "id": "divImport",
+            "name": "divImport",
+            "label": "Import",
+            "divMain": "divMainImport",
+            "divSearch": "divImport",
+            "divMainStyle": "",
+            "divSearchStyle": "display: flex;margin: 5px auto;border: solid rgb(0, 0, 0) 0px",
+            "divInput": "divFilter",
+            "FilterType": "TF",
+            "class": "",
+            "style": "display: block;margin: 0px auto;border: solid rgb(48, 178, 74) 0px;text-align: center;color: green;font-weight: bold;",
+            "inputs": [
+                {
+                    "id": "btnImport",
+                    "name": "btnImport",
+                    "value": "Import",
+                    "label": "Apps",
+                    "type": "submit",
+                    "class": "w3-btn",
+                    "placeholder": "",
+                    "style": "display: flex;margin: auto;width: 100px;font-size: 18px;background-color: #e1e5e9;color: black;border: solid black 1px;border-radius: 5px",
+                    "filter": "searchApps('Import','divSearchImport','inpSearchImport','filteredImport')",
+                    "tooltipTitle": "Import New Applications",
+                    "tooltip": "Import all new applications which have been submitted and processed for review",
+                    "formaction": "http://localhost:3000/import"
+                }
+            ]
+        },
+        {
+            "id": "divConfig",
+            "name": "divConfig",
+            "label": "Show",
+            "divMain": "divMainConfig",
+            "divSearch": "divConfig",
+            "divMainStyle": "",
+            "divSearchStyle": "display: flex;margin: 5px auto;border: solid rgb(0, 0, 0) 0px",
+            "divInput": "divFilter",
+            "FilterType": "TF",
+            "class": "",
+            "style": "display: block;margin: 0px auto;border: solid rgb(48, 178, 74) 0px;text-align: center;color: green;font-weight: bold;",
+            "inputs": [
+                {
+                    "id": "btnConfig",
+                    "name": "btnConfig",
+                    "value": "Config",
+                    "label": "Config",
+                    "type": "submit",
+                    "class": "w3-btn",
+                    "placeholder": "",
+                    "style": "display: flex;margin: auto;width: 100px;font-size: 18px;background-color: #e1e5e9;color: black;border: solid black 1px;border-radius: 5px",
+                    "filter": "searchApps('Config','divSearchConfig','inpSearchConfig','filteredConfig')",
+                    "tooltipTitle": "Display Configuration Options",
+                    "tooltip": "Display/Edit all settings from the configuration file",
+                    "formaction": "http://localhost:3000/showConfig"
+                }
+            ]
+        },
+        {
+            "id": "divHelp",
+            "name": "divHelp",
+            "label": "ToolTips",
+            "divMain": "divMainHelp",
+            "divSearch": "divHelp",
+            "divMainStyle": "",
+            "divSearchStyle": "display: flex;margin: 5px auto;border: solid rgb(0, 0, 0) 0px",
+            "divInput": "divFilter",
+            "FilterType": "TF",
+            "class": "",
+            "style": "display: block;margin: 0px auto;border: solid rgb(48, 178, 74) 0px;text-align: center;color: green;font-weight: bold;",
+            "inputs": [
+                {
+                    "id": "inpTest",
+                    "name": "inpHelp",
+                    "value": "Help",
+                    "label": "Help",
+                    "type": "checkbox",
+                    "class": "w3-check",
+                    "placeholder": "",
+                    "style": "border: solid black 1pxheight: 100px",
+                    "filter": "searchApps('help','divSearchHelp','inpSearchHelp','filteredHelp')",
+                    "tooltipTitle": "Show Tooltips",
+                    "tooltip": "Displays tooltips for each field in the Search Section"
+                }
+            ]
+        }
+    ],
+    "AppHeaders": [
+        {
+            "id": "divSelect",
+            "label": "Select",
+            "type": "label",
+            "style": "color: purple;border: solid black 0px;padding-left: 0px;text-align: center;width: 100px;",
+            "colspan": "1",
+            "class": "select"
+        },
+        {
+            "id": "divBatch",
+            "label": "Batch",
+            "type": "label",
+            "style": "color: purple;border: solid black 0px;padding-left: 0px;text-align: center;width: 75px;",
+            "colspan": "1",
+            "class": "batch"
+        },
+        {
+            "id": "divActive",
+            "label": "Active",
+            "type": "label",
+            "style": "color: purple;border: solid black 0px;padding-left: 0px;text-align: center;width: 75px;",
+            "colspan": "1",
+            "class": "active"
+        },
+        {
+            "id": "divSent",
+            "label": "Sent",
+            "type": "label",
+            "style": "color: purple;border: solid black 0px;padding-left: 0px;text-align: center;width: 75px;",
+            "colspan": "1",
+            "class": "sent"
+        },
+        {
+            "id": "divPrinted",
+            "label": "Printed",
+            "type": "label",
+            "style": "color: purple;border: solid black 0px;padding-left: 0px;text-align: center;width: 50px;",
+            "colspan": "1",
+            "class": "printed"
+        },
+        {
+            "id": "divId",
+            "label": "App Id",
+            "type": "label",
+            "style": "color: purple;border: solid black 0px;padding-left: 15px;text-align: left;width: 150px",
+            "colspan": "1",
+            "class": "appid"
+        },
+        {
+            "id": "divLanguage",
+            "label": "Language",
+            "type": "label",
+            "style": "color: purple;border: solid black 0px;padding-left: 15px;text-align: left;width: 100px;",
+            "colspan": "1",
+            "class": "language"
+        },
+        {
+            "id": "divEmail",
+            "label": "Guardian Email",
+            "type": "label",
+            "style": "color: purple;border: solid black 0px;padding-left: 15px;text-align: keft;width: 200px;",
+            "colspan": "1",
+            "class": "email"
+        },
+        {
+            "id": "divLastName",
+            "label": "Last Name",
+            "type": "label",
+            "style": "color: purple;border: solid black 0px;padding-left: 15px;text-align: left;width: 125px;",
+            "colspan": "1",
+            "class": "lastName"
+        },
+        {
+            "id": "divFirstName",
+            "label": "First Name",
+            "type": "label",
+            "style": "color: purple;border: solid black 0px;padding-left: 15px;text-align: left;width: 100px;",
+            "colspan": "1",
+            "class": "firstName"
+        },
+        {
+            "id": "divStatus",
+            "label": "Status",
+            "type": "label",
+            "style": "color: purple;border: solid black 0px;padding-left: 15px;text-align: left;width: 100px;",
+            "colspan": "1",
+            "class": "status"
+        },
+        {
+            "id": "divReason",
+            "label": "Denial Reason",
+            "type": "label",
+            "style": "color: purple;border: solid black 0px;padding-left: 15px;text-align: left;width: 350px;",
+            "colspan": "1",
+            "class": "reason"
+        },
+        {
+            "id": "divRow",
+            "label": "Row",
+            "type": "label",
+            "style": "color: purple;border: solid black 0px;padding-left: 0px;text-align: center;width: 50px;",
+            "colspan": "1",
+            "class": "row"
+        },
+        {
+            "id": "divActions",
+            "label": "Actions",
+            "type": "label",
+            "style": "color: purple;border: solid black 0px;padding-left: 0px;text-align: center;width: 100px",
+            "colspan": "2",
+            "class": "print"
+        }
+    ],
+    "Columns": [
+        {
+            "id": "divSelect",
+            "label": "Select",
+            "type": "label",
+            "style": "width: 40px;border: solid black 0px",
+            "class": "select",
+            "inputs": [
+                {
+                    "id": "btnSelect",
+                    "type": "checkbox",
+                    "style": "width: 80px;border: solid black 1px",
+                    "class": "w3-check print"
+                }
+            ]
+        },
+        {
+            "id": "divBatch",
+            "label": "Batch",
+            "type": "label",
+            "style": "width: 40px;border: solid black 0px",
+            "class": "batch",
+            "inputs": [
+                {
+                    "id": "txtBatch",
+                    "type": "text",
+                    "style": "width: 60px;border: solid black 0px",
+                    "readonly": "true",
+                    "class": "w3-input batch"
+                }
+            ]
+        },
+        {
+            "id": "divActive",
+            "label": "Active",
+            "type": "label",
+            "style": "width: 40px;border: solid black 0px",
+            "class": "active",
+            "inputs": [
+                {
+                    "id": "btn",
+                    "type": "radio",
+                    "style": "display: flex;margin: auto;jusify-content: left;border: solid black 1px;width: 50px",
+                    "class": "w3-radio active"
+                }
+            ]
+        },
+        {
+            "id": "divSent",
+            "label": "Sent",
+            "type": "label",
+            "style": "display: flex;margin: auto;width: 50px",
+            "class": "sent",
+            "inputs": [
+                {
+                    "id": "chkSent",
+                    "type": "checkbox",
+                    "style": "width: 40px;border: solid black 0px",
+                    "readonly": "true",
+                    "disabled": "true",
+                    "class": "w3-check sent"
+                }
+            ]
+        },
+        {
+            "id": "divPrinted",
+            "label": "Printed",
+            "type": "label",
+            "style": "display: flex;margin: auto;width: 50px",
+            "class": "printed",
+            "inputs": [
+                {
+                    "id": "chkPrinted",
+                    "type": "checkbox",
+                    "style": "width: 40px;border: solid black 0px",
+                    "readonly": "true",
+                    "disabled": "true",
+                    "class": "w3-check print"
+                }
+            ]
+        },
+        {
+            "id": "divId",
+            "label": "Application Id",
+            "type": "label",
+            "style": "width: 125px",
+            "class": "appid",
+            "contenteditable": "false",
+            "inputs": [
+                {
+                    "id": "txtAppId",
+                    "type": "text",
+                    "style": "",
+                    "readonly": "true",
+                    "class": "w3-input id"
+                }
+            ]
+        },
+        {
+            "id": "divLanguage",
+            "label": "Language",
+            "type": "label",
+            "style": "display: flex;width: 100px",
+            "class": "language",
+            "inputs": [
+                {
+                    "id": "txtLanguage",
+                    "type": "text",
+                    "style": "",
+                    "readonly": "true",
+                    "class": "w3-input id"
+                }
+            ]
+        },
+        {
+            "id": "divEmail",
+            "label": "Email",
+            "type": "label",
+            "style": "display: flex;width: 200px",
+            "class": "email",
+            "inputs": [
+                {
+                    "id": "txtEmail",
+                    "type": "text",
+                    "style": "",
+                    "readonly": "true",
+                    "class": "w3-input email"
+                }
+            ]
+        },
+        {
+            "id": "divLastName",
+            "label": "Last Name",
+            "type": "label",
+            "style": "display: flex;width: 150px",
+            "class": "lastName",
+            "inputs": [
+                {
+                    "id": "txtLName",
+                    "type": "text",
+                    "style": "",
+                    "readonly": "true",
+                    "class": "w3-input lname"
+                }
+            ]
+        },
+        {
+            "id": "divFirstName",
+            "label": "First Name",
+            "type": "label",
+            "style": "display: flex;width: 150px",
+            "class": "firstName",
+            "inputs": [
+                {
+                    "id": "txtFName",
+                    "type": "text",
+                    "style": "",
+                    "readonly": "true",
+                    "class": "w3-input fname"
+                }
+            ]
+        },
+        {
+            "id": "divStatus",
+            "label": "Status",
+            "type": "label",
+            "style": "width: 300px",
+            "class": "status",
+            "inputs": [
+                {
+                    "id": "txtStatus",
+                    "type": "text",
+                    "style": "",
+                    "readonly": "true",
+                    "class": "w3-input status"
+                }
+            ]
+        },
+        {
+            "id": "divReason",
+            "label": "Denial Reason",
+            "type": "label",
+            "style": "width: 400px",
+            "class": "reason",
+            "inputs": [
+                {
+                    "id": "txtReason",
+                    "type": "text",
+                    "style": "",
+                    "readonly": "true",
+                    "class": "w3-input reason"
+                }
+            ]
+        },
+        {
+            "id": "divRow",
+            "label": "Row",
+            "type": "label",
+            "style": "display: flex;margin: auto;width: 50px",
+            "class": "row",
+            "inputs": [
+                {
+                    "id": "txtRow",
+                    "type": "text",
+                    "style": "",
+                    "readonly": "true",
+                    "class": "w3-input rownum"
+                }
+            ]
+        },
+        {
+            "id": "divPrint",
+            "label": "Print",
+            "type": "label",
+            "style": "display: flex;margin: auto;width: 100px;flex-wrap: nowrap",
+            "class": "print",
+            "inputs": [
+                {
+                    "id": "txtPrint",
+                    "value": "Print",
+                    "type": "button",
+                    "style": "width: 75px;border: solid black 0px",
+                    "class": "w3-btn w3-blue print"
+                }
+            ]
+        },
+        {
+            "id": "divSend",
+            "label": "Send",
+            "type": "label",
+            "style": "display: flex;margin: auto;width: 100px;flex-wrap: nowrap",
+            "class": "send",
+            "inputs": [
+                {
+                    "id": "txtRow",
+                    "value": "Send",
+                    "type": "button",
+                    "style": "width: 50px;border: solid black 1px",
+                    "class": "w3-btn w3-blue send"
+                }
+            ]
+        }
+    ],
+    "Utilities": [
+        {
+            "id": "divPDFs",
+            "name": "divPDFs",
+            "label": "Show",
+            "divMain": "divMainPDFs",
+            "divSearch": "divPDFs",
+            "divMainStyle": "display: block;margin: 5px auto;margin-left: 0px;margin-right: 25px;border: solid rgb(48, 178, 74) 0px;text-align: center;color: #0a58ca;font-weight: bold;font-size: 18px;",
+            "divSearchStyle": "display: flex;margin: 5px auto;border: solid rgb(0, 0, 0) 0px",
+            "divInput": "divFilter",
+            "FilterType": "TF",
+            "class": "",
+            "style": "display: block;margin: 0px auto;border: solid rgb(48, 178, 74) 0px;text-align: center;color: green;font-weight: bold;",
+            "inputs": [
+                {
+                    "id": "btnPDFs",
+                    "name": "btnPDFs",
+                    "value": "PDFs",
+                    "label": "PDFs",
+                    "type": "button",
+                    "class": "w3-btn",
+                    "placeholder": "",
+                    "style": "display: flex;margin: auto;margin-right: 5px;font-size: 18px;background-color: red;color: white;border: solid black 1px;border-radius: 5px",
+                    "filter": "searchApps('PDFs','divSearchPDFs','inpSearchPDFs','filteredPDFs')",
+                    "tooltipTitle": "Show 'Eligibility Letters'",
+                    "tooltip": "Display eligibility letters in PDF format for all applications which have been selected"
+                }
+            ]
+        },
+        {
+            "id": "divImport",
+            "name": "divImport",
+            "label": "Import",
+            "divMain": "divMainImport",
+            "divSearch": "divImport",
+            "divMainStyle": "display: block;margin: 5px auto;margin-left: 0px;margin-right: 25px;border: solid rgb(48, 178, 74) 0px;text-align: center;color: #0a58ca;font-weight: bold;font-size: 18px;",
+            "divSearchStyle": "display: flex;margin: 5px auto;border: solid rgb(0, 0, 0) 0px",
+            "divInput": "divFilter",
+            "FilterType": "TF",
+            "class": "",
+            "style": "display: block;margin: 0px auto;border: solid rgb(48, 178, 74) 0px;text-align: center;color: green;font-weight: bold;",
+            "inputs": [
+                {
+                    "id": "btnImport",
+                    "name": "btnImport",
+                    "value": "Import",
+                    "label": "New Apps",
+                    "type": "submit",
+                    "class": "w3-btn",
+                    "placeholder": "",
+                    "style": "display: flex;margin: auto;margin-right: 5px;font-size: 18px;background-color: green;color: white;border: solid black 1px;border-radius: 5px",
+                    "filter": "searchApps('Import','divSearchImport','inpSearchImport','filteredImport')",
+                    "tooltipTitle": "Import New Applications",
+                    "tooltip": "Import all new applications which have been submitted and processed for review",
+                    "submitTo": "importApps=1"
+                }
+            ]
+        },
+        {
+            "id": "divConfig",
+            "name": "divConfig",
+            "label": "Show",
+            "divMain": "divMainConfig",
+            "divSearch": "divConfig",
+            "divMainStyle": "display: block;margin: 5px auto;margin-left: 0px;margin-right: 25px;border: solid rgb(48, 178, 74) 0px;text-align: center;color: #0a58ca;font-weight: bold;font-size: 18px;",
+            "divSearchStyle": "display: flex;margin: 5px auto;border: solid rgb(0, 0, 0) 0px",
+            "divInput": "divFilter",
+            "FilterType": "TF",
+            "class": "",
+            "style": "display: block;margin: 0px auto;border: solid rgb(48, 178, 74) 0px;text-align: center;color: green;font-weight: bold;",
+            "inputs": [
+                {
+                    "id": "btnConfig",
+                    "name": "btnConfig",
+                    "value": "Config",
+                    "label": "Config",
+                    "type": "submit",
+                    "class": "w3-btn",
+                    "placeholder": "",
+                    "style": "display: flex;margin: auto;margin-right: 5px;font-size: 18px;background-color: purple;color: white;border: solid black 1px;border-radius: 5px",
+                    "filter": "searchApps('Config','divSearchConfig','inpSearchConfig','filteredConfig')",
+                    "tooltipTitle": "Display Configuration Options",
+                    "tooltip": "Display/Edit all settings from the configuration file",
+                    "submitTo": "showConfig=1"
+                }
+            ]
+        },
+        {
+            "id": "divHelp",
+            "name": "divHelp",
+            "label": "ToolTips",
+            "divMain": "divMainHelp",
+            "divSearch": "divHelp",
+            "divMainStyle": "display: block;margin: 5px auto;margin-left: 0px;margin-right: 25px;border: solid rgb(48, 178, 74) 0px;text-align: center;color: #0a58ca;font-weight: bold;font-size: 18px;",
+            "divSearchStyle": "display: flex;margin: 5px auto;border: solid rgb(0, 0, 0) 0px",
+            "divInput": "divFilter",
+            "FilterType": "TF",
+            "class": "",
+            "style": "display: block;margin: 0px auto;border: solid rgb(48, 178, 74) 0px;text-align: center;color: green;font-weight: bold;",
+            "inputs": [
+                {
+                    "id": "inpTest",
+                    "name": "inpHelp",
+                    "value": "Help",
+                    "label": "Help",
+                    "type": "checkbox",
+                    "class": "w3-check",
+                    "placeholder": "",
+                    "style": "display: flex;margin: auto;margin-right: 5px;font-size: 18px;background-color: #0a58ca;;color: white;border: solid black 1px;border-radius: 5px",
+                    "filter": "searchApps('help','divSearchHelp','inpSearchHelp','filteredHelp')",
+                    "tooltipTitle": "Show Tooltips",
+                    "tooltip": "Displays tooltips for each field in the Search Section"
+                }
+            ]
+        }
+    ]
+}

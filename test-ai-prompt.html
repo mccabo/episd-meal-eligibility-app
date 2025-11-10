@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Prompt Endpoint Test</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 2rem;
+        }
+
+        .subtitle {
+            color: #7f8c8d;
+            margin-bottom: 30px;
+            font-size: 1rem;
+        }
+
+        .test-section {
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: 'Consolas', 'Monaco', monospace;
+            resize: vertical;
+            min-height: 120px;
+            transition: border-color 0.3s;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        button {
+            flex: 1;
+            padding: 15px 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-submit {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-submit:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-submit:disabled {
+            background: #bdc3c7;
+            cursor: not-allowed;
+        }
+
+        .btn-clear {
+            background: #ecf0f1;
+            color: #2c3e50;
+        }
+
+        .btn-clear:hover:not(:disabled) {
+            background: #dfe6e9;
+        }
+
+        .status {
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            display: none;
+            font-weight: 500;
+        }
+
+        .status.show {
+            display: block;
+        }
+
+        .status.loading {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+
+        .status.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .status.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .response-section {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+            display: none;
+        }
+
+        .response-section.show {
+            display: block;
+        }
+
+        .response-section h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .response-content {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            max-height: 400px;
+            overflow-y: auto;
+            line-height: 1.6;
+            color: #2c3e50;
+        }
+
+        .metadata {
+            margin-top: 15px;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+
+        .metadata strong {
+            color: #2c3e50;
+        }
+
+        .firebase-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 15px;
+            background: #27ae60;
+            color: white;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .info-box {
+            background: #e8f4f8;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .info-box p {
+            margin: 5px 0;
+            color: #2c3e50;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 AI Prompt Endpoint Test</h1>
+        <p class="subtitle">Test the server endpoint directly without the Vue app</p>
+
+        <div class="info-box">
+            <p><strong>Server URL:</strong> http://localhost:3000/ai-prompt</p>
+            <p><strong>Method:</strong> POST</p>
+            <p><strong>Status:</strong> <span id="serverStatus">Checking...</span></p>
+        </div>
+
+        <div class="test-section">
+            <label for="promptInput">Enter Your Prompt:</label>
+            <textarea 
+                id="promptInput" 
+                placeholder="Type your AI prompt here...
+
+Example prompts:
+- Explain async/await in JavaScript
+- Write a function to reverse a string
+- What are the benefits of using Vue.js?"
+            ></textarea>
+            
+            <div class="button-group">
+                <button class="btn-submit" id="submitBtn" onclick="submitPrompt()">
+                    Submit Prompt
+                </button>
+                <button class="btn-clear" id="clearBtn" onclick="clearAll()">
+                    Clear All
+                </button>
+            </div>
+        </div>
+
+        <div class="status" id="statusMessage"></div>
+
+        <div class="response-section" id="responseSection">
+            <h2>📝 AI Response</h2>
+            <div class="response-content" id="responseContent"></div>
+            <div class="metadata" id="metadata"></div>
+        </div>
+    </div>
+
+    <script>
+        // Check server status on load
+        window.addEventListener('load', checkServerStatus);
+
+        async function checkServerStatus() {
+            const statusEl = document.getElementById('serverStatus');
+            try {
+                const response = await fetch('http://localhost:3000/ai-prompt', {
+                    method: 'OPTIONS'
+                });
+                
+                if (response.ok || response.status === 200) {
+                    statusEl.innerHTML = '<span style="color: #27ae60;">✓ Online</span>';
+                } else {
+                    statusEl.innerHTML = '<span style="color: #e74c3c;">✗ Server Error</span>';
+                }
+            } catch (error) {
+                statusEl.innerHTML = '<span style="color: #e74c3c;">✗ Offline</span>';
+                console.error('Server status check failed:', error);
+            }
+        }
+
+        async function submitPrompt() {
+            const promptInput = document.getElementById('promptInput');
+            const statusMessage = document.getElementById('statusMessage');
+            const responseSection = document.getElementById('responseSection');
+            const responseContent = document.getElementById('responseContent');
+            const metadata = document.getElementById('metadata');
+            const submitBtn = document.getElementById('submitBtn');
+
+            const prompt = promptInput.value.trim();
+
+            if (!prompt) {
+                showStatus('Please enter a prompt!', 'error');
+                return;
+            }
+
+            // Disable button and show loading
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span class="spinner"></span> Processing...';
+            responseSection.classList.remove('show');
+            showStatus('Sending prompt to server...', 'loading');
+
+            try {
+                const startTime = Date.now();
+                const response = await fetch('http://localhost:3000/ai-prompt', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ prompt })
+                });
+
+                const data = await response.json();
+                const endTime = Date.now();
+                const duration = ((endTime - startTime) / 1000).toFixed(2);
+
+                if (data.success) {
+                    showStatus('✓ Prompt processed successfully!', 'success');
+                    
+                    // Display response
+                    responseContent.textContent = data.response;
+                    
+                    // Display metadata
+                    metadata.innerHTML = `
+                        <p><strong>Response Time:</strong> ${duration}s</p>
+                        <p><strong>Firebase ID:</strong> ${data.firebaseId || 'N/A'}</p>
+                        <p><strong>Timestamp:</strong> ${new Date().toLocaleString()}</p>
+                        ${data.firebaseError ? `<p style="color: #e74c3c;"><strong>Warning:</strong> ${data.firebaseError}</p>` : ''}
+                        ${data.firebaseId ? '<div class="firebase-badge">✓ Saved to Firebase</div>' : ''}
+                    `;
+                    
+                    responseSection.classList.add('show');
+                } else {
+                    showStatus('✗ Error: ' + (data.error || 'Unknown error'), 'error');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                showStatus('✗ Failed to connect to server: ' + error.message, 'error');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit Prompt';
+            }
+        }
+
+        function showStatus(message, type) {
+            const statusMessage = document.getElementById('statusMessage');
+            statusMessage.textContent = message;
+            statusMessage.className = 'status show ' + type;
+            
+            if (type !== 'loading') {
+                setTimeout(() => {
+                    statusMessage.classList.remove('show');
+                }, 5000);
+            }
+        }
+
+        function clearAll() {
+            document.getElementById('promptInput').value = '';
+            document.getElementById('statusMessage').classList.remove('show');
+            document.getElementById('responseSection').classList.remove('show');
+        }
+
+        // Allow Enter+Shift to submit
+        document.getElementById('promptInput').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' && e.shiftKey) {
+                e.preventDefault();
+                submitPrompt();
+            }
+        });
+    </script>
+</body>
+</html>
+

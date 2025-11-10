@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo API Tester</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        button {
+            padding: 12px 24px;
+            margin: 10px 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+        .btn-primary:hover {
+            background: #5568d3;
+        }
+        .btn-success {
+            background: #10b981;
+            color: white;
+        }
+        .btn-success:hover {
+            background: #059669;
+        }
+        .btn-danger {
+            background: #ef4444;
+            color: white;
+        }
+        .btn-danger:hover {
+            background: #dc2626;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            border-left: 4px solid #667eea;
+        }
+        .success {
+            border-left-color: #10b981;
+            background: #ecfdf5;
+        }
+        .error {
+            border-left-color: #ef4444;
+            background: #fef2f2;
+        }
+        pre {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .status {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        .status.ok {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .status.fail {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+        .test-section {
+            margin: 30px 0;
+            padding: 20px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+        }
+        .instructions {
+            background: #fef3c7;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #f59e0b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 Todo API Diagnostic Tool</h1>
+        
+        <div class="instructions">
+            <strong>📋 Instructions:</strong>
+            <ol>
+                <li>Make sure your server is running: <code>node server.js</code></li>
+                <li>Click each test button below</li>
+                <li>Check the results to diagnose issues</li>
+            </ol>
+        </div>
+
+        <div class="test-section">
+            <h2>Test 1: Health Check <span id="health-status"></span></h2>
+            <p>Tests if the server is running and reachable.</p>
+            <button class="btn-primary" onclick="testHealth()">Run Health Check</button>
+            <div id="health-result"></div>
+        </div>
+
+        <div class="test-section">
+            <h2>Test 2: Get Todos <span id="get-status"></span></h2>
+            <p>Tests if you can retrieve todos from the server.</p>
+            <button class="btn-primary" onclick="testGetTodos()">Get Todos</button>
+            <div id="get-result"></div>
+        </div>
+
+        <div class="test-section">
+            <h2>Test 3: Save Todo <span id="post-status"></span></h2>
+            <p>Tests if you can save a todo to the server.</p>
+            <button class="btn-success" onclick="testPostTodos()">Save Test Todo</button>
+            <div id="post-result"></div>
+        </div>
+
+        <div class="test-section">
+            <h2>Test 4: Complete Flow <span id="flow-status"></span></h2>
+            <p>Tests adding a new todo, saving, and retrieving it.</p>
+            <button class="btn-success" onclick="testCompleteFlow()">Run Complete Test</button>
+            <div id="flow-result"></div>
+        </div>
+
+        <div class="test-section">
+            <h2>All Tests</h2>
+            <button class="btn-danger" onclick="runAllTests()">🚀 Run All Tests</button>
+        </div>
+    </div>
+
+    <script>
+        const API_URL = 'http://localhost:3000';
+
+        function showResult(elementId, message, isSuccess = true, data = null) {
+            const element = document.getElementById(elementId);
+            element.className = `result ${isSuccess ? 'success' : 'error'}`;
+            
+            let html = `<strong>${isSuccess ? '✓' : '✗'} ${message}</strong>`;
+            
+            if (data) {
+                html += `<pre>${JSON.stringify(data, null, 2)}</pre>`;
+            }
+            
+            element.innerHTML = html;
+        }
+
+        function updateStatus(statusId, isSuccess) {
+            const element = document.getElementById(statusId);
+            element.className = `status ${isSuccess ? 'ok' : 'fail'}`;
+            element.textContent = isSuccess ? 'PASS' : 'FAIL';
+        }
+
+        async function testHealth() {
+            try {
+                console.log('Testing health endpoint...');
+                const response = await fetch(`${API_URL}/health`);
+                const data = await response.json();
+                
+                if (response.ok) {
+                    showResult('health-result', 'Server is running!', true, data);
+                    updateStatus('health-status', true);
+                    console.log('✓ Health check passed');
+                } else {
+                    throw new Error(`Status: ${response.status}`);
+                }
+            } catch (error) {
+                showResult('health-result', `Failed: ${error.message}`, false);
+                updateStatus('health-status', false);
+                console.error('✗ Health check failed:', error);
+            }
+        }
+
+        async function testGetTodos() {
+            try {
+                console.log('Testing GET /todos...');
+                const response = await fetch(`${API_URL}/todos`);
+                const data = await response.json();
+                
+                if (response.ok) {
+                    showResult('get-result', `Successfully loaded ${data.length} todos`, true, data);
+                    updateStatus('get-status', true);
+                    console.log('✓ GET todos passed');
+                } else {
+                    throw new Error(`Status: ${response.status}`);
+                }
+            } catch (error) {
+                showResult('get-result', `Failed: ${error.message}. Is server running?`, false);
+                updateStatus('get-status', false);
+                console.error('✗ GET todos failed:', error);
+            }
+        }
+
+        async function testPostTodos() {
+            try {
+                console.log('Testing POST /todos...');
+                
+                // First get existing todos
+                const getResponse = await fetch(`${API_URL}/todos`);
+                const existingTodos = await getResponse.json();
+                
+                // Add a test todo
+                const testTodo = {
+                    id: Date.now(),
+                    title: 'API Test Todo - ' + new Date().toLocaleTimeString(),
+                    description: 'Created by diagnostic tool',
+                    category: 'testing',
+                    priority: 'medium',
+                    status: 'pending',
+                    createdAt: new Date().toISOString(),
+                    dueDate: null,
+                    assignee: 'Test System'
+                };
+                
+                const updatedTodos = [...existingTodos, testTodo];
+                
+                const response = await fetch(`${API_URL}/todos`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(updatedTodos)
+                });
+                
+                const result = await response.json();
+                
+                if (response.ok) {
+                    showResult('post-result', `Successfully saved! Todo added: "${testTodo.title}"`, true, result);
+                    updateStatus('post-status', true);
+                    console.log('✓ POST todos passed');
+                } else {
+                    throw new Error(result.message || `Status: ${response.status}`);
+                }
+            } catch (error) {
+                showResult('post-result', `Failed: ${error.message}`, false);
+                updateStatus('post-status', false);
+                console.error('✗ POST todos failed:', error);
+            }
+        }
+
+        async function testCompleteFlow() {
+            try {
+                console.log('Testing complete flow...');
+                const steps = [];
+                
+                // Step 1: Health check
+                const healthResponse = await fetch(`${API_URL}/health`);
+                if (!healthResponse.ok) throw new Error('Health check failed');
+                steps.push('✓ Server is running');
+                
+                // Step 2: Get existing todos
+                const getResponse = await fetch(`${API_URL}/todos`);
+                const todos = await getResponse.json();
+                if (!getResponse.ok) throw new Error('Failed to get todos');
+                steps.push(`✓ Loaded ${todos.length} existing todos`);
+                
+                // Step 3: Add a new todo
+                const newTodo = {
+                    id: Date.now(),
+                    title: 'Complete Flow Test - ' + new Date().toLocaleTimeString(),
+                    description: 'End-to-end test',
+                    category: 'testing',
+                    priority: 'high',
+                    status: 'pending',
+                    createdAt: new Date().toISOString(),
+                    dueDate: null,
+                    assignee: 'Test Suite'
+                };
+                
+                todos.push(newTodo);
+                
+                // Step 4: Save todos
+                const saveResponse = await fetch(`${API_URL}/todos`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(todos)
+                });
+                
+                if (!saveResponse.ok) throw new Error('Failed to save todos');
+                steps.push('✓ Saved todos successfully');
+                
+                // Step 5: Verify by getting again
+                const verifyResponse = await fetch(`${API_URL}/todos`);
+                const verifiedTodos = await verifyResponse.json();
+                
+                const found = verifiedTodos.find(t => t.id === newTodo.id);
+                if (!found) throw new Error('New todo not found after save');
+                steps.push('✓ Verified new todo persisted');
+                
+                steps.push(`\n✅ All tests passed! Total todos: ${verifiedTodos.length}`);
+                
+                showResult('flow-result', 'Complete flow test passed!', true, { 
+                    steps,
+                    newTodo 
+                });
+                updateStatus('flow-status', true);
+                console.log('✓ Complete flow passed');
+                
+            } catch (error) {
+                showResult('flow-result', `Failed: ${error.message}`, false);
+                updateStatus('flow-status', false);
+                console.error('✗ Complete flow failed:', error);
+            }
+        }
+
+        async function runAllTests() {
+            console.log('Running all tests...');
+            await testHealth();
+            await new Promise(resolve => setTimeout(resolve, 500));
+            await testGetTodos();
+            await new Promise(resolve => setTimeout(resolve, 500));
+            await testPostTodos();
+            await new Promise(resolve => setTimeout(resolve, 500));
+            await testCompleteFlow();
+            console.log('All tests complete!');
+        }
+
+        // Auto-run health check on load
+        window.addEventListener('load', () => {
+            console.log('Page loaded, running initial health check...');
+            setTimeout(testHealth, 500);
+        });
+    </script>
+</body>
+</html>
+

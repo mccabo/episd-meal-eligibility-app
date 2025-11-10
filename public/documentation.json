@@ -1,0 +1,234 @@
+{
+    "Documentation": {
+        "title": "EPISD Free and Reduced Lunch Eligibility Application",    
+        "url": "https://localhost:8081/docs",    
+        "description": "This is a Vue.js-based web application designed for the El Paso Independent School District (EPISD) to manage and process free and reduced lunch eligibility applications. Here's what the application does:",            
+        "author": "Mario Camarena",
+        "version": "1.0.0",
+        "date": "2025-10-15",
+        "contact": "mvc757@gmail.com",
+        "license": "MIT",
+        "copyright": "2025 El Paso Independent School District",
+        "keywords": ["EPISD", "Free and Reduced Lunch", "Eligibility", "Application", "Vue.js", "Express.js", "SQL Server", "Firebase"],
+        "overview": ""
+,        "purpose": "This is a comprehensive school district management system specifically designed for handling the complex process of meal eligibility determination and communication with families.",
+        "keyFeatures": [
+            {
+                "section": "Application Management",
+                "description": "Application Management",
+                "features": [
+                    {                        
+                        "feature": "Import applications from a SQL Server database"
+                    },
+                    {                     
+                        "feature": "Search and filter applications by various criteria (ID, guardian name, student name, campus, status, batch number, language)"
+                    },
+                    {                                             
+                        "feature": "Track application status (sent, printed, approved/denied)"
+                    }
+                ]
+            },
+            {
+                "section": "Multi-language Support",
+                "description": "Supports multiple languages",
+                "features": [
+                    {                        
+                        "feature": "Supports both English and Spanish applications"
+                    },
+                    {                     
+                        "feature": "Generates eligibility letters in both languages"
+                    }
+                ]
+            },
+            {
+                "section": "PDF Generation",
+                "description": "Generates PDF letters for each application",
+                "features": [
+                    {                        
+                        "feature": "Creates personalized eligibility letters as PDFs"
+                    },
+                    {                     
+                        "feature": "Uses wkhtmltopdf for HTML-to-PDF conversion"
+                    },
+                    {                     
+                        "feature": "Organizes PDFs by batch numbers in separate folders"
+                    }
+                ]
+            },
+            {
+                "section": "Email Distribution",
+                "description": "Automatically sends emails to guardians with eligibility letters",
+                "features": [
+                    {                        
+                        "feature": "Sends eligibility letters via email to guardians to inform them of the status of their application"
+                    },
+                    {                     
+                        "feature": "Supports both English and Spanish email templates"
+                    },
+                    {                     
+                        "feature": "Uses Nodemailer for email functionality"
+                    }
+                ]
+            },
+            {
+                "section": "Configuration Management",
+                "description": "Allows for the configuration of the applications settings",
+                "features": [
+                    {                        
+                        "feature": "Web-based configuration utility for system settings"
+                    },
+                    {                     
+                        "feature": "Database connection settings"
+                    },
+                    {                     
+                        "feature": "Email server configuration"
+                    },
+                    {                     
+                        "feature": "File path management"
+                    }
+                ]
+            },
+            {
+                "section": "Batch Processing",
+                "description": "Processes applications in batches",
+                "features": [
+                    {                        
+                        "feature": "Web-based configuration utility for system settings"
+                    },
+                    {                     
+                        "feature": "Database connection settings"
+                    },
+                    {                     
+                        "feature": "Email server configuration"
+                    },
+                    {                     
+                        "feature": "File path management"
+                    }
+                ]
+            },
+            {
+                "section": "Batch Processing",
+                "description": "Processes applications in batches",
+                "features": [
+                    {                        
+                        "feature": "Web-based configuration utility for system settings"
+                    },
+                    {                     
+                        "feature": "Database connection settings"
+                    },
+                    {                     
+                        "feature": "Email server configuration"
+                    },
+                    {                     
+                        "feature": "File path management"
+                    }
+                ]
+            }
+        ],
+        "technicalFeatures": [
+            {
+                "section": "Frontend",
+                "description": "Frontend Technical Details",
+                "features": [
+                    {                        
+                        "feature": "Vue.js 3 with Vue Router"
+                    },
+                    {                     
+                        "feature": "PrimeVue UI components"
+                    },
+                    {                                             
+                        "feature": "Bootstrap 5 for styling"
+                    },
+                    {                                             
+                        "feature": "jQuery for DOM manipulation"
+                    }
+                ]
+            },
+            {
+                "section": "Backend",
+                "description": "Backend Technical Details",
+                "features": [
+                    {                        
+                        "feature": "Node.js with Express.js"
+                    },
+                    {                     
+                        "feature": "SQL Server database integration"
+                    },
+                    {                                             
+                        "feature": "Firebase for hosting and authentication"
+                    },
+                    {                                             
+                        "feature": "Various PDF generation libraries (wkhtmltopdf, html2pdf.js, jsPDF)"
+                    }
+                ]
+            },
+            {
+                "section": "Key Dependencies:",
+                "description": "Dependencies on various data sources and libraries",
+                "features": [
+                    {                        
+                        "feature": "Database: mssql, msnodesqlv8"
+                    },
+                    {                     
+                        "feature": "PDF: wkhtmltopdf, html2pdf.js, pdfkit"
+                    },
+                    {                                             
+                        "feature": "Email: nodemailer"
+                    },
+                    {                                             
+                        "feature": "UI: primevue, bootstrap, vuetify"
+                    }
+                ]
+            }
+        ],
+        "workflow": [
+            {
+                "section": "Workflow",
+                "description": "Workflow of the application",
+                "features": [
+                    {                        
+                        "feature": "Import: Applications are imported from the school district's database"
+                    },
+                    {                     
+                        "feature": "Review: Staff can search, filter, and review applications"
+                    },
+                    {                                             
+                        "feature": "Process: Applications are processed and eligibility determined"
+                    },
+                    {                                             
+                        "feature": "Generate: PDF letters are generated with personalized information"
+                    },
+                    {                                             
+                        "feature": "Distribute: Letters are emailed to guardians or printed for mailing"
+                    },
+                    {                                             
+                        "feature": "Track: System tracks which applications have been sent/printed"
+                    }
+                ]
+            }
+        ],
+        "fileStructure": [
+            {
+                "section": "Workflow",
+                "description": "Workflow of the application",
+                "features": [
+                    {                        
+                        "feature": "src/views/HomeView.vue - Main application interface"
+                    },
+                    {                     
+                        "feature": "server-EPISD.js - Backend API server"
+                    },
+                    {                                             
+                        "feature": "public/ - Static assets and configuration files"
+                    },
+                    {                                             
+                        "feature": "Letters/ - Generated PDF letters organized by batch"
+                    },
+                    {                                             
+                        "feature": "firebase.json - Firebase hosting configuration"
+                    }
+                ]
+            }
+        ]
+    }
+}

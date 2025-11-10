@@ -1,0 +1,83 @@
+/* custom font */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap');
+iframe#webpack-dev-server-client-overlay{display:none!important}
+/* variables */
+:root {
+  --primary: #4f515a;
+  --secondary: #ebebeb;
+  --warning: #da0f41;
+}
+
+/* base styles  */
+
+label {
+  margin-top: 0px;
+  color:purple;
+  font-size: 20px;
+  border: solid black 0px;
+}
+
+body {
+  background: #ffffff;
+  margin: 0px;
+}
+a {
+  text-decoration: none;
+}
+
+/* buttons */
+
+
+
+/* forms */
+form {
+  max-width: 400px;
+  margin-top: 5px;
+  padding: 15px;
+  border-radius: 8px;
+  border: 2px solid  var(--secondary);
+  background: rgb(255, 254, 254);
+}
+
+input, textarea {
+  border: 0;
+  border-bottom: 1px solid var(--secondary);
+  padding: 10px;
+  outline: none;
+  display: flex;  
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0px auto;
+}
+
+/* error text */
+.error {
+  color: var(--warning);
+  font-size: 20px;
+  margin: 16px 0;
+}
+
+td {
+  margin-left: 0px;
+}
+
+* {margin: 0; padding: 0;}
+body { background-color: #000; }
+.block {
+  overflow: hidden;
+  width: 800px;
+  margin: 50px auto;
+  background: #fff;
+}
+.animation {
+  width: auto;
+  height: 100px;
+  font-size: 0px;
+}
+.animation div {
+  display: inline-block;
+  width: auto;
+  float: none;
+  padding: 0 10px;
+}
+

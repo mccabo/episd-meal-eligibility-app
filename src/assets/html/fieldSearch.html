@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- <script src="/transportation/js/dc.js"></script> -->
+
+    <meta name="description" content="Bootstrap 3 optimized responsive color selector with HSV, HSL, RGB and CIE-Lch (which supports human perceived lightness) selectors and color swatches.">
+    <meta name="author" content="István Ujj-Mészáros">
+
+    <meta itemprop="name" content="Bootstrap Color Picker Sliders">
+    <meta itemprop="description" content="Bootstrap 3 optimized responsive color selector with HSV, HSL, RGB and CIE-Lch (which supports human perceived lightness) selectors and color swatches.">
+    <meta itemprop="image" content="http://www.virtuosoft.eu/resources/bootstrap-colorpickersliders.png">
+
+    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+    <!-- <link href="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css" rel="stylesheet" type="text/css" media="all"> -->
+    <!-- <link href="demo.css" rel="stylesheet" type="text/css" media="all"> -->
+    <!-- <link href="src/bootstrap.colorpickersliders.css" rel="stylesheet" type="text/css" media="all"> -->
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.min.js"></script> -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/tinycolor/0.11.1/tinycolor.min.js"></script>
+    <!-- <script src="src/bootstrap.colorpickersliders.js"></script> -->
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+</style>
+</head>
+<body>
+<div id="images"></div>
+<h2 class="w3-center">Jukebox</h2>
+
+<!-- <input type="text" id="myInput" onblur="searchClass(this.value)" placeholder="Search for names.." title="Type in a name"> -->
+
+  <!-- <div id="divNav" align="left" class="w3-bar w3-left" style="margin-left:5px;margin-bottom:
+  0px;margin-top:5px">
+    <button id="btnName" class="fields w3-bar-item w3-btn w3-border w3-left" style="height:40px;font-size:11px;width:115px;margin-right:5px;margin-bottom:2px;display:block" onclick="getClass('name')">Name</button>
+    <button id="btnAddress" class="fields w3-bar-item w3-btn w3-border w3-left" style="height:40px;font-size:11px;width:115px;margin-right:5px;margin-bottom:2px;display:block" onclick="getClass('address')">Address</button>
+    <button id="btnSSN" class="fields w3-bar-item w3-btn w3-border w3-left" style="height:40px;font-size:11px;width:115px;margin-right:5px;margin-bottom:2px;display:block"  onclick="getClass('ssn')">SSN</button>
+    <button id="btnEmail" class="fields w3-bar-item w3-btn w3-border w3-left" style="height:40px;font-size:11px;width:115px;margin-right:5px;margin-bottom:2px;display:block" onclick="getClass('email')">Email</button>
+    <button id="btnPhone" class="fields w3-bar-item w3-btn w3-border w3-left" style="height:40px;font-size:11px;width:115px;margin-right:5px;margin-bottom:2px;display:block" onclick="getClass('phone')">Phone</button>
+  </div> -->
+
+<ul id="theClass">
+  <li  style="display:none"><button class="na ee de w3-btn">Name</button></li>
+  <li  style="display:none"><button class="da ee de w3-btn">Date</button></li>
+  <li  style="display:none"><button class="er w3-btn">Address</button></li>
+  <li  style="display:none"><button class="er w3-btn">Phone</button></li>
+  <li  style="display:none"><button class="da in w3-btn">Received Date</button></li>
+  <li  style="display:none"><button class="da ee in w3-btn">Start Date</button></li>
+  <li  style="display:none"><button class="da ee w3-btn">End Date</button></li>
+  <li  style="display:none"><button class="da in w3-btn">Due Date</button></li>
+  <li  style="display:none"><button class="ss w3-btn">SSN</button></li>
+  <li  style="display:none"><button class="ph w3-btn">Home Phone #</button></li>
+  <li  style="display:none"><button class="em w3-btn">Email</button></li>
+</ul>
+
+<div id="divLevels" class="w3-margin" style="display: flex;margin: auto;justify-content: center">
+    <!-- <input type="checkbox" class="w3-check"></input><button id="btnsec0000" onclick="addFields(0,this.id)" class="sec w3-border w3-btn w3-white" style="text-align:left;margin:5px;width:300px">Employee Information</button>
+    <div id='divfld0000' class="panel" style="display:none"></div>
+    <input type="checkbox" class="w3-check"><button id="btnsec1000" onclick="addFields(1,this.id)" class="sec w3-border w3-btn w3-white" style="text-align:left;margin:5px;width:300px">Employer Information</button>
+    <div id='divfld1000' class="panel" style="display:none"></div>
+    <input type="checkbox" class="w3-check"><button id="btnsec2000" onclick="addFields(2,this.id)" class="sec w3-border w3-btn w3-white" style="text-align:left;margin:5px;width:300px">Dependent Information</button>
+    <div id='divfld2000' class="panel" style="display:none"></div>
+    <input type="checkbox" class="w3-check"><button id="btnsec3000" onclick="addFields(3,this.id)" class="sec w3-border w3-btn w3-white" style="text-align:left;margin:5px;width:300px">Benefits</button>
+    <div id='divfld3000' class="panel" style="display:none"></div> -->
+</div>
+
+<script>
+  var curSec = 0;
+  var curFld = 0;
+  var curSub = 0;
+  var curLst = 0;
+
+  var curSection = "";
+  var curField = "";
+  var curSubfield = "";
+  var curList = "";
+
+  $(document).ready(function()
+  {
+    var fldButtons = document.getElementsByClassName("fields");
+    var secAcc = document.getElementsByClassName("sec");
+    var fldAcc = document.getElementsByClassName("fld");
+    var subAcc = document.getElementsByClassName("sub");
+
+    function isArray(what) {
+      //alert("is " + what + " an array?" );
+      //alert("is Array = " + Object.prototype.toString.call(what) === '[object Array]');
+      return Object.prototype.toString.call(what) === '[object Array]';
+    }
+
+    $.getJSON( "../assets/jbLinks.json", function( data ) {
+      //var genres = [];
+      console.log(JSON.stringify(data));
+
+      $.each( data.Languages, function( key, val ) {
+
+        //var isFieldarray = isArray(val);
+        //alert(JSON.stringify(val));
+        //if(isFieldarray)
+        //{
+          //create the Fields buttons
+          //for(var i=0;i<1;i++)
+          //{
+            //console.log("Type: " + val.Types);            
+            var languageClass = val.Language;
+            //$("#divLevels").append("<button class='w3-btn w3-margin w3-pink'>" + languageClass + "</button>");
+            console.log("Type: " + val.Language);
+            //getClass(languageClass);
+          //}
+        //}
+        //else
+        //{
+          //create a Sections buttons
+        //}
+      });
+    });
+
+    //alert("accordion length = " + acc.length);
+    for (var i = 0; i < secAcc.length; i++)
+     {
+      secAcc[i].addEventListener("click", function()
+      {
+        for (j = 0; j < fldButtons.length; j++)
+        {
+          fldButtons[j].disabled = false;
+        }
+
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block")
+        {
+            //alert("none");
+            panel.style.display = "none";
+        } else
+        {
+            //alert("block");
+            panel.style.display = "block";
+        }
+      });
+    }
+
+    //alert("accordion length = " + acc.length);
+    for (var i = 0; i < fldAcc.length; i++)
+    {
+      fldAcc[i].addEventListener("click", function()
+      {
+          for (j = 0; j < fldButtons.length; j++)
+          {
+            fldButtons[j].disabled = false;
+          }
+
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block")
+          {
+              //alert("none");
+              panel.style.display = "none";
+          } else {
+              //alert("block");
+              panel.style.display = "block";
+          }
+      });
+    }
+
+    //alert("accordion length = " + acc.length);
+    for (var i = 0; i < subAcc.length; i++)
+    {
+      subAcc[i].addEventListener("click", function() {
+
+          for (j = 0; j < fldButtons.length; j++)
+          {
+            fldButtons[j].disabled = false;
+          }
+
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block")
+          {
+              //alert("none");
+              panel.style.display = "none";
+          } else {
+              //alert("block");
+              panel.style.display = "block";
+          }
+      });
+    }
+  });
+
+  function isArray(what)
+  {
+      return Object.prototype.toString.call(what) === '[object Array]';
+  }
+
+  function getClass(searchClass)
+  {
+    alert("curSec = " + curSec);
+    var filter, ul, li, btn, i, j;
+
+    var curField = event.target;
+    curField.disabled = true;
+
+    ul = document.getElementById("theClass");
+    li = ul.getElementsByTagName("li");
+
+    filter = searchClass;
+    curSection = "Employee Information";
+
+    if(filter.indexOf('ssn') == 0)
+    {
+      curField = filter.toUpperCase() + ":";
+    }
+    else
+    {
+      curField = toTitleCase(filter) + ":";
+    }
+
+    $("#divfld" + curSec + "000").append("<input type='checkbox' class='w3-check' style='margin-left:30px'><button id='btnfld" + curSec + curFld + curSub + curLst + "' class='fld w3-border w3-btn w3-white w3-text-black' style='text-align:left;margin:5px;width:240px'>" + curField + "</button>");
+    $("#divfld" + curSec + "000").append("<div id='divsub" + curSec + curFld + curSub + curLst + "' class='panel' style='background-color:white;margin:1px;width:300px'></div>");
+
+    for (j = 0; j < li.length; j++)
+    {
+      btn = li[j].getElementsByTagName("button")[0];
+
+      if (btn.className.indexOf(filter) == 0) {
+        curSubfield = toTitleCase(btn.innerHTML) + ":";
+        $("#divsub" + curSec + curFld + curSub + curLst).append("<input type='checkbox' class='w3-check' style='margin-left:60px'><button id='btnSub" + curSec + curFld + curSub + curLst + "' class='sub w3-border w3-btn w3-white' style='text-align:left;margin:5px;width:210px'>" + curSubfield + "</button>");
+        $("#divsub" + curSec + curFld + curSub + curLst).append("<div id='divlst" + curSec + curFld + curSub + curLst + "' class='panel' style='background-color:white;margin:1px;width:300px'></div>");
+      }
+    }
+    curFld++;
+  }
+
+  function toTitleCase(str)
+  {
+    return str.replace(
+      /\w\S*/g,
+      function(txt)
+      {
+        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+      }
+    );
+  }
+
+  function searchClass(searchClass)
+  {
+    var filter, ul, li, btn, i, j, searchClassArray;
+
+    ul = document.getElementById("theClass");
+    li = ul.getElementsByTagName("li");
+
+    for (j = 0; j < li.length; j++)
+    {
+      li[j].style.display = "none";
+    }
+
+    searchClassArray = searchClass.split(',');
+
+    var curSection = 0;
+    $("#divLevels").append("<div><button id='sec" + curSection + i + "000'></button></div>");
+    for(var i=0;i<searchClassArray.length;i++)
+    {
+      filter = searchClassArray[i].toUpperCase();
+      $("#divsec' + i + '000").append("<div><button id='btn" + i + j + "00'></button></div>");
+      if(filter.length > 0)
+      {
+        //alert("'" + filter.trim() + "'");
+        for (j = 0; j < li.length; j++)
+        {
+          btn = li[j].getElementsByTagName("button")[0];
+          //alert(btn.value);
+          if (btn.className.toUpperCase().indexOf(filter) == 0) {
+            //li[j].style.display = "block";
+            $("#divsec' + i + '000").append("<div><button id='btn" + i + j + "00'></button></div>");
+          }
+          else
+          {
+            //li[j].style.display = "none";
+          }
+        }
+      }
+    }
+  }
+
+  function accordian()
+  {
+    for(var i=0;i<transData.Sections.length;i++)
+    {
+      this.className = this.style.display = "none";
+    }
+  }
+
+  function addFields(secIndex,id)
+  {
+    $(this).css('color', '#ff0000');
+    curSec = secIndex;
+    accordian();
+  }
+
+  function addSubfields(fldIndex)
+  {
+    //curField =
+    //curSec = secIndex;
+  }
+
+  function addLists(subIndex)
+  {
+    //curField =
+    //curSec = secIndex;
+  }
+
+</script>
+</body>
+</html>

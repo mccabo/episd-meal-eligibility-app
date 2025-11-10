@@ -1,0 +1,28 @@
+{
+    "sites": [
+      {
+        "SiteID": "100",
+        "Name": "Coronado High School"
+      },
+      {
+        "SiteID": "200",
+        "Name": "Belair High School"
+      },
+      {
+        "SiteID": "300",
+        "Name": "Washington Elementary School"
+      },
+      {
+        "SiteID": "400",
+        "Name": "Lincoln Middle School"
+      },
+      {
+        "SiteID": "500",
+        "Name": "Kennedy Middle School"
+      },
+      {
+        "SiteID": "600",
+        "Name": "Austin High School"
+      }
+    ]
+  }

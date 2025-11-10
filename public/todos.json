@@ -1,0 +1,156 @@
+[
+  {
+    "id": 1762290583836,
+    "title": "Something is broken",
+    "description": "",
+    "category": "bug",
+    "priority": "critical",
+    "status": "pending",
+    "createdAt": "2025-11-04T21:09:43.836Z",
+    "dueDate": null,
+    "assignee": ""
+  },
+  {
+    "id": 1761178245855,
+    "title": "add a dashjboard based on the applics.json file",
+    "description": "",
+    "category": "development",
+    "priority": "medium",
+    "status": "pending",
+    "createdAt": "2025-10-23T00:10:45.855Z",
+    "dueDate": null,
+    "assignee": ""
+  },
+  {
+    "id": 1760897260727,
+    "title": "Fix Todos not saving new items",
+    "description": "",
+    "category": "bug",
+    "priority": "high",
+    "status": "completed",
+    "createdAt": "2025-10-19T18:07:40.727Z",
+    "dueDate": null,
+    "assignee": ""
+  },
+  {
+    "id": 1760897151821,
+    "title": "test 1",
+    "description": "",
+    "category": "development",
+    "priority": "medium",
+    "status": "pending",
+    "createdAt": "2025-10-19T18:05:51.821Z",
+    "dueDate": null,
+    "assignee": ""
+  },
+  {
+    "id": 1,
+    "title": "Complete test suite documentation",
+    "description": "Add comprehensive documentation for all 146 tests",
+    "category": "documentation",
+    "priority": "high",
+    "status": "completed",
+    "createdAt": "2025-10-15T00:00:00.000Z",
+    "dueDate": null,
+    "assignee": "Development Team"
+  },
+  {
+    "id": 2,
+    "title": "Fix Vue component mounting issues",
+    "description": "Resolve VueCompilerDOM errors in test suite",
+    "category": "bug",
+    "priority": "critical",
+    "status": "completed",
+    "createdAt": "2025-10-16T00:00:00.000Z",
+    "dueDate": null,
+    "assignee": "QA Team"
+  },
+  {
+    "id": 3,
+    "title": "Add click event tests",
+    "description": "Create comprehensive tests for user click interactions",
+    "category": "testing",
+    "priority": "high",
+    "status": "completed",
+    "createdAt": "2025-10-17T00:00:00.000Z",
+    "dueDate": null,
+    "assignee": "QA Team"
+  },
+  {
+    "id": 4,
+    "title": "Create Test Results Vue component",
+    "description": "Build interactive dashboard for displaying test results",
+    "category": "feature",
+    "priority": "high",
+    "status": "completed",
+    "createdAt": "2025-10-18T00:00:00.000Z",
+    "dueDate": null,
+    "assignee": "Frontend Team"
+  },
+  {
+    "id": 5,
+    "title": "Add test button to navigation",
+    "description": "Implement Run Tests button in navbar with toast notifications",
+    "category": "feature",
+    "priority": "medium",
+    "status": "completed",
+    "createdAt": "2025-10-18T00:00:00.000Z",
+    "dueDate": null,
+    "assignee": "Frontend Team"
+  },
+  {
+    "id": 6,
+    "title": "Implement application filtering by status",
+    "description": "Add filters for approved, denied, and reduced-price applications",
+    "category": "feature",
+    "priority": "medium",
+    "status": "in-progress",
+    "createdAt": "2025-10-18T00:00:00.000Z",
+    "dueDate": "2025-10-25T00:00:00.000Z",
+    "assignee": "Backend Team"
+  },
+  {
+    "id": 7,
+    "title": "Optimize database queries",
+    "description": "Improve performance for large application datasets",
+    "category": "development",
+    "priority": "high",
+    "status": "pending",
+    "createdAt": "2025-10-18T00:00:00.000Z",
+    "dueDate": "2025-10-30T00:00:00.000Z",
+    "assignee": "Backend Team"
+  },
+  {
+    "id": 8,
+    "title": "Add email notification system",
+    "description": "Send email notifications when applications are processed",
+    "category": "feature",
+    "priority": "medium",
+    "status": "pending",
+    "createdAt": "2025-10-18T00:00:00.000Z",
+    "dueDate": "2025-11-05T00:00:00.000Z",
+    "assignee": "Backend Team"
+  },
+  {
+    "id": 9,
+    "title": "Deploy to production",
+    "description": "Set up production environment and deploy application",
+    "category": "deployment",
+    "priority": "critical",
+    "status": "pending",
+    "createdAt": "2025-10-18T00:00:00.000Z",
+    "dueDate": "2025-11-15T00:00:00.000Z",
+    "assignee": "DevOps Team"
+  },
+  {
+    "id": 10,
+    "title": "Create user guide",
+    "description": "Write comprehensive user documentation",
+    "category": "documentation",
+    "priority": "medium",
+    "status": "pending",
+    "createdAt": "2025-10-18T00:00:00.000Z",
+    "dueDate": "2025-11-01T00:00:00.000Z",
+    "assignee": "Documentation Team"
+  }
+]

@@ -1,0 +1,311 @@
+{
+    "panels": [
+        {
+            "panel": "ODBC",
+            "hidden": "",
+            "fields": [
+                {
+                    "id": "00",
+                    "type": "text",
+                    "class": "w3-input",
+                    "field": "server",
+                    "label": "Host Name",
+                    "value": "(localdb)\\mssqllocaldb"
+                },
+                {
+                    "id": "01",
+                    "field": "database",
+                    "type": "text",
+                    "class": "w3-input",
+                    "label": "Database",
+                    "value": "Winsnap"
+                },
+                {
+                    "id": "02",
+                    "field": "driver",
+                    "type": "text",
+                    "class": "w3-input",
+                    "label": "SQL Driver",
+                    "value": "mssql/msnodesqlv8"
+                },
+                {
+                    "id": "03",
+                    "field": "trustedConnection",
+                    "type": "checkbox",
+                    "class": "w3-check",
+                    "label": "Trusted Connection",
+                    "value": "false"
+                },
+                {
+                    "id": "04",
+                    "field": "user",
+                    "type": "password",
+                    "class": "w3-input",
+                    "label": "User Name",
+                    "value": "marioo"
+                },
+                {
+                    "id": "05",
+                    "field": "pwd",
+                    "type": "password",
+                    "class": "w3-input",
+                    "label": "Password",
+                    "value": "S3pt3mb3R@123"
+                },
+                {
+                    "id": "06",
+                    "field": "rememberMe",
+                    "type": "checkbox",
+                    "class": "w3-check",
+                    "label": "Remember Me",
+                    "value": "checked"
+                }
+            ]
+        },
+        {
+            "panel": "PRINT",
+            "hidden": "",
+            "fields": [
+                {
+                    "id": "10",
+                    "type": "text",
+                    "class": "w3-input",
+                    "field": "server",
+                    "label": "Print Server",
+                    "value": "local"
+                },
+                {
+                    "id": "11",
+                    "type": "text",
+                    "class": "w3-input",
+                    "field": "driver",
+                    "label": "Print To Format",
+                    "value": "pdf"
+                },
+                {
+                    "id": "12",
+                    "type": "checkbox",
+                    "class": "w3-check",
+                    "field": "rememberMe",
+                    "label": "Remember Me",
+                    "value": "checked"
+                }
+            ]
+        },
+        {
+            "panel": "EMAIL",
+            "hidden": "",
+            "fields": [
+                {
+                    "id": "20",
+                    "type": "text",
+                    "class": "w3-input",
+                    "field": "host",
+                    "label": "Host Server",
+                    "value": "smtp.mail.yahoo.com"
+                },
+                {
+                    "id": "21",
+                    "type": "text",
+                    "class": "w3-input",
+                    "field": "port",
+                    "label": "Port",
+                    "value": "465"
+                },
+                {
+                    "id": "22",
+                    "type": "text",
+                    "class": "w3-input",
+                    "field": "trustedConnection",
+                    "label": "Trusted Connection",
+                    "value": "true"
+                },
+                {
+                    "id": "23",
+                    "type": "password",
+                    "class": "w3-input",
+                    "field": "user",
+                    "label": "User",
+                    "value": "mvc57@att.net"
+                },
+                {
+                    "id": "24",
+                    "type": "password",
+                    "class": "w3-input",
+                    "field": "pwd",
+                    "label": "Password",
+                    "value": "nfezlcdlggjxrhme"
+                },
+                {
+                    "id": "25",
+                    "type": "text",
+                    "class": "w3-input",
+                    "field": "path",
+                    "label": "PDF Path",
+                    "value": "C:/EPISD/Eligibility/Letters"
+                },
+                {
+                    "id": "26",
+                    "type": "checkbox",
+                    "class": "w3-check",
+                    "field": "rememberMe",
+                    "label": "Remember Me",
+                    "value": "checked"
+                }
+            ]
+        },
+        {
+            "panel": "PHONE",
+            "hidden": "hidden",
+            "fields": [
+                {
+                    "id": "30",
+                    "type": "text",
+                    "class": "w3-input",
+                    "field": "server",
+                    "label": "Print Server",
+                    "value": "local"
+                },
+                {
+                    "id": "31",
+                    "type": "text",
+                    "class": "w3-input",
+                    "field": "driver",
+                    "label": "Print to",
+                    "value": "pdf"
+                },
+                {
+                    "id": "32",
+                    "type": "checkbox",
+                    "class": "w3-check",
+                    "field": "rememberMe",
+                    "label": "Remember Me",
+                    "value": "checked"
+                }
+            ]
+        },
+        {
+            "panel": "CHAT",
+            "hidden": "hidden",
+            "fields": [
+                {
+                    "id": "40",
+                    "type": "text",
+                    "class": "w3-input",
+                    "field": "server",
+                    "label": "Print Server",
+                    "value": "local"
+                },
+                {
+                    "id": "41",
+                    "type": "text",
+                    "class": "w3-input",
+                    "field": "driver",
+                    "label": "Print to",
+                    "value": "pdf"
+                },
+                {
+                    "id": "42",
+                    "type": "checkbox",
+                    "class": "w3-check",
+                    "field": "rememberMe",
+                    "label": "Remember Me",
+                    "value": "checked"
+                }
+            ]
+        },
+        {
+            "panel": "TELEPHONY",
+            "hidden": "hidden",
+            "fields": [
+                {
+                    "id": "50",
+                    "type": "text",
+                    "class": "w3-input",
+                    "field": "server",
+                    "label": "Print Server",
+                    "value": "local"
+                },
+                {
+                    "id": "51",
+                    "type": "text",
+                    "class": "w3-input",
+                    "field": "driver",
+                    "label": "Print To Format",
+                    "value": "pdf"
+                },
+                {
+                    "id": "52",
+                    "type": "checkbox",
+                    "class": "w3-check",
+                    "field": "rememberMe",
+                    "label": "Remember Me",
+                    "value": "checked"
+                }
+            ]
+        },
+        {
+            "panel": "APPLICATION INFORMATION 8081",
+            "hidden": "",
+            "fields": [
+                {
+                    "id": "60",
+                    "type": "text",
+                    "class": "w3-input",
+                    "field": "apps",
+                    "label": "Applications File Path",
+                    "value": "D:/Projects/EPISD/deploy template/public/applications.json"
+                },
+                {
+                    "id": "61",
+                    "type": "text",
+                    "class": "w3-input",
+                    "field": "applicationsTableName",
+                    "label": "Applications Table Name",
+                    "value": "Applications"
+                },
+                {
+                    "id": "62",
+                    "type": "text",
+                    "class": "w3-input",
+                    "field": "studentsTableName",
+                    "label": "Students Table Name",
+                    "value": "Customers"
+                },
+                {
+                    "id": "63",
+                    "type": "text",
+                    "class": "w3-input",
+                    "field": "sitesTableName",
+                    "label": "Schools Table Name",
+                    "value": "Sites"
+                },
+                {
+                    "id": "64",
+                    "type": "text",
+                    "class": "w3-input",
+                    "field": "emailFilePath",
+                    "label": "Email File Path",
+                    "value": "C:/EPISD/email.csv"
+                },
+                {
+                    "id": "65",
+                    "type": "text",
+                    "class": "w3-input",
+                    "field": "fetchAppsURL",
+                    "label": "Applications Endpoint",
+                    "value": "http://localhost:8081/applications.json"
+                },
+                {
+                    "id": "66",
+                    "field": "rememberMe",
+                    "type": "checkbox",
+                    "class": "w3-check",
+                    "label": "Remember Me",
+                    "value": "checked"
+                }
+            ]
+        }
+    ],
+    "appsPath": "C:/inetpub/wwwroot/applications.json"
+}
