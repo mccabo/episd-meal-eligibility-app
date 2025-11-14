@@ -731,7 +731,8 @@ customers: {{ customers }}<br><br>
         <input id="inpPrint" type="submit" value="Print Selected Letters" class="w3-btn w3-margin w-20rem" style="font-size: 24px;background-color: #0a58ca;color: white;border: solid black 1px" />              
         <input id="inpShow" type="submit" value="Show Selected Letters" class="w3-btn w3-margin w-20rem" style="font-size: 24px;background-color: #0a58ca;color: white;border: solid black 1px" />              
         <input id="inpSend" type="submit" value="Send Selected Letters" class="w3-btn w3-margin w-20rem" style="font-size: 24px;background-color: #0a58ca;color: white;border: solid black 1px" />        
-        <input id="inpUpdate" type="submit" value="Save Edited Row" class="w3-btn w3-margin w-20rem" style="font-size: 24px;background-color: #0a58ca;color: white;border: solid black 1px" />        
+        <input id="inpUpdate" type="submit" value="Save Edited Row" class="w3-btn w3-margin w-20rem" style="font-size: 24px;background-color: #0a58ca;color: white;border: solid black 1px" />
+        <input v-if="user.displayName=='System Administrator'" id="inpDelete" @click="deleteSelected()" type="button" value="Delete Selected" class="w3-btn w3-margin w-20rem" style="font-size: 24px;background-color: #dc3545;color: white;border: solid black 1px" />        
       </div>            
     </div>  
 
@@ -1577,6 +1578,72 @@ customers: {{ customers }}<br><br>
         var selectedIndexes = document.getElementById("txtSelected").value;
         const elements = document.getElementsByClassName('select');
         ap.printSelected(document.getElementById("txtSelected").value,Applications,English,Spanish)}
+      
+      //Delete selected applications from applications.json
+      const deleteSelected = async () => {
+        var selectedData = document.getElementById("txtSelected").value;
+        
+        if (!selectedData || selectedData.trim() === '') {
+          alert('No applications selected for deletion');
+          return;
+        }
+        
+        // Parse the selected data to extract application IDs
+        // Format: "appid|batchnum|email|,appid|batchnum|email|,..."
+        const selectedApps = selectedData.split(',');
+        const selectedIds = selectedApps.map(app => {
+          const parts = app.split('|');
+          return parts[0]; // Get the application ID
+        }).filter(id => id && id.trim() !== '');
+        
+        if (selectedIds.length === 0) {
+          alert('No valid application IDs found');
+          return;
+        }
+        
+        // Confirm deletion
+        const confirmDelete = confirm(
+          `Are you sure you want to delete ${selectedIds.length} selected application(s)?\n\n` +
+          `Application IDs: ${selectedIds.join(', ')}\n\n` +
+          `This action cannot be undone!`
+        );
+        
+        if (!confirmDelete) {
+          return;
+        }
+        
+        try {
+          const response = await fetch(`${apiBaseUrl.value}/deleteApplications`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ selectedIds: selectedIds })
+          });
+          
+          const result = await response.json();
+          
+          if (result.success) {
+            alert(`Success! ${result.message}\n\nDeleted: ${result.deletedCount}\nRemaining: ${result.remainingCount}`);
+            
+            // Clear the selected items
+            document.getElementById("txtSelected").value = '';
+            selected.value = [];
+            
+            // Reload the applications data
+            const appsResponse = await fetch(apiBaseUrl.value + '/applications.json');
+            if (appsResponse.ok) {
+              jsonData.value = await appsResponse.json();
+              appCount.value = jsonData.value.Applications?.length || 0;
+            }
+          } else {
+            alert(`Error: ${result.message}`);
+          }
+        } catch (error) {
+          console.error('Error deleting applications:', error);
+          alert('Failed to delete applications. Please try again.');
+        }
+      }
         
       //Select the logo for Header
       const setLogoURL = () => {
@@ -1766,7 +1833,7 @@ customers: {{ customers }}<br><br>
         }]);
       return { printLetter,onLeave,submitEmail,submitEmails,setOver,setActive,toggleAppInfo,toggleStudentInfo,onActive,searchApps,selectedStatus,status,selectedReason,reasons,
         selectedPrint,searchtype,filteredtype,selectedId,selectedGuardian,printType,activeSet,selectedStudent,selectedCampus,selectedId,selectedSent,overIndex,activeIndex,
-        english,spanish,sent,ids,guardians,searchFilters,students,campus,setLogoURL,selDoc,selectDate,docEvent,setDocumentation,setDocFlag,printSelected,test,user,
+        english,spanish,sent,ids,guardians,searchFilters,students,campus,setLogoURL,selDoc,selectDate,docEvent,setDocumentation,setDocFlag,printSelected,deleteSelected,test,user,
         toggleEditLetter,toggleSearch,toggleUtilities,utilities,appId,email,appArray,printData,sendData,addSite,handleSubmit,
         tester,readonly,handleClick,handleBlur,handleKeyUp,appCount,customers,sites,documentation,activeTab,tabs
         }}}

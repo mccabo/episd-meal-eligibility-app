@@ -3118,6 +3118,64 @@ app.post('/updatePrinted', (req, res) => {
   //return htmlString;
 });
 
+// Delete selected applications
+app.post('/deleteApplications', express.json(), (req, res) => {
+  console.log('In deleteApplications server function');
+  
+  try {
+    const { selectedIds } = req.body;
+    
+    if (!selectedIds || !Array.isArray(selectedIds) || selectedIds.length === 0) {
+      return res.status(400).json({ 
+        success: false, 
+        message: 'No application IDs provided' 
+      });
+    }
+    
+    console.log('Deleting application IDs:', selectedIds);
+    
+    // Get the current count before deletion
+    const beforeCount = apps.Applications.length;
+    
+    // Filter out applications with IDs in the selectedIds array
+    apps.Applications = apps.Applications.filter(app => {
+      return !selectedIds.includes(app.Id);
+    });
+    
+    const afterCount = apps.Applications.length;
+    const deletedCount = beforeCount - afterCount;
+    
+    console.log(`Deleted ${deletedCount} applications`);
+    console.log(`Remaining applications: ${afterCount}`);
+    
+    // Save the updated applications.json file
+    fs.writeFile(appsPath, JSON.stringify(apps, null, 4), function (err) {
+      if (err) {
+        console.error('Error writing applications.json:', err);
+        return res.status(500).json({ 
+          success: false, 
+          message: 'Failed to save applications file' 
+        });
+      }
+      
+      console.log('Applications file updated successfully');
+      res.json({ 
+        success: true, 
+        message: `Successfully deleted ${deletedCount} application(s)`,
+        deletedCount: deletedCount,
+        remainingCount: afterCount
+      });
+    });
+    
+  } catch (error) {
+    console.error('Error in deleteApplications:', error);
+    res.status(500).json({ 
+      success: false, 
+      message: 'Server error while deleting applications' 
+    });
+  }
+});
+
 app.post('/showLetters', (req, res) => {
   console.log('In showLetters server function');
   //console.log(req.body);
