@@ -1063,22 +1063,30 @@ customers: {{ customers }}<br><br>
           //alert("this.appCount : "+this.appCount )
           
         } catch (error) {
-          this.error = 'Failed to fetch JSON data: ' + error.message;
+          this.error = 'Failed to fetch config.json: ' + error.message;
           console.error(error);
         }
 
+        // Fetch applications.json from backend
         try {
-          const response = await fetch(endpoint); // Replace with your URL
-          
-          if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+          let appsResponse = ''
+          if(deployMethod == "dev") {
+            appsResponse = await fetch('http://localhost:8081/applications.json'); // Dev environment
+          } else if(deployMethod == "prod") {
+            appsResponse = await fetch('http://localhost:3600/applications.json'); // Production environment
+          } else if(deployMethod == "firebase") {
+            appsResponse = await fetch(this.apiBaseUrl + '/applications.json'); // Render backend
           }
-          this.jsonData = await response.json()
-          //alert("Len: "+ this.jsonData.Applications.length )
-          this.appCount = this.jsonData.Applications.length
+          
+          if (!appsResponse.ok) {
+            throw new Error(`HTTP error! status: ${appsResponse.status}`);
+          }
+          this.jsonData = await appsResponse.json()
+          console.log("Applications loaded:", this.jsonData.Applications?.length || 0);
+          this.appCount = this.jsonData.Applications?.length || 0
           
         } catch (error) {
-          this.error = 'Failed to fetch JSON data: ' + error.message;
+          this.error = 'Failed to fetch applications.json: ' + error.message;
           console.error(error);
         }
       },
