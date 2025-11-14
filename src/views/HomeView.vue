@@ -748,6 +748,7 @@ customers: {{ customers }}<br><br>
   const axios = require('axios');
   import html2pdf from "html2pdf.js";
   import { ref, onMounted, ReactiveEffect, reactive } from 'vue';
+  import API_BASE_URL from '@/config/api';
   import { useToast } from "primevue/usetoast";
   //import { Applications } from 'C:/inetpub/wwwroot/applications.json'  
   import { Test } from 'C:/EPISD/test/applications.json'  
@@ -1616,7 +1617,7 @@ customers: {{ customers }}<br><br>
         }
         
         try {
-          const response = await fetch(`${this.apiBaseUrl}/deleteApplications`, {
+          const response = await fetch(`${API_BASE_URL}/deleteApplications`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -1641,7 +1642,7 @@ customers: {{ customers }}<br><br>
             selected.value = [];
             
             // Reload the applications data
-            const appsResponse = await fetch(this.apiBaseUrl + '/applications.json');
+            const appsResponse = await fetch(API_BASE_URL + '/applications.json');
             if (appsResponse.ok) {
               jsonData.value = await appsResponse.json();
               appCount.value = jsonData.value.Applications?.length || 0;
