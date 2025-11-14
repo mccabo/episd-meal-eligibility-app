@@ -2477,3 +2477,119 @@
 [info] 
 [info] Project Console: https://console.firebase.google.com/project/freeandreduced-ac6d8/overview
 [info] Hosting URL: https://freeandreduced-ac6d8.web.app
+[debug] [2025-11-14T22:41:55.481Z] ----------------------------------------------------------------------
+[debug] [2025-11-14T22:41:55.485Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\mvc57\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2025-11-14T22:41:55.486Z] CLI Version:   14.23.0
+[debug] [2025-11-14T22:41:55.486Z] Platform:      win32
+[debug] [2025-11-14T22:41:55.486Z] Node Version:  v20.10.0
+[debug] [2025-11-14T22:41:55.486Z] Time:          Fri Nov 14 2025 14:41:55 GMT-0800 (Pacific Standard Time)
+[debug] [2025-11-14T22:41:55.486Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-11-14T22:41:55.709Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-11-14T22:41:55.711Z] > authorizing via signed-in user (mvc757@gmail.com)
+[debug] [2025-11-14T22:41:55.711Z] [iam] checking project freeandreduced-ac6d8 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-11-14T22:41:55.712Z] Checked if tokens are valid: false, expires at: 1763160946544
+[debug] [2025-11-14T22:41:55.712Z] Checked if tokens are valid: false, expires at: 1763160946544
+[debug] [2025-11-14T22:41:55.713Z] > refreshing access token with scopes: []
+[debug] [2025-11-14T22:41:55.715Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-11-14T22:41:55.715Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-14T22:41:55.969Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-11-14T22:41:55.970Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-14T22:41:56.001Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/freeandreduced-ac6d8:testIamPermissions [none]
+[debug] [2025-11-14T22:41:56.002Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/freeandreduced-ac6d8:testIamPermissions x-goog-quota-user=projects/freeandreduced-ac6d8
+[debug] [2025-11-14T22:41:56.002Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/freeandreduced-ac6d8:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-11-14T22:41:56.340Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/freeandreduced-ac6d8:testIamPermissions 200
+[debug] [2025-11-14T22:41:56.341Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/freeandreduced-ac6d8:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-11-14T22:41:56.342Z] Checked if tokens are valid: true, expires at: 1763163714970
+[debug] [2025-11-14T22:41:56.342Z] Checked if tokens are valid: true, expires at: 1763163714970
+[debug] [2025-11-14T22:41:56.343Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/freeandreduced-ac6d8 [none]
+[debug] [2025-11-14T22:41:56.576Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/freeandreduced-ac6d8 200
+[debug] [2025-11-14T22:41:56.577Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/freeandreduced-ac6d8 {"projectId":"freeandreduced-ac6d8","projectNumber":"531547556984","displayName":"FreeAndReduced","name":"projects/freeandreduced-ac6d8","resources":{"hostingSite":"freeandreduced-ac6d8"},"state":"ACTIVE","etag":"1_a186fb81-cda8-4650-9c31-fa8f695e2842"}
+[info] 
+[info] === Deploying to 'freeandreduced-ac6d8'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2025-11-14T22:41:56.583Z] Checked if tokens are valid: true, expires at: 1763163714970
+[debug] [2025-11-14T22:41:56.583Z] Checked if tokens are valid: true, expires at: 1763163714970
+[debug] [2025-11-14T22:41:56.583Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/freeandreduced-ac6d8/versions [none]
+[debug] [2025-11-14T22:41:56.583Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/freeandreduced-ac6d8/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2025-11-14T22:41:57.231Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/freeandreduced-ac6d8/versions 200
+[debug] [2025-11-14T22:41:57.231Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/freeandreduced-ac6d8/versions {"name":"projects/531547556984/sites/freeandreduced-ac6d8/versions/72a0486c7ce2b60c","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[freeandreduced-ac6d8]: beginning deploy... 
+[info] i  hosting[freeandreduced-ac6d8]: found 41 files in dist 
+[debug] [2025-11-14T22:41:57.250Z] [hosting] uploading with 200 concurrency
+[debug] [2025-11-14T22:41:57.874Z] Checked if tokens are valid: true, expires at: 1763163714970
+[debug] [2025-11-14T22:41:57.875Z] Checked if tokens are valid: true, expires at: 1763163714970
+[debug] [2025-11-14T22:41:57.875Z] [hosting] hash cache [ZGlzdA] stored for 41 files
+[debug] [2025-11-14T22:41:57.876Z] [hosting][hash queue][FINAL] {"max":614,"min":18,"avg":38.58536585365853,"active":0,"complete":41,"success":41,"errored":0,"retried":0,"total":41,"elapsed":625}
+[debug] [2025-11-14T22:41:57.876Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/531547556984/sites/freeandreduced-ac6d8/versions/72a0486c7ce2b60c:populateFiles [none]
+[debug] [2025-11-14T22:41:57.876Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/531547556984/sites/freeandreduced-ac6d8/versions/72a0486c7ce2b60c:populateFiles {"files":{"/users.json":"5b663402e5ff5f19e9048a623c304886d8f62409f05101b70f028acc26b2acb8","/todos.json":"95c5b7d5710db09d252c86b64223c5f216b19c941362df1d991d92bb756e5a12","/sites.json":"def5bed9d40b00a7aa1e2765dffde61d85ff2638ebb8a060063af5f5b6b0aa74","/letters.json":"63e10dd9ee6ec81549760e8f890a0641e0c77d6d615e8aa96b9c987d69edd1b5","/index.html":"3c45639b36004cd53be5ff31dd9f3bb92e3ae49b388a99f41980d984b56267c1","/index AI.html":"14e655baba6517c00f7c9377530f074b0e7e01e990d1658c038d1b14ebc9e80d","/index copy.html":"f84b11e84971215d318861cd9f020a6862bf79b2f18d51b6b5101762538a5ef1","/favicon.ico":"f9f4b219627eeeeee783cebdfca888c572ed678ac45d6a97fa64d74ec6d89408","/searches copy.json":"294d6292cba9745dbe7b081294838c8f18e8f2ef35b5d7235d7ca867cb29f7be","/episdlogo.jpg":"f9f4b219627eeeeee783cebdfca888c572ed678ac45d6a97fa64d74ec6d89408","/emails.csv":"21ef2fd2d15a2c7aa2d1a42c0ede812e39c69ec29ec68173fef9f7c1da2e7008","/searches.json":"ed59189a6b9b7930e0fa3b629918eede31cf5c211e164eb48a05a47e2b7f4621","/apps.json":"d96e3e6abc4ff342f506dbecc7e99efff07d9e88efcdd987a725ae45c61f0886","/documentation.json":"160a9a8bd82b134cfbfa3027a80fa3163e50fafb21ee7b191b8e6e09b5b0f0d3","/config.json":"cd8bbda42540198d5ddf2e81f8bb669f5894a9d489113e514d0ab82507fb2c84","/debug.log":"5c8dea7482b24a3478c2f6edb389808279fb688c7a5d9e79ea7c607a4064d396","/customers.json":"0733bac3b14858e6117596ba027070dc00536c7e08dd25817b327b6b44271b1c","/applications.json":"2f0435c8c6d0407ac92f0befd4ca31228346559789f0569327b73bd6ab6c5081","/test/applications.json":"b910713c231c5d34449e1710da6a34f7905b6036ddbe0a7c79793ee5bfd49853","/documentation/USER_MANUAL.md":"c219a5dddb88dee64b5d678502ba2318af6687c8c09e710487a85dd47bde4826","/documentation/USERS_JSON_REGISTRATION.md":"753c71694ac8d0339848adb60c406a63c190d1d0c2b6c39253861e8f5342b7dd","/documentation/QUICK_START_SERVER_REGISTRATION.md":"7e6dc44db6d02ff0beca405b614d11f3f9a3af2a936016d30b117045b4757eca","/documentation/QUICK_FIX_FETCH_ERROR.md":"b671eade06c468ed2907432a3208d5a43031fc28e633b0e1c6d57a7be69f49a7","/documentation/SIGNUP_IMPLEMENTATION.md":"066e0d0eb5ec7beb4494e61d3064d6641b8dd9214a92fd304b10d5fbd45e3991","/documentation/TROUBLESHOOTING_SERVER_REGISTRATION.md":"fffd2a11a91d7fdf6f8d59a7f7c6c19e581eff47dc21531c7e3e21f5b557d4e5","/documentation/LOCAL_AUTH_QUICKSTART.md":"3c5652bea8e46df6efdc0c58d15e2eafe0e38317e5f2425dacb46302e4fe4652","/documentation/IMAGE_RECOGNITION_SETUP_COMPLETE.md":"e54ff561f7f210547de1ee134df4066bd98caef20c45aef7a9c211d629abe16b","/documentation/docs.txt":"f930b32208fb5673880f1c7a77633a4a11dffe06deca32a38e1f9b8ed8aac07d","/documentation/AUTH_MIGRATION_FIX.md":"7784ad1559b2060cdc8d0e5e45cf41757c5d6056b40aa7851361dd26d3901e9c","/documentation/IMPLEMENTATION_SUMMARY.md":"859f4ad5978ce5af9d50c52e2a492fe79f22d8cde258d62c2a5042e212e08784","/fonts/primeicons.ba3f916d.woff2":"791ee8aac4aeca332199ef7cbd17cbb955d9b02d2aa7826e98d998769f27d650","/css/app.75d319ed.css":"d0628104e24715f6db199ecabab734e0ee78ea4787dc89d33ae7c1d812f58991","/fonts/primeicons.ffecb254.eot":"82d7509fadba65574e2a15834ab77b1a099946a2f4d0c62156f28dac59e1e1de","/fonts/primeicons.f8b9e8a4.woff":"77d8db6a74771174c0205b56de03c2d0d60f6735c31b95daafa7e9db6debe269","/fonts/primeicons.0112589c.ttf":"d89fe95f16b4197d18cefd326affcb368a1661ce37c32871d4e452f76694bbfb","/img/primeicons.943ab24c.svg":"69b662a9ed6adff626cb5b5b802c53c9e1fe86e2f72059f1647e623b272d6e46","/js/app.18ddf62b.js":"2c61692bc905e3c68a8a91b3ea3a02e8fff298735701a1381f57e3e7f1cdd134","/css/vendors.93af5501.css":"7cb9180521982ccf89da5628d12e5580818b66e42a6d5aafaf6ab03faccfc0bc","/js/app.18ddf62b.js.map":"0a32385205bd6f6d8460a3ec39b311328e990f56f03a8e15932bbd5e0ab2f109","/js/vendors.8dd55327.js":"e4e3c608e972ac6a6c9a3b153935a43438c6c69c71289dfdb11eaa898ce9da53","/js/vendors.8dd55327.js.map":"3b7fc6b5f89a7d67d65f601f3a464c8f1f9b1abdd01593643093309a0d1337a2"}}
+[debug] [2025-11-14T22:41:58.096Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/531547556984/sites/freeandreduced-ac6d8/versions/72a0486c7ce2b60c:populateFiles 200
+[debug] [2025-11-14T22:41:58.097Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/531547556984/sites/freeandreduced-ac6d8/versions/72a0486c7ce2b60c:populateFiles {"uploadRequiredHashes":["0a32385205bd6f6d8460a3ec39b311328e990f56f03a8e15932bbd5e0ab2f109","2c61692bc905e3c68a8a91b3ea3a02e8fff298735701a1381f57e3e7f1cdd134","3c45639b36004cd53be5ff31dd9f3bb92e3ae49b388a99f41980d984b56267c1"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/freeandreduced-ac6d8/versions/72a0486c7ce2b60c/files"}
+[debug] [2025-11-14T22:41:58.099Z] Checked if tokens are valid: true, expires at: 1763163714970
+[debug] [2025-11-14T22:41:58.099Z] Checked if tokens are valid: true, expires at: 1763163714970
+[debug] [2025-11-14T22:41:58.100Z] Checked if tokens are valid: true, expires at: 1763163714970
+[debug] [2025-11-14T22:41:58.101Z] Checked if tokens are valid: true, expires at: 1763163714970
+[debug] [2025-11-14T22:41:58.102Z] Checked if tokens are valid: true, expires at: 1763163714970
+[debug] [2025-11-14T22:41:58.102Z] Checked if tokens are valid: true, expires at: 1763163714970
+[debug] [2025-11-14T22:41:58.102Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/freeandreduced-ac6d8/versions/72a0486c7ce2b60c/files/0a32385205bd6f6d8460a3ec39b311328e990f56f03a8e15932bbd5e0ab2f109 [none]
+[debug] [2025-11-14T22:41:58.103Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/freeandreduced-ac6d8/versions/72a0486c7ce2b60c/files/0a32385205bd6f6d8460a3ec39b311328e990f56f03a8e15932bbd5e0ab2f109 [stream]
+[debug] [2025-11-14T22:41:58.107Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/freeandreduced-ac6d8/versions/72a0486c7ce2b60c/files/2c61692bc905e3c68a8a91b3ea3a02e8fff298735701a1381f57e3e7f1cdd134 [none]
+[debug] [2025-11-14T22:41:58.107Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/freeandreduced-ac6d8/versions/72a0486c7ce2b60c/files/2c61692bc905e3c68a8a91b3ea3a02e8fff298735701a1381f57e3e7f1cdd134 [stream]
+[debug] [2025-11-14T22:41:58.110Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/freeandreduced-ac6d8/versions/72a0486c7ce2b60c/files/3c45639b36004cd53be5ff31dd9f3bb92e3ae49b388a99f41980d984b56267c1 [none]
+[debug] [2025-11-14T22:41:58.110Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/freeandreduced-ac6d8/versions/72a0486c7ce2b60c/files/3c45639b36004cd53be5ff31dd9f3bb92e3ae49b388a99f41980d984b56267c1 [stream]
+[debug] [2025-11-14T22:41:58.113Z] [hosting][populate queue][FINAL] {"max":228,"min":228,"avg":228,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":239}
+[debug] [2025-11-14T22:41:58.113Z] [hosting] uploads queued: 3
+[debug] [2025-11-14T22:41:58.907Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/freeandreduced-ac6d8/versions/72a0486c7ce2b60c/files/3c45639b36004cd53be5ff31dd9f3bb92e3ae49b388a99f41980d984b56267c1 200
+[debug] [2025-11-14T22:41:58.908Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/freeandreduced-ac6d8/versions/72a0486c7ce2b60c/files/3c45639b36004cd53be5ff31dd9f3bb92e3ae49b388a99f41980d984b56267c1 [stream]
+[debug] [2025-11-14T22:41:59.105Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/freeandreduced-ac6d8/versions/72a0486c7ce2b60c/files/2c61692bc905e3c68a8a91b3ea3a02e8fff298735701a1381f57e3e7f1cdd134 200
+[debug] [2025-11-14T22:41:59.105Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/freeandreduced-ac6d8/versions/72a0486c7ce2b60c/files/2c61692bc905e3c68a8a91b3ea3a02e8fff298735701a1381f57e3e7f1cdd134 [stream]
+[debug] [2025-11-14T22:41:59.159Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/freeandreduced-ac6d8/versions/72a0486c7ce2b60c/files/0a32385205bd6f6d8460a3ec39b311328e990f56f03a8e15932bbd5e0ab2f109 200
+[debug] [2025-11-14T22:41:59.159Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/freeandreduced-ac6d8/versions/72a0486c7ce2b60c/files/0a32385205bd6f6d8460a3ec39b311328e990f56f03a8e15932bbd5e0ab2f109 [stream]
+[debug] [2025-11-14T22:41:59.160Z] [hosting][upload queue][FINAL] {"max":1063,"min":807,"avg":958.6666666666666,"active":0,"complete":3,"success":3,"errored":0,"retried":0,"total":3,"elapsed":1063}
+[info] i  hosting: upload complete 
+[info] +  hosting[freeandreduced-ac6d8]: file upload complete 
+[debug] [2025-11-14T22:41:59.162Z] [hosting] deploy completed after 1929ms
+[debug] [2025-11-14T22:41:59.162Z] [
+  {
+    "config": {
+      "public": "dist",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "freeandreduced-ac6d8"
+    },
+    "version": "projects/531547556984/sites/freeandreduced-ac6d8/versions/72a0486c7ce2b60c"
+  }
+]
+[info] i  hosting[freeandreduced-ac6d8]: finalizing version... 
+[debug] [2025-11-14T22:41:59.167Z] Checked if tokens are valid: true, expires at: 1763163714970
+[debug] [2025-11-14T22:41:59.167Z] Checked if tokens are valid: true, expires at: 1763163714970
+[debug] [2025-11-14T22:41:59.169Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/freeandreduced-ac6d8/versions/72a0486c7ce2b60c updateMask=status%2Cconfig
+[debug] [2025-11-14T22:41:59.169Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/freeandreduced-ac6d8/versions/72a0486c7ce2b60c {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2025-11-14T22:41:59.406Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/freeandreduced-ac6d8/versions/72a0486c7ce2b60c 200
+[debug] [2025-11-14T22:41:59.406Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/freeandreduced-ac6d8/versions/72a0486c7ce2b60c {"name":"projects/531547556984/sites/freeandreduced-ac6d8/versions/72a0486c7ce2b60c","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2025-11-14T22:41:57.157159Z","createUser":{"email":"mvc757@gmail.com"},"finalizeTime":"2025-11-14T22:41:59.535676Z","finalizeUser":{"email":"mvc757@gmail.com"}}
+[debug] [2025-11-14T22:41:59.406Z] [hosting] finalized version for freeandreduced-ac6d8:[object Object]
+[info] +  hosting[freeandreduced-ac6d8]: version finalized 
+[info] i  hosting[freeandreduced-ac6d8]: releasing new version... 
+[debug] [2025-11-14T22:41:59.408Z] Checked if tokens are valid: true, expires at: 1763163714970
+[debug] [2025-11-14T22:41:59.408Z] Checked if tokens are valid: true, expires at: 1763163714970
+[debug] [2025-11-14T22:41:59.410Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/freeandreduced-ac6d8/channels/live/releases versionName=projects%2F531547556984%2Fsites%2Ffreeandreduced-ac6d8%2Fversions%2F72a0486c7ce2b60c
+[debug] [2025-11-14T22:41:59.410Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/freeandreduced-ac6d8/channels/live/releases {}
+[debug] [2025-11-14T22:41:59.610Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/freeandreduced-ac6d8/channels/live/releases 200
+[debug] [2025-11-14T22:41:59.610Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/freeandreduced-ac6d8/channels/live/releases {"name":"projects/531547556984/sites/freeandreduced-ac6d8/channels/live/releases/1763160119192000","version":{"name":"projects/531547556984/sites/freeandreduced-ac6d8/versions/72a0486c7ce2b60c","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2025-11-14T22:41:57.157159Z","createUser":{"email":"mvc757@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocKrXxjTxQajcwAQsM4TsuRagT2Hec6IZ_Hx5xxj9x_h7KfGFM0"},"finalizeTime":"2025-11-14T22:41:59.535676Z","finalizeUser":{"email":"mvc757@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocKrXxjTxQajcwAQsM4TsuRagT2Hec6IZ_Hx5xxj9x_h7KfGFM0"}},"type":"DEPLOY","releaseTime":"2025-11-14T22:41:59.192Z","releaseUser":{"email":"mvc757@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocKrXxjTxQajcwAQsM4TsuRagT2Hec6IZ_Hx5xxj9x_h7KfGFM0"}}
+[debug] [2025-11-14T22:41:59.611Z] [hosting] release: {"name":"projects/531547556984/sites/freeandreduced-ac6d8/channels/live/releases/1763160119192000","version":{"name":"projects/531547556984/sites/freeandreduced-ac6d8/versions/72a0486c7ce2b60c","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2025-11-14T22:41:57.157159Z","createUser":{"email":"mvc757@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocKrXxjTxQajcwAQsM4TsuRagT2Hec6IZ_Hx5xxj9x_h7KfGFM0"},"finalizeTime":"2025-11-14T22:41:59.535676Z","finalizeUser":{"email":"mvc757@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocKrXxjTxQajcwAQsM4TsuRagT2Hec6IZ_Hx5xxj9x_h7KfGFM0"}},"type":"DEPLOY","releaseTime":"2025-11-14T22:41:59.192Z","releaseUser":{"email":"mvc757@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocKrXxjTxQajcwAQsM4TsuRagT2Hec6IZ_Hx5xxj9x_h7KfGFM0"}}
+[info] +  hosting[freeandreduced-ac6d8]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/freeandreduced-ac6d8/overview
+[info] Hosting URL: https://freeandreduced-ac6d8.web.app

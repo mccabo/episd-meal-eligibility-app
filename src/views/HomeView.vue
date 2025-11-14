@@ -1621,6 +1621,13 @@ customers: {{ customers }}<br><br>
             body: JSON.stringify({ selectedIds: selectedIds })
           });
           
+          if (!response.ok) {
+            const errorText = await response.text();
+            console.error('Delete failed:', response.status, errorText);
+            alert(`Delete failed (Status ${response.status}):\n\n${errorText || 'Unknown error'}\n\nNote: The backend may still be deploying. Please wait a few minutes and try again.`);
+            return;
+          }
+          
           const result = await response.json();
           
           if (result.success) {
@@ -1641,7 +1648,7 @@ customers: {{ customers }}<br><br>
           }
         } catch (error) {
           console.error('Error deleting applications:', error);
-          alert('Failed to delete applications. Please try again.');
+          alert(`Failed to delete applications: ${error.message}\n\nPlease check:\n1. Backend is deployed (may take 5-10 minutes)\n2. Internet connection is stable\n3. Try again in a few minutes`);
         }
       }
         
