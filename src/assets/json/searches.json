@@ -364,64 +364,7 @@
                     "tooltip": "Select all applications submitted in 'Spanish'"
                 }
             ]
-        },
-        {
-            "id": "divPDFs",
-            "name": "divPDFs",
-            "label": "Show",
-            "divMain": "divMainPDFs",            
-            "divSearch": "divPDFs",
-            "divMainStyle": "",
-            "divSearchStyle": "display: flex;margin: 5px auto;border: solid rgb(0, 0, 0) 0px",
-            "divInput": "divFilter",
-            "FilterType": "TF",
-            "class": "",
-            "style": "display: flex;margin: 0px auto;border: solid rgb(48, 178, 74) 0px;justify-content-center;text-align: center;color: green;font-weight: bold;",
-            "inputs": [
-                {
-                    "id": "btnPDFs",
-                    "name": "btnPDFs",
-                    "value": "PDFs",
-                    "label": "PDFs",
-                    "type": "submit",                    
-                    "class": "w3-btn",
-                    "placeholder": "",
-                    "style": "display: flex;margin: auto;width: 100px;font-size: 18px;background-color: #F1F5F9;color: black;border: solid black 1px;border-radius: 5px",
-                    "filter": "searchApps('PDFs','divSearchPDFs','inpSearchPDFs','filteredPDFs')",
-                    "tooltipTitle": "Show 'Eligibility Letters'",
-                    "tooltip": "Display eligibility letters in PDF format for all applications which have been selected",
-                    "formaction": "/appIndex?frmData=2025951"
-                }
-            ]
-        },
-        {
-            "id": "divHelp",
-            "name": "divHelp",
-            "label": "ToolTips",
-            "divMain": "divMainHelp",            
-            "divSearch": "divHelp",
-            "divMainStyle": "",
-            "divSearchStyle": "display: flex;margin: 5px auto;border: solid rgb(0, 0, 0) 0px",
-            "divInput": "divFilter",
-            "FilterType": "TF",
-            "class": "",
-            "style": "display: block;margin: 0px auto;border: solid rgb(48, 178, 74) 0px;text-align: center;color: green;font-weight: bold;",
-            "inputs": [
-                {
-                    "id": "inpTest",
-                    "name": "inpHelp",
-                    "value": "Help",
-                    "label": "Help",
-                    "type": "checkbox",                    
-                    "class": "w3-check",
-                    "placeholder": "",
-                    "style": "border: solid black 1pxheight: 100px",
-                    "filter": "searchApps('help','divSearchHelp','inpSearchHelp','filteredHelp')",
-                    "tooltipTitle": "Show Tooltips",
-                    "tooltip": "Displays tooltips for each field in the Search Section"
-                }
-            ]
-        }
+        }        
     ],
     "AppHeaders": [
         {
