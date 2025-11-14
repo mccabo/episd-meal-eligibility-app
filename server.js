@@ -144,8 +144,122 @@ app.post('/appIndexbbb', (req, res) => {
   //console.log("frmData: "+JSON.parse(frmData[0]))
 });
 
+// GET version of appIndex for direct URL access
+app.get('/appIndex', (req, res) => {
+  console.log('In appIndex server function (GET)');
+  var frmData = req.query.frmData;
+  //console.log('frmData: ' + frmData);
+  var appArray = [];
+  appArray = frmData.split(',');
+  
+  var batchnum = '';
+  
+  var htmlString = `
+      <html>
+        <title>W3.CSS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <style>
+          body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+          }
+          .letter {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            background: white;
+          }
+          .header {
+            text-align: center;
+            margin-bottom: 20px;
+          }
+          .content {
+            line-height: 1.6;
+          }
+        </style>
+      <body>`;
+  
+  for (var i = 0; i < appArray.length; i++) {
+    var appid = appArray[i];
+    console.log('Processing appid: ' + appid);
+    
+    // Find the application in the apps array
+    var app = apps.Applications.find(a => a.Id === appid);
+    
+    if (app) {
+      batchnum = app.BatchNum || '';
+      var guardian = app.Guardians && app.Guardians[0] ? app.Guardians[0] : {};
+      var students = app.Students || [];
+      var status = app.Status || [];
+      var reasons = app.Reasons || [];
+      
+      htmlString += `
+        <div class="letter">
+          <div class="header">
+            <h2>El Paso Independent School District</h2>
+            <h3>Meal Application Status</h3>
+          </div>
+          <div class="content">
+            <p><strong>Application ID:</strong> ${app.Id}</p>
+            <p><strong>Batch Number:</strong> ${batchnum}</p>
+            <p><strong>Date:</strong> ${app.Date || ''}</p>
+            <p><strong>Language:</strong> ${app.Language || ''}</p>
+            
+            <h4>Guardian Information</h4>
+            <p><strong>Name:</strong> ${guardian.FirstName || ''} ${guardian.LastName || ''}</p>
+            <p><strong>Email:</strong> ${guardian.Email || ''}</p>
+            
+            <h4>Students</h4>
+            <ul>`;
+      
+      students.forEach(student => {
+        htmlString += `<li>${student.FirstName || ''} ${student.LastName || ''} - ${student.Campus || ''} (ID: ${student.Id || ''})</li>`;
+      });
+      
+      htmlString += `
+            </ul>
+            
+            <h4>Application Status</h4>`;
+      
+      status.forEach(s => {
+        if (s.Checked === 'true') {
+          htmlString += `<p><strong>${s.Status}</strong></p>`;
+        }
+      });
+      
+      var hasReasons = reasons.some(r => r.Checked === 'true');
+      if (hasReasons) {
+        htmlString += `<h4>Reason(s)</h4><ul>`;
+        reasons.forEach(r => {
+          if (r.Checked === 'true') {
+            htmlString += `<li>${r.Reason}</li>`;
+          }
+        });
+        htmlString += `</ul>`;
+      }
+      
+      htmlString += `
+          </div>
+        </div>
+        <hr style="margin: 40px 0;">`;
+    } else {
+      htmlString += `<p>Application ${appid} not found.</p>`;
+    }
+  }
+  
+  htmlString += `
+      </body>
+      </html>`;
+  
+  res.writeHead(200, { 'Content-Type': 'text/html' });
+  res.write(htmlString);
+  res.end();
+});
+
 app.post('/appIndex', (req, res) => {
-  console.log('In appIndex server function');
+  console.log('In appIndex server function (POST)');
   var frmData = req.query.frmData;
   //console.log('frmData: ' + frmData);
   var appArray = [];
@@ -1775,8 +1889,42 @@ app.post('/email', (req, res) => {
   res.end();
 });
 
+// GET version of printbyId for direct URL access
+app.get('/printbyId', (req, res) => {
+  console.log('printbyId (GET)');
+  console.log('apps len: ' + apps.Applications.length);
+  
+  var appstring = req.query.frmData;
+  var appArray = appstring ? appstring.split(',') : [];
+  
+  res.writeHead(200, { 'Content-Type': 'text/html' });
+  res.write('<html><head><title>Print Preview</title>');
+  res.write('<style>body { font-family: Arial; margin: 20px; } .notice { padding: 20px; background: #fff3cd; border: 1px solid #ffc107; margin: 20px 0; }</style>');
+  res.write('</head><body>');
+  res.write('<h2>Print by ID - Test View</h2>');
+  res.write('<div class="notice"><strong>Note:</strong> PDF generation requires wkhtmltopdf to be installed. This is a preview of what would be printed.</div>');
+  res.write('<p><strong>Requested Application IDs:</strong> ' + appstring + '</p>');
+  res.write('<p><strong>Number of Applications:</strong> ' + appArray.length + '</p>');
+  res.write('<h3>Applications to Print:</h3><ul>');
+  
+  appArray.forEach(appid => {
+    var app = apps.Applications.find(a => a.Id === appid);
+    if (app) {
+      var guardian = app.Guardians && app.Guardians[0] ? app.Guardians[0] : {};
+      res.write(`<li><strong>${appid}</strong> - ${guardian.FirstName} ${guardian.LastName}</li>`);
+    } else {
+      res.write(`<li><strong>${appid}</strong> - Not found</li>`);
+    }
+  });
+  
+  res.write('</ul>');
+  res.write('<p><em>To generate actual PDFs, use the POST method or install wkhtmltopdf on the server.</em></p>');
+  res.write('</body></html>');
+  res.end();
+});
+
 app.post('/printbyId', (req, res) => {
-  console.log('printbyId');
+  console.log('printbyId (POST)');
   console.log('apps len: ' + apps.Applications.length);
 
   var fileName = '';
