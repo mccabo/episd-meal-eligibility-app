@@ -1,77 +1,10 @@
 {
-    "English": [
+    "Applications": [
         {
-            "Id": "0",
-            "HeaderLeft": "Texas Department of",
-            "HeaderLeft2": "Agriculture",
-            "HeaderRight": "Letter | Household Eligibility Notification | Application",
-            "HeaderDate": "July 28, 2022",
-            "Title": "Letter to Household, Eligibility Based on Household Meal Application",
-            "District": "El Paso Independent School District",
-            "BodyDate": "September 25, 2023",
-            "Salutation": "Dear Mr./Ms.:",
-            "Reviewed": "We have reviewed your application for free and reduced-price school meals for the following student(s):",
-            "Status": "Your application has been:",
-            "Discussion": "If you do not agree with the decision, you may discuss it with Food & Nutrition Services, fns@episd.org 915.230.2160. You also have a right to a fair hearing. To request a fair hearing, call or write the following official within 10 calendar days:",
-            "Service": "Food and Nutrition Services",
-            "Street": "1905 Delta Dr.",
-            "City": "El Paso, TX 79905",
-            "Phone": "915.230.2160",
-            "Reapply": "You may reapply for meal benefits at any time during the school year. If you are not eligible now but have a decrease in household income, become unemployed, have an increase in household size, or qualify for the Supplemental Nutrition Assistance Program (SNAP), Temporary Assistance for Needy Families (TANF) or Federal Distribution Program on Indian Reservations (FDPIR), you may fill out another application at that time.",
-            "Closing": "Sincerley,",
-            "Director": "Laura V. Duran, Director of Food and Nutrition Services",
-            "Gap": "This institution is an equal opportunity provider.",
-            "Accordance1": "In accordance with federal civil rights law and U.S. Department of Agriculture (USDA) civil rights regulations and policies, this institution is prohibited from discriminating on the basis of race, color, national origin, sex (including gender identity and sexual orientation), disability, age, or reprisal or retaliation for prior civil rights activity. Program information may be made available in languages other than English.",
-            "Accordance2": "Persons with disabilities who require alternative means of communication to obtain program information (e.g., Braille, large print, audiotape, American Sign Language), should contact the responsible state or local agency that administers the program or USDA’s TARGET Center at (202) 720-2600 (voice and TTY) or contact USDA through the Federal Relay Service at (800) 877-8339. To file a program discrimination complaint, a Complainant should complete a Form AD-3027, USDA Program Discrimination Complaint Form which can be obtained online at: ",
-            "Link1": "https://www.usda.gov/sites/default/files/documents/USDA-OASCR%20P-Complaint-Form-0508-0002-508-11-28-17Fax2Mail.pdf",
-            "Accordance3": ", from any USDA office, by calling (866) 632-9992, or by writing a letter addressed to USDA. The letter must contain the complainant’s name, address, telephone number, and a written description of the alleged discriminatory action in sufficient detail to inform the Assistant Secretary for Civil Rights (ASCR) about the nature and date of an alleged civil rights violation. The completed AD-3027 form or letter must be submitted to USDA by: (1) mail: U.S. Department of Agriculture, Office of the Assistant Secretary for Civil Rights, 1400 Independence Avenue, SW, Washington, D.C. 20250-9410; (2) fax: (833) 256-1665 or (202) 690-7442; or (3) email: ",
-            "Link2": "program.intake@usda.gov",
-            "Accordance4": ". This institution is an equal opportunity provider."
-        }
-    ],
-    "Spanish": [
-        {
-            "Id": "0",
-            "HeaderLeft": "Texas Department of Agriculture",
-            "HeaderRight": "Letter | Household Eligibility Notification | Application",
-            "HeaderDate": "July 28, 2022",
-            "Title": "Carta para el hogar, Elegibilidad basada en la solicitud de comidas para la familia",
-            "District": "El Distrito Escolar Independiente de El Paso",
-            "BodyDate": "Septiembre 25, 2023",
-            "Salutation": "Estimado Sr/a:",
-            "Reviewed": "Hemos revisado su solicitud para comida escolar gratis o a precio reducido para el/los siguiente(s) estudiante(s):",
-            "Status": "Su solicitud ha sido:",
-            "Discussion": "Si usted no está de acuerdo con la decisión, puede consultarlo con el Departamento de Alimentos de Nutrición y Alimentos, fns@episd.org 915.230.2160. Usted también tiene derecho a una audiencia imparcial. Para solicitar una audiencia imparcial, llame o escriba al siguiente funcionario antes de 10 días hábiles:",
-            "Service": "Departamento del Servicio de Nutrición y Alimentos",
-            "Street": "1905 Delta Dr.",
-            "City": "El Paso, TX 79905",
-            "Phone": "915.230.2160",
-            "Reapply": "Usted puede solicitar de nuevo los beneficios de comida en cualquier momento durante el año escolar. Si usted no es elegible ahora, pero tiene una reducción en sus ingresos familiares, pierde su empleo, aumenta el número de personas que viven en su hogar o califica para el Programa de asistencia nutricional complementaria (SNAP), Programa de asistencia temporaria para las familias necesitadas (TANF) o Programa de distribución de alimentos en reservaciones indígenas (FDPIR), usted puede llenar otra solicitud en ese momento.",
-            "Closing": "Atentamente,",
-            "Director": "Laura V. Duran, Directora del Departamento de Alimentos de Nutrición y Alimentos",
-            "Accordance1": "Para todos los demás programas de asistencia de nutrición del FNS, agencias estatales o locales y sus subreceptores, deben publicar la siguiente Declaración de No Discriminación:",
-            "Accordance2": "De acuerdo con la ley federal de derechos civiles y las normas y políticas de derechos civiles del Departamento de Agricultura de los Estados Unidos (USDA), esta entidad está prohibida de discriminar por motivos de raza, color, origen nacional, sexo (incluyendo identidad de género y orientación sexual), discapacidad, edad, o represalia o retorsión por actividades previas de derechos civiles.",
-            "Accordance3": "La información sobre el programa puede estar disponible en otros idiomas que no sean el inglés.  Las personas con discapacidades que requieren medios alternos de comunicación para obtener la información del programa (por ejemplo, Braille, letra grande, cinta de audio, lenguaje de señas americano (ASL), etc.) deben comunicarse con la agencia local o estatal responsable de administrar el programa o con el Centro TARGET del USDA al (202) 720-2600 (voz y TTY) o comuníquese con el USDA a través del Servicio Federal de Retransmisión al (800) 877-8339.",
-            "Accordance4": "Para presentar una queja por discriminación en el programa, el reclamante debe llenar un formulario AD-3027, formulario de queja por discriminación en el programa del USDA, el cual puede obtenerse en línea en:",
-            "Link": "https://www.fns.usda.gov/sites/default/files/resource-files/usda-program-discrimination-complaint-form-spanish.pdf",
-            "Accordance5": "de cualquier oficina de USDA, llamando al (866) 632-9992, o escribiendo una carta dirigida a USDA. La carta debe contener el nombre del demandante, la dirección, el número de teléfono y una descripción escrita de la acción discriminatoria alegada con suficiente detalle para informar al Subsecretario de Derechos Civiles (ASCR) sobre la naturaleza y fecha de una presunta violación de derechos civiles. El formulario AD-3027 completado o la carta debe presentarse a USDA por:",
-            "Mail1": "(1) correo:",
-            "Mail2": "U.S. Department of Agriculture",
-            "Mail3": "Office of the Assistant Secretary for Civil Rights 1400 Independence Avenue, SW",
-            "Mail4": "Washington, D.C. 20250-9410; or",
-            "Fax1": "(2) fax:",
-            "Fax2": "(833) 256-1665 o (202) 690-7442; o",
-            "Email1": "(3) correo electrónico:",
-            "Email2": "program.intake@usda.gov",
-            "Accordance6": "Esta entidad es un proveedor que brinda igualdad de oportunidades."
-        }
-    ],
-    "Test": [
-        {
-            "Date": "8/11/2025",
+            "Date": "11/14/2025",
             "Index": "0",
-            "Id": "2025951",
-            "BatchNum": "1",
+            "Id": "TEST2025001",
+            "BatchNum": "999",
             "Language": "English",
             "Filename": "EPISD - Meal Application",
             "Selected": "false",
@@ -79,29 +12,23 @@
             "Printed": "false",
             "Guardians": [
                 {
-                    "Id": "2025951",
-                    "FirstName": "Tommy",
-                    "LastName": "John Doe",
-                    "Address": "",
-                    "City": "",
-                    "State": "",
-                    "Zip": "",
-                    "Phone": "",
-                    "Email": "mvc757@gmail.com"
+                    "Id": "TEST2025001",
+                    "FirstName": "John",
+                    "LastName": "Test",
+                    "Address": "123 Test Street",
+                    "City": "El Paso",
+                    "State": "TX",
+                    "Zip": "79901",
+                    "Phone": "915-555-0001",
+                    "Email": "test1@example.com"
                 }
             ],
             "Students": [
                 {
-                    "Id": "000001",
-                    "FirstName": "Nancy",
-                    "LastName": "Doe",
-                    "Campus": "Coronado High School"
-                },
-                {
-                    "Id": "000002",
-                    "FirstName": "Billy",
-                    "LastName": "Doe",
-                    "Campus": "Coronado High School"
+                    "Id": "900001",
+                    "FirstName": "Alice",
+                    "LastName": "Test",
+                    "Campus": "Test Elementary School"
                 }
             ],
             "Status": [
@@ -135,161 +62,40 @@
             ]
         },
         {
-            "Date": "8/11/2025",
+            "Date": "11/14/2025",
             "Index": "1",
-            "Id": "2025952",
-            "BatchNum": "1",
-            "Language": "English",
-            "Filename": "EPISD - Meal Application",
-            "Selected": "false",
-            "Sent": "true",
-            "Printed": "true",
-            "Guardians": [
-                {
-                    "Id": "2025952",
-                    "FirstName": "Mary",
-                    "LastName": "Smith",
-                    "Address": "",
-                    "City": "",
-                    "State": "",
-                    "Zip": "",
-                    "Phone": "",
-                    "Email": "mvc757@gmail.com"
-                }
-            ],
-            "Students": [
-                {
-                    "Id": "100001",
-                    "FirstName": "Sally",
-                    "LastName": "Smith",
-                    "Campus": "Belair High School"
-                },
-                {
-                    "Id": "100002",
-                    "FirstName": "Debbie",
-                    "LastName": "Smith",
-                    "Campus": "Belair High School"
-                }
-            ],
-            "Status": [
-                {
-                    "Checked": "true",
-                    "Status": "Approved for free meals.",
-                    "MobileStatus": "Approved for free meals"
-                },
-                {
-                    "Checked": "false",
-                    "Status": "Approved for reduced-price meals for breakfast at a cost of $0.00; for lunch at a cost of $0.40; and afterschool snack at a cost of $0.00.",
-                    "MobileStatus": "Approved for reduced-price meals"
-                },
-                {
-                    "Checked": "false",
-                    "Status": "Denied for the following reason(s):",
-                    "MobileStatus": "Denied"
-                }
-            ],
-            "Reasons": [
-                {
-                    "Checked": "false",
-                    "Reason": "Income over the allowable amount.",
-                    "MobileReason": "Income over the allowable amount"
-                },
-                {
-                    "Checked": "false",
-                    "Reason": "Incomplete application, please complete the forms attached to provide the needed information.",
-                    "MobileReason": "Incomplete application"
-                }
-            ]
-        },
-        {
-            "Date": "8/11/2025",
-            "Index": "2",
-            "Id": "2025953",
-            "BatchNum": "2",
-            "Language": "English",
-            "Filename": "EPISD - Meal Application",
-            "Selected": "false",
-            "Sent": "false",
-            "Printed": "true",
-            "Guardians": [
-                {
-                    "Id": "2025953",
-                    "FirstName": "Mike",
-                    "LastName": "Jones",
-                    "Address": "",
-                    "City": "",
-                    "State": "",
-                    "Zip": "",
-                    "Phone": "",
-                    "Email": "mvc757@gmail.com"
-                }
-            ],
-            "Students": [
-                {
-                    "Id": "200001",
-                    "FirstName": "Michael",
-                    "LastName": "Jones",
-                    "Campus": "Washington Elementary School"
-                }
-            ],
-            "Status": [
-                {
-                    "Checked": "false",
-                    "Status": "Approved for free meals.",
-                    "MobileStatus": "Approved for free meals"
-                },
-                {
-                    "Checked": "true",
-                    "Status": "Approved for reduced-price meals for breakfast at a cost of $0.00; for lunch at a cost of $0.40; and afterschool snack at a cost of $0.00.",
-                    "MobileStatus": "Approved for reduced-price meals"
-                },
-                {
-                    "Checked": "false",
-                    "Status": "Denied for the following reason(s):",
-                    "MobileStatus": "Denied"
-                }
-            ],
-            "Reasons": [
-                {
-                    "Checked": "false",
-                    "Reason": "Income over the allowable amount.",
-                    "MobileReason": "Income over the allowable amount"
-                },
-                {
-                    "Checked": "false",
-                    "Reason": "Incomplete application, please complete the forms attached to provide the needed information.",
-                    "MobileReason": "Incomplete application"
-                }
-            ]
-        },
-        {
-            "Index": "3",
-            "Id": "2025961",
-            "BatchNum": "2",
+            "Id": "TEST2025002",
+            "BatchNum": "999",
             "Language": "Spanish",
             "Filename": "EPISD - Meal Application",
             "Selected": "false",
             "Sent": "false",
-            "Printed": "true",
+            "Printed": "false",
             "Guardians": [
                 {
-                    "Id": "2025961",
+                    "Id": "TEST2025002",
                     "FirstName": "Maria",
-                    "LastName": "Gomez",
-                    "Address": "",
-                    "City": "",
-                    "State": "",
-                    "Zip": "",
-                    "Phone": "",
-                    "Email": "mvc757@gmail.com"
+                    "LastName": "Prueba",
+                    "Address": "456 Test Avenue",
+                    "City": "El Paso",
+                    "State": "TX",
+                    "Zip": "79902",
+                    "Phone": "915-555-0002",
+                    "Email": "test2@example.com"
                 }
             ],
             "Students": [
                 {
-                    "Id": "300001",
-                    "FirstName": "Jay",
-                    "LastName": "Gomez",
-                    "Campus": "Lincoln Middle School"
+                    "Id": "900002",
+                    "FirstName": "Carlos",
+                    "LastName": "Prueba",
+                    "Campus": "Test Middle School"
+                },
+                {
+                    "Id": "900003",
+                    "FirstName": "Sofia",
+                    "LastName": "Prueba",
+                    "Campus": "Test Middle School"
                 }
             ],
             "Status": [
@@ -299,189 +105,7 @@
                     "MobileStatus": "Aprovada para comidas gratis"
                 },
                 {
-                    "Checked": "false",
-                    "Status": "Aprovada para comidas a precio reducido para almuerzos a un costo de $0.40; desayuno a un costo $0,00; merienda para despues de la escuela (si esta disponble) a un costo de $0.00.",
-                    "MobileStatus": "Aprovado para comida a precio reducido"
-                },
-                {
                     "Checked": "true",
-                    "Status": "Negada por la(s) siguiente(s) razon(es):",
-                    "MobileStatus": "Negada"
-                }
-            ],
-            "Reasons": [
-                {
-                    "Checked": "true",
-                    "Reason": "Su ingreso sobrepasa la cantidad permitida.",
-                    "MobileReason": "Su ingreso sobrepasa la cantidad permitida."
-                },
-                {
-                    "Checked": "false",
-                    "Reason": "Su solicitud esta incompleta. Por favor conplete los documentos adjuntos para proporcionar la informacion necesaria.",
-                    "MobileReason": "Su solicitud esta incompleta."
-                }
-            ]
-        },
-        {
-            "Date": "8/11/2025",
-            "Index": "4",
-            "Id": "2025962",
-            "BatchNum": "3",
-            "Language": "English",
-            "Filename": "EPISD - Meal Application",
-            "Selected": "false",
-            "Sent": "false",
-            "Printed": "false",
-            "Guardians": [
-                {
-                    "Id": "2025962",
-                    "FirstName": "Jessie",
-                    "LastName": "James Leija",
-                    "Address": "",
-                    "City": "",
-                    "State": "",
-                    "Zip": "",
-                    "Phone": "",
-                    "Email": "mvc757@gmail.com"
-                }
-            ],
-            "Students": [
-                {
-                    "Id": "400001",
-                    "FirstName": "Donna",
-                    "LastName": "Foster",
-                    "Campus": "Kennedy Middle School"
-                }
-            ],
-            "Status": [
-                {
-                    "Checked": "true",
-                    "Status": "Approved for free meals.",
-                    "MobileStatus": "Approved for free meals"
-                },
-                {
-                    "Checked": "false",
-                    "Status": "Approved for reduced-price meals for breakfast at a cost of $0.00; for lunch at a cost of $0.40; and afterschool snack at a cost of $0.00.",
-                    "MobileStatus": "Approved for reduced-price meals"
-                },
-                {
-                    "Checked": "false",
-                    "Status": "Denied for the following reason(s):",
-                    "MobileStatus": "Denied"
-                }
-            ],
-            "Reasons": [
-                {
-                    "Checked": "false",
-                    "Reason": "Income over the allowable amount.",
-                    "MobileReason": "Income over the allowable amount"
-                },
-                {
-                    "Checked": "false",
-                    "Reason": "Incomplete application, please complete the forms attached to provide the needed information.",
-                    "MobileReason": "Incomplete application"
-                }
-            ]
-        },
-        {
-            "Date": "8/11/2025",
-            "Index": "5",
-            "Id": "2025971",
-            "BatchNum": "3",
-            "Language": "English",
-            "Filename": "EPISD - Meal Application",
-            "Selected": "false",
-            "Sent": "false",
-            "Printed": "false",
-            "Guardians": [
-                {
-                    "Id": "2025971",
-                    "FirstName": "Johny",
-                    "LastName": "Taylor",
-                    "Address": "",
-                    "City": "",
-                    "State": "",
-                    "Zip": "",
-                    "Phone": "",
-                    "Email": "mvc757@gmail.com"
-                }
-            ],
-            "Students": [
-                {
-                    "Id": "500001",
-                    "FirstName": "Sammy",
-                    "LastName": "Taylor",
-                    "Campus": "Austin High School"
-                }
-            ],
-            "Status": [
-                {
-                    "Checked": "false",
-                    "Status": "Approved for free meals.",
-                    "MobileStatus": "Approved for free meals"
-                },
-                {
-                    "Checked": "true",
-                    "Status": "Approved for reduced-price meals for breakfast at a cost of $0.00; for lunch at a cost of $0.40; and afterschool snack at a cost of $0.00.",
-                    "MobileStatus": "Approved for reduced-price meals"
-                },
-                {
-                    "Checked": "false",
-                    "Status": "Denied for the following reason(s):",
-                    "MobileStatus": "Denied"
-                }
-            ],
-            "Reasons": [
-                {
-                    "Checked": "false",
-                    "Reason": "Income over the allowable amount.",
-                    "MobileReason": "Income over the allowable amount"
-                },
-                {
-                    "Checked": "false",
-                    "Reason": "Incomplete application, please complete the forms attached to provide the needed information.",
-                    "MobileReason": "Incomplete application"
-                }
-            ]
-        },
-        {
-            "Index": "6",
-            "Id": "2025972",
-            "BatchNum": "4",
-            "Language": "Spanish",
-            "Filename": "EPISD - Meal Application",
-            "Selected": "false",
-            "Sent": "false",
-            "Printed": "false",
-            "Guardians": [
-                {
-                    "Id": "2025972",
-                    "FirstName": "Luis",
-                    "LastName": "Lopez",
-                    "Address": "",
-                    "City": "",
-                    "State": "",
-                    "Zip": "",
-                    "Phone": "",
-                    "Email": "mvc757@gmail.com"
-                }
-            ],
-            "Students": [
-                {
-                    "Id": "500001",
-                    "FirstName": "Vincent",
-                    "LastName": "Taylor",
-                    "Campus": "Austin High School"
-                }
-            ],
-            "Status": [
-                {
-                    "Checked": "true",
-                    "Status": "Aprovada para comidas gratis.",
-                    "MobileStatus": "Aprovada para comidas gratis"
-                },
-                {
-                    "Checked": "false",
                     "Status": "Aprovada para comidas a precio reducido para almuerzos a un costo de $0.40; desayuno a un costo $0,00; merienda para despues de la escuela (si esta disponble) a un costo de $0.00.",
                     "MobileStatus": "Aprovado para comida a precio reducido"
                 },
@@ -505,10 +129,10 @@
             ]
         },
         {
-            "Date": "8/11/2025",
-            "Index": "7",
-            "Id": "2025973",
-            "BatchNum": "4",
+            "Date": "11/14/2025",
+            "Index": "2",
+            "Id": "TEST2025003",
+            "BatchNum": "999",
             "Language": "English",
             "Filename": "EPISD - Meal Application",
             "Selected": "false",
@@ -516,28 +140,28 @@
             "Printed": "false",
             "Guardians": [
                 {
-                    "Id": "2025973",
-                    "FirstName": "Lorna",
-                    "LastName": "Wayne",
-                    "Address": "",
-                    "City": "",
-                    "State": "",
-                    "Zip": "",
-                    "Phone": "",
-                    "Email": "mvc757@gmail.com"
+                    "Id": "TEST2025003",
+                    "FirstName": "Robert",
+                    "LastName": "Demo",
+                    "Address": "789 Demo Lane",
+                    "City": "El Paso",
+                    "State": "TX",
+                    "Zip": "79903",
+                    "Phone": "915-555-0003",
+                    "Email": "test3@example.com"
                 }
             ],
             "Students": [
                 {
-                    "Id": "600001",
-                    "FirstName": "Ismael",
-                    "LastName": "Lopez",
-                    "Campus": "Washington Elementary School"
+                    "Id": "900004",
+                    "FirstName": "Emily",
+                    "LastName": "Demo",
+                    "Campus": "Test High School"
                 }
             ],
             "Status": [
                 {
-                    "Checked": "true",
+                    "Checked": "false",
                     "Status": "Approved for free meals.",
                     "MobileStatus": "Approved for free meals"
                 },
@@ -547,136 +171,14 @@
                     "MobileStatus": "Approved for reduced-price meals"
                 },
                 {
-                    "Checked": "false",
+                    "Checked": "true",
                     "Status": "Denied for the following reason(s):",
                     "MobileStatus": "Denied"
                 }
             ],
             "Reasons": [
-                {
-                    "Checked": "false",
-                    "Reason": "Income over the allowable amount.",
-                    "MobileReason": "Income over the allowable amount"
-                },
-                {
-                    "Checked": "false",
-                    "Reason": "Incomplete application, please complete the forms attached to provide the needed information.",
-                    "MobileReason": "Incomplete application"
-                }
-            ]
-        },
-        {
-            "Date": "8/11/2025",
-            "Index": "8",
-            "Id": "2025974",
-            "BatchNum": "5",
-            "Language": "English",
-            "Filename": "EPISD - Meal Application",
-            "Selected": "false",
-            "Sent": "false",
-            "Printed": "false",
-            "Guardians": [
-                {
-                    "Id": "2025974",
-                    "FirstName": "Bat",
-                    "LastName": "Man",
-                    "Address": "",
-                    "City": "",
-                    "State": "",
-                    "Zip": "",
-                    "Phone": "",
-                    "Email": "mvc757@gmail.com"
-                }
-            ],
-            "Students": [
-                {
-                    "Id": "700001",
-                    "FirstName": "Max",
-                    "LastName": "Wayne",
-                    "Campus": "Washington Elementary School"
-                }
-            ],
-            "Status": [
                 {
                     "Checked": "true",
-                    "Status": "Approved for free meals.",
-                    "MobileStatus": "Approved for free meals"
-                },
-                {
-                    "Checked": "false",
-                    "Status": "Approved for reduced-price meals for breakfast at a cost of $0.00; for lunch at a cost of $0.40; and afterschool snack at a cost of $0.00.",
-                    "MobileStatus": "Approved for reduced-price meals"
-                },
-                {
-                    "Checked": "false",
-                    "Status": "Denied for the following reason(s):",
-                    "MobileStatus": "Denied"
-                }
-            ],
-            "Reasons": [
-                {
-                    "Checked": "false",
-                    "Reason": "Income over the allowable amount.",
-                    "MobileReason": "Income over the allowable amount"
-                },
-                {
-                    "Checked": "false",
-                    "Reason": "Incomplete application, please complete the forms attached to provide the needed information.",
-                    "MobileReason": "Incomplete application"
-                }
-            ]
-        },
-        {
-            "Date": "8/11/2025",
-            "Index": "9",
-            "Id": "2025975",
-            "BatchNum": "6",
-            "Language": "English",
-            "Filename": "EPISD - Meal Application",
-            "Selected": "false",
-            "Sent": "true",
-            "Printed": "true",
-            "Guardians": [
-                {
-                    "Id": "2025975",
-                    "FirstName": "Hello",
-                    "LastName": "World",
-                    "Address": "",
-                    "City": "",
-                    "State": "",
-                    "Zip": "",
-                    "Phone": "",
-                    "Email": "mvc757@gmail.com"
-                }
-            ],
-            "Students": [
-                {
-                    "Id": "800001",
-                    "FirstName": "Big",
-                    "LastName": "Man",
-                    "Campus": "Belair High School"
-                }
-            ],
-            "Status": [
-                {
-                    "Checked": "true",
-                    "Status": "Approved for free meals.",
-                    "MobileStatus": "Approved for free meals"
-                },
-                {
-                    "Checked": "false",
-                    "Status": "Approved for reduced-price meals for breakfast at a cost of $0.00; for lunch at a cost of $0.40; and afterschool snack at a cost of $0.00.",
-                    "MobileStatus": "Approved for reduced-price meals"
-                },
-                {
-                    "Checked": "false",
-                    "Status": "Denied for the following reason(s):",
-                    "MobileStatus": "Denied"
-                }
-            ],
-            "Reasons": [
-                {
-                    "Checked": "false",
                     "Reason": "Income over the allowable amount.",
                     "MobileReason": "Income over the allowable amount"
                 },
@@ -687,21 +189,5 @@
                 }
             ]
         }
-    ],
-    "Expected": [
-        {
-            "Sent": [
-                {
-                    "Yes": "2",
-                    "No": "8"
-                }
-            ],
-            "Printed": [
-                {
-                    "Yes": "4",
-                    "No": "6"
-                }
-            ]             
-        }        
     ]
 }
