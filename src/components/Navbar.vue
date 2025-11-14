@@ -11,7 +11,7 @@
             </div>   
             <div style="display: flex; align-items: center; gap: 10px;">
               <label id="lblUser" class="w3-margin" for="user">Welcome {{ user.displayName }}</label>
-              <div v-if="user.displayName=='Mary Lou' || user.displayName=='Marylou'" style="display: flex; align-items: center; gap: 10px;">
+              <div v-if="user.displayName=='System Administrator'" style="display: flex; align-items: center; gap: 10px;">
                 <router-link :to="{ name: 'Dashboard' }" class="btn btn-dashboard" title="Applications Dashboard">
                   <i class="pi pi-chart-line"></i> Dashboard
                 </router-link>
@@ -68,7 +68,7 @@
             <button class="btn btn-primary btn-logout" @click="handleClick">Logout</button>
           </div>
           <div class="title w-full" style="display: flex;justify-content: center;margin-bottom: -40px">
-            <div v-if="user.displayName == 'Mary Lou'" id="divTitleAdmin" @blur="onBlur('divTitleAdmin')" contenteditable="true" class="title" style="font-size: 34px;font-weight: 700;color: black">          
+            <div v-if="user.displayName == 'System Administrator'" id="divTitleAdmin" @blur="onBlur('divTitleAdmin')" contenteditable="true" class="title" style="font-size: 34px;font-weight: 700;color: black">          
               {{ english[0].Title }}      
             </div>
             <div v-else id="divTitleUser" contenteditable="false" style="font-size: 34px;font-weight: 700;color: black">          
