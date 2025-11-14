@@ -386,7 +386,7 @@
                     "type": "checkbox",                    
                     "class": "w3-check",
                     "placeholder": "",
-                    "style": "border: solid black 1px;height: 100px",
+                    "style": "border: solid black 1px;margin-top: 5px",
                     "filter": "searchApps('help','divSearchHelp','inpSearchHelp','filteredHelp')",
                     "tooltipTitle": "Show Tooltips",
                     "tooltip": "Displays tooltips for each field in the Search Section"

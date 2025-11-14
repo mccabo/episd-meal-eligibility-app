@@ -4,10 +4,10 @@
     <div id="divImage" style="display: block;width: 100%;border: solid rgb(167, 31, 31) 0px">                  
       <nav>           
         <!--<h1><router-link :to="{ name: 'Home' }" class="route-title">Musical Pleasure</router-link></h1> -->                  
-        <div class="create-logout" v-if="user">                
+        <div class="create-logout" v-if="user" style="margin-bottom: 20px">                
           <div class="header">
-            <div>                        
-              <img id="imgLogo" @click="selectLogo" src="http://DESKTOP-DJNVAF5/episdlogo.jpg" style="width: 125px">
+            <div>
+              <img id="imgLogo" @click="selectLogo" src="/episdlogo.jpg" style="width: 125px">
             </div>   
             <div style="display: flex; align-items: center; gap: 10px;">
               <label id="lblUser" class="w3-margin" for="user">Welcome {{ user.displayName }}</label>
