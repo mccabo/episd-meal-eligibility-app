@@ -120,9 +120,9 @@ customers: {{ customers }}<br><br>
               <div :id="utility.id" class="w-full" style="display: flex;margin: auto;justify-content: center;text-align: center;
                 border:solid black 0px;color: #0a58ca;font-size: 18px;font-weight: 700;height: 15px">{{ utility.label }}</div>                                    
               <div style="display: flex;margin:auto;border: solid black 0px;width: 120px;height: 75px">               
-                <div v-for="(input,j) in utility.inputs" :key="j" :id="input.id" class="utilities" style="display: flex;margin:auto;border: solid black 0px;
-                  width: 120px">                                                    
-                <input :id="input.id" @mouseover="docEvent(i,j)" :type="input.type" :style="input.style" :class="input.class" :value="input.label" :formaction="apiBaseUrl + input.formaction"/>
+              <div v-for="(input,j) in utility.inputs" :key="j" :id="input.id" class="utilities" style="display: flex;margin:auto;border: solid black 0px;
+                width: 120px">                                                    
+                <input :id="input.id" @mouseover="docEvent(i,j,true)" :type="input.type" :style="input.style" :class="input.class" :value="input.label" :formaction="apiBaseUrl + input.formaction"/>
                 </div>                                                             
               </div>                                                    
             </div>          
@@ -1555,11 +1555,17 @@ customers: {{ customers }}<br><br>
         }        
       }
       //Display Tooltip on hover over search fields if Documentation is enabled
-      const docEvent = (field,subfield) => {
+      const docEvent = (field, subfield, isUtility = false) => {
         //alert("setDocFlag.value: "+setDocFlag.value)
         if(setDocFlag.value == true) {
-          $("#lblTooltipTitle").html(searches.value[field].inputs[subfield ].tooltipTitle)                    
-          $("#lblTooltip").html(searches.value[field].inputs[subfield ].tooltip)} else {}        
+          const sourceArray = isUtility ? utilities.value : searchFilters.value;
+          if(sourceArray[field] && sourceArray[field].inputs && sourceArray[field].inputs[subfield]) {
+            $("#lblTooltipTitle").html(sourceArray[field].inputs[subfield].tooltipTitle);
+            $("#lblTooltip").html(sourceArray[field].inputs[subfield].tooltip);
+            $("#lblTooltipTitle").removeClass('hidden');
+            $("#lblTooltip").removeClass('hidden');
+          }
+        }
       }
       //Display Calendar object to select a date
       const selectDate = () => {
