@@ -17,32 +17,15 @@ customers: {{ customers }}<br><br>
       justify-content: center;border: solid rgb(0, 0, 0) 0px;margin-left: -10px">     
       <div style="display: flex;margin: auto;justify-content: center;border: solid black 0px" class="w-full">
       <div style="display: flex;margin: auto;border: solid black 0px;justify-content: center" class="w-full">        
-          <div id="divUtilitiesMain" v-for="(search,i) in searches" :key="i" style="display: block;margin: 0px;border: solid black 0px;margin-top: 5px">                                   
+          <div id="divUtilitiesMain" v-for="(utility,i) in utilities" :key="i" style="display: block;margin: 0px;border: solid black 0px;margin-top: 5px">                                   
 
-            <div v-if="i>11 && i<14" :id="search.id" class="w-full" style="display: flex;margin: auto;justify-content: center;text-align: center;
-              border:solid black 0px;color: #0a58ca;font-size: 18px;font-weight: 700;height: 15px">{{ search.label }}</div>
-            <div v-else :id="search.id" class="w-full hidden" style="display: flex;margin: auto;justify-content: center;text-align: center;
-              border:solid black 0px;color: #0a58ca;font-size: 18px;font-weight: 700;height: 0px">{{ search.label }}</div>                                                  
+            <div :id="utility.id" class="w-full" style="display: flex;margin: auto;justify-content: center;text-align: center;
+              border:solid black 0px;color: #0a58ca;font-size: 18px;font-weight: 700;height: 15px">{{ utility.label }}</div>
 
-            <div v-if="i>11 && i<14" style="display: flex;margin:auto;border: solid black 0px;width: 120px;height: 75px">               
-              <div v-for="(input,j) in search.inputs" :key="j" :id="input.id" class="utilities" style="display: flex;margin:auto;border: solid black 0px;
+            <div style="display: flex;margin:auto;border: solid black 0px;width: 120px;height: 75px">               
+              <div v-for="(input,j) in utility.inputs" :key="j" :id="input.id" class="utilities" style="display: flex;margin:auto;border: solid black 0px;
                 width: 120px">                                                    
-                <!-- <input v-if="i=='11'" type="submit">
-                <input v-if="i=='11'" :id="input.id" @mouseover="docEvent(11,0)" :type="input.type" :style="input.style" :class="input.class" :value="input.label" :formaction="input.formaction" hidden/>
-                <input v-if="i=='11'" :id="input.id" @mouseover="docEvent(11,0)" :type="input.type" :style="input.style" :class="input.class" :value="input.label" :formaction="input.formaction" hidden/> --> 
-                <input v-if="i=='12'" :id="input.id" @mouseover="docEvent(12,0)" :type="input.type" :style="input.style" :class="input.class" :value="input.label" :formaction="apiBaseUrl + input.formaction" />                                                                                
-                <input v-else-if="i=='13'" :id="input.id" @mouseover="docEvent(13,0)" :type="input.type" :style="input.style" :class="input.class" :value="input.label" :formaction="apiBaseUrl + input.formaction"/>                                                                                                                
-              </div>                                                             
-            </div>                                                    
-
-            <div v-else class="hidden" style="display: flex;margin:auto;border: solid black 0px;width: 0px;height: 0px">               
-              <div v-for="(input,j) in search.inputs" :key="j" :id="input.id" class="utilities" style="display: flex;margin:auto;border: solid black 0px;
-                width: 120px">                                                    
-                <!-- <input v-if="i=='11'" type="submit">
-                <input v-if="i=='11'" :id="input.id" @mouseover="docEvent(11,0)" :type="input.type" :style="input.style" :class="input.class" :value="input.label" :formaction="input.formaction" hidden/>
-                <input v-if="i=='11'" :id="input.id" @mouseover="docEvent(11,0)" :type="input.type" :style="input.style" :class="input.class" :value="input.label" :formaction="input.formaction" hidden/> --> 
-                <input v-if="i=='12'" :id="input.id" @mouseover="docEvent(12,0)" :type="input.type" :style="input.style" :class="input.class" :value="input.label" :formaction="apiBaseUrl + input.formaction" />                                                                                
-                <input v-else-if="i=='13'" :id="input.id" @mouseover="docEvent(13,0)" :type="input.type" :style="input.style" :class="input.class" :value="input.label" :formaction="apiBaseUrl + input.formaction"/>                                                                                                                
+                <input :id="input.id" @mouseover="docEvent(i,j)" :type="input.type" :style="input.style" :class="input.class" :value="input.label" :formaction="apiBaseUrl + input.formaction"/>
               </div>                                                             
             </div>                                                    
           </div>          
@@ -152,17 +135,13 @@ customers: {{ customers }}<br><br>
         justify-content: center;border: solid rgb(0, 0, 0) 0px;">     
         <div style="display: flex;margin: auto;justify-content: center;border: solid black 0px" class="w-full">
         <div style="display: flex;margin: auto;border: solid black 0px;justify-content: center" class="w-full">        
-            <div id="divUtilitiesMain" v-for="(search,i) in searches" :key="i" style="display: block;margin: 0px;border: solid black 0px;margin-top: -5px">                                   
-              <div v-if="i>11 && i<14" :id="search.id" class="w-full" style="display: flex;margin: auto;justify-content: center;text-align: center;
-                border:solid black 0px;color: #0a58ca;font-size: 18px;font-weight: 700;height: 15px">{{ search.label }}</div>                                    
-              <div v-if="i>11 && i<14" style="display: flex;margin:auto;border: solid black 0px;width: 120px;height: 75px">               
-                <div v-for="(input,j) in search.inputs" :key="j" :id="input.id" class="utilities" style="display: flex;margin:auto;border: solid black 0px;
+            <div id="divUtilitiesMain" v-for="(utility,i) in utilities" :key="i" style="display: block;margin: 0px;border: solid black 0px;margin-top: -5px">                                   
+              <div :id="utility.id" class="w-full" style="display: flex;margin: auto;justify-content: center;text-align: center;
+                border:solid black 0px;color: #0a58ca;font-size: 18px;font-weight: 700;height: 15px">{{ utility.label }}</div>                                    
+              <div style="display: flex;margin:auto;border: solid black 0px;width: 120px;height: 75px">               
+                <div v-for="(input,j) in utility.inputs" :key="j" :id="input.id" class="utilities" style="display: flex;margin:auto;border: solid black 0px;
                   width: 120px">                                                    
-                <!-- <input v-if="i=='11'" type="submit">
-                <input v-if="i=='11'" :id="input.id" @mouseover="docEvent(11,0)" :type="input.type" :style="input.style" :class="input.class" :value="input.label" :formaction="apiBaseUrl + input.formaction" hidden/> -->
-                <input v-if="i=='11'" :id="input.id" @mouseover="docEvent(11,0)" :type="input.type" :style="input.style" :class="input.class" :value="input.label" :formaction="apiBaseUrl + input.formaction" hidden/> 
-                <input v-else-if="i=='12'" :id="input.id" @mouseover="docEvent(12,0)" :type="input.type" :style="input.style" :class="input.class" :value="input.label" :formaction="apiBaseUrl + input.formaction" />                                                                                
-                <input v-else-if="i=='13'" :id="input.id" @mouseover="docEvent(13,0)" :type="input.type" :style="input.style" :class="input.class" :value="input.label" :formaction="apiBaseUrl + input.formaction"/>
+                <input :id="input.id" @mouseover="docEvent(i,j)" :type="input.type" :style="input.style" :class="input.class" :value="input.label" :formaction="apiBaseUrl + input.formaction"/>
                 </div>                                                             
               </div>                                                    
             </div>          
@@ -185,10 +164,10 @@ customers: {{ customers }}<br><br>
       <div id="divSearchWrapper" class="divSearchWrapper" style="height: 100px">     
         <div style="display: flex;margin: auto;border: solid black 0px;justify-content: center;">
           <div style="display: flex;margin: auto;border: solid black 0px;justify-content: center;">
-            <div id="divSearchMain" v-for="(search,i) in searches" :key="i" :style="search.divMainStyle">          
-              <div v-if="(i!=8 && i<11) || i==14" :id="search.id" class="w-full">{{ search.label }}</div>            
-              <div :class="search.class" :style="search.divSearchStyle">
-                <div v-for="(input,j) in searches[i].inputs" :key="j" :id="input.id" style="display: flex;margin: auto;justify-content: left;border: solid rgb(0, 0, 0) 0px" class="search">                          
+            <div id="divSearchMain" v-for="(searchFilter,i) in searchFilters" :key="i" :style="searchFilter.divMainStyle">          
+              <div v-if="(i!=8 && i<11)" :id="searchFilter.id" class="w-full">{{ searchFilter.label }}</div>            
+              <div :class="searchFilter.class" :style="searchFilter.divSearchStyle">
+                <div v-for="(input,j) in searchFilters[i].inputs" :key="j" :id="input.id" style="display: flex;margin: auto;justify-content: left;border: solid rgb(0, 0, 0) 0px" class="search">                          
                   <input v-if="i=='0' && j=='0'" :id="input.id" @mouseover="docEvent(0,0)" @click="searchApps('sentTrue','divSearchSent','inpSearchSent','filteredSentTrue','true')" :type="input.type" :style="input.style" :class="input.class" :value="input.label" />            
                   <input v-else-if="i=='0' && j=='1'" :id="input.id" @mouseover="docEvent(0,1)" @click="searchApps('sentFalse','divSearchSent','inpSearchSent','filteredSentFalse','false')" :type="input.type" :style="input.style" :class="input.class" :value="input.label" />            
                   <input v-else-if="i=='1' && j=='0'" :id="input.id" @mouseover="docEvent(1,0)" @click="searchApps('printedTrue','divSearchPrinted','inpSearchPrinted','filteredPrintedTrue','true')" :type="input.type" :style="input.style" :class="input.class" :value="input.label" />            
@@ -794,7 +773,7 @@ customers: {{ customers }}<br><br>
   import { useToast } from "primevue/usetoast";
   //import { Applications } from 'C:/inetpub/wwwroot/applications.json'  
   import { Test } from 'C:/EPISD/test/applications.json'  
-  import { Searches } from '../assets/json/searches.json'
+  import { SearchFilters } from '../assets/json/searches.json'
   import { Utilities } from '../assets/json/searches.json'
   import { English } from 'C:/EPISD/letters.json'
   import { Spanish } from 'C:/EPISD/letters.json'
@@ -1382,7 +1361,7 @@ customers: {{ customers }}<br><br>
       const toast = useToast()      
       //const applications = reactive(this.jsonData)
       const test = ref(Test)
-      const searches = ref(Searches)    
+      const searchFilters = ref(SearchFilters)    
       const utilities = ref(Utilities)    
       const documentation = ref(Documentation)    
       const ids = []
@@ -1796,7 +1775,7 @@ customers: {{ customers }}<br><br>
         }]);
       return { printLetter,onLeave,submitEmail,submitEmails,setOver,setActive,toggleAppInfo,toggleStudentInfo,onActive,searchApps,selectedStatus,status,selectedReason,reasons,
         selectedPrint,searchtype,filteredtype,selectedId,selectedGuardian,printType,activeSet,selectedStudent,selectedCampus,selectedId,selectedSent,overIndex,activeIndex,
-        english,spanish,sent,ids,guardians,searches,students,campus,setLogoURL,selDoc,selectDate,docEvent,setDocumentation,setDocFlag,printSelected,test,user,
+        english,spanish,sent,ids,guardians,searchFilters,students,campus,setLogoURL,selDoc,selectDate,docEvent,setDocumentation,setDocFlag,printSelected,test,user,
         toggleEditLetter,toggleSearch,toggleUtilities,utilities,appId,email,appArray,printData,sendData,addSite,handleSubmit,
         tester,readonly,handleClick,handleBlur,handleKeyUp,appCount,customers,sites,documentation,activeTab,tabs
         }}}
