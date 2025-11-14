@@ -363,7 +363,7 @@ customers: {{ customers }}<br><br>
 
     <!-- Documentation Section -->
     
-   <div v-if="setDocFlag==true" hidden>
+   <div v-if="setDocFlag==true" style="display: block;margin: auto;justify-content: center;border: solid black 0px;width: 100%;margin-top: 10px;margin-bottom: 10px">
       <label id="lblTooltipTitle" type="text" style="display: flex;margin: auto;justify-content: center;border: solid black 0px;width: 100%;font-size: 14px;font-weight: 600;"></label>
       <div id="lblTooltip" type="text"  style="display: flex;margin: auto;justify-content: center;border: solid black 0px;width: 100%;font-size: 14px;font-weight: 600"></div>
       <div id="divExpected" type="text"  style="display: flex;margin: auto;justify-content: center;border: solid black 0px;width: 100%;font-size: 14px;font-weight: 600">    
