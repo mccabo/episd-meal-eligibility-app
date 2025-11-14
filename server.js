@@ -2611,14 +2611,87 @@ app.post('/import', async (req, res) => {
   }
 
   // Check if we're in a production/cloud environment
-  const isProduction = process.env.NODE_ENV === 'production' || !process.env.NODE_ENV && !require('os').platform().includes('win32');
+  const isProduction = process.env.NODE_ENV === 'production' || !require('os').platform().includes('win32');
   
   if (isProduction) {
-    console.log('Import feature is not available in production - requires SQL Server database');
-    return res.status(501).json({ 
-      success: false, 
-      message: 'Import feature requires a local SQL Server database and is only available in development environment.' 
-    });
+    // Use test/demo applications file instead of SQL Server for production
+    console.log('Production mode: Using test applications file instead of SQL Server');
+    
+    const testAppsPath = path.join(__dirname, 'public', 'test', 'applications.json');
+    
+    if (!fs.existsSync(testAppsPath)) {
+      console.error('Test applications file not found at: ' + testAppsPath);
+      return res.status(400).json({ 
+        success: false, 
+        message: 'Test applications file not found at: ' + testAppsPath 
+      });
+    }
+    
+    try {
+      // Read test applications
+      const testApps = JSON.parse(fs.readFileSync(testAppsPath, 'utf8'));
+      
+      if (!testApps || !testApps.Applications || !Array.isArray(testApps.Applications)) {
+        return res.status(400).json({ 
+          success: false, 
+          message: 'Invalid test applications file format' 
+        });
+      }
+      
+      // Add new applications from test file to main applications file
+      let addedCount = 0;
+      
+      for (let i = 0; i < testApps.Applications.length; i++) {
+        const testApp = testApps.Applications[i];
+        
+        // Check if application already exists
+        const exists = apps.Applications.some(app => app.Id === testApp.Id);
+        
+        if (!exists) {
+          apps.Applications.push(testApp);
+          addedCount++;
+          console.log('Added application: ' + testApp.Id);
+        } else {
+          console.log('Skipped existing application: ' + testApp.Id);
+        }
+      }
+      
+      // Save updated applications
+      fs.writeFileSync(appsPath, JSON.stringify(apps, null, 4), 'utf8');
+      console.log('Import complete: Added ' + addedCount + ' new applications');
+      
+      // Return success response with redirect
+      const htmlString =
+        `<!DOCTYPE html>
+        <html lang="">
+          <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+            <script> 		
+                var delayInMilliseconds = 3000; //3 seconds
+                setTimeout(function() {
+                  window.location.replace("${FRONTEND_URL}");            
+                }, delayInMilliseconds);
+            </script>
+          </head>
+          <body>          
+            <div class="w3-container">    
+              <div class="w3-panel w3-card w3-green"><p style="font-size: 20px; padding: 10px;">Import Successful!</p></div>
+              <div class="w3-panel w3-card-2"><p>Added ${addedCount} new application(s) from test file.</p></div>
+              <div class="w3-panel w3-card-2"><p>Redirecting to application...</p></div>
+            </div>
+          </body>
+        </html>`;
+      
+      return res.send(htmlString);
+      
+    } catch (error) {
+      console.error('Error importing test applications:', error);
+      return res.status(500).json({ 
+        success: false, 
+        message: 'Failed to import test applications: ' + error.message 
+      });
+    }
   }
 
   //var config = JSON.parse(fs.readFileSync('C:/EPISD/config.json', 'utf8'));
