@@ -30,8 +30,8 @@ customers: {{ customers }}<br><br>
                 <!-- <input v-if="i=='11'" type="submit">
                 <input v-if="i=='11'" :id="input.id" @mouseover="docEvent(11,0)" :type="input.type" :style="input.style" :class="input.class" :value="input.label" :formaction="input.formaction" hidden/>
                 <input v-if="i=='11'" :id="input.id" @mouseover="docEvent(11,0)" :type="input.type" :style="input.style" :class="input.class" :value="input.label" :formaction="input.formaction" hidden/> --> 
-                <input v-if="i=='12'" :id="input.id" @mouseover="docEvent(12,0)" :type="input.type" :style="input.style" :class="input.class" :value="input.label" :formaction="input.formaction" />                                                                                
-                <input v-else-if="i=='13'" :id="input.id" @mouseover="docEvent(13,0)" :type="input.type" :style="input.style" :class="input.class" :value="input.label" :formaction="input.formaction"/>                                                                                                                
+                <input v-if="i=='12'" :id="input.id" @mouseover="docEvent(12,0)" :type="input.type" :style="input.style" :class="input.class" :value="input.label" :formaction="apiBaseUrl + input.formaction" />                                                                                
+                <input v-else-if="i=='13'" :id="input.id" @mouseover="docEvent(13,0)" :type="input.type" :style="input.style" :class="input.class" :value="input.label" :formaction="apiBaseUrl + input.formaction"/>                                                                                                                
               </div>                                                             
             </div>                                                    
 
@@ -41,8 +41,8 @@ customers: {{ customers }}<br><br>
                 <!-- <input v-if="i=='11'" type="submit">
                 <input v-if="i=='11'" :id="input.id" @mouseover="docEvent(11,0)" :type="input.type" :style="input.style" :class="input.class" :value="input.label" :formaction="input.formaction" hidden/>
                 <input v-if="i=='11'" :id="input.id" @mouseover="docEvent(11,0)" :type="input.type" :style="input.style" :class="input.class" :value="input.label" :formaction="input.formaction" hidden/> --> 
-                <input v-if="i=='12'" :id="input.id" @mouseover="docEvent(12,0)" :type="input.type" :style="input.style" :class="input.class" :value="input.label" :formaction="input.formaction" />                                                                                
-                <input v-else-if="i=='13'" :id="input.id" @mouseover="docEvent(13,0)" :type="input.type" :style="input.style" :class="input.class" :value="input.label" :formaction="input.formaction"/>                                                                                                                
+                <input v-if="i=='12'" :id="input.id" @mouseover="docEvent(12,0)" :type="input.type" :style="input.style" :class="input.class" :value="input.label" :formaction="apiBaseUrl + input.formaction" />                                                                                
+                <input v-else-if="i=='13'" :id="input.id" @mouseover="docEvent(13,0)" :type="input.type" :style="input.style" :class="input.class" :value="input.label" :formaction="apiBaseUrl + input.formaction"/>                                                                                                                
               </div>                                                             
             </div>                                                    
           </div>          
@@ -158,11 +158,11 @@ customers: {{ customers }}<br><br>
               <div v-if="i>11 && i<14" style="display: flex;margin:auto;border: solid black 0px;width: 120px;height: 75px">               
                 <div v-for="(input,j) in search.inputs" :key="j" :id="input.id" class="utilities" style="display: flex;margin:auto;border: solid black 0px;
                   width: 120px">                                                    
-                  <!-- <input v-if="i=='11'" type="submit">
-                  <input v-if="i=='11'" :id="input.id" @mouseover="docEvent(11,0)" :type="input.type" :style="input.style" :class="input.class" :value="input.label" :formaction="input.formaction" hidden/> -->
-                  <input v-if="i=='11'" :id="input.id" @mouseover="docEvent(11,0)" :type="input.type" :style="input.style" :class="input.class" :value="input.label" :formaction="input.formaction" hidden/> 
-                  <input v-else-if="i=='12'" :id="input.id" @mouseover="docEvent(12,0)" :type="input.type" :style="input.style" :class="input.class" :value="input.label" :formaction="input.formaction" />                                                                                
-                  <input v-else-if="i=='13'" :id="input.id" @mouseover="docEvent(13,0)" :type="input.type" :style="input.style" :class="input.class" :value="input.label" :formaction="input.formaction"/>                                                                                                                
+                <!-- <input v-if="i=='11'" type="submit">
+                <input v-if="i=='11'" :id="input.id" @mouseover="docEvent(11,0)" :type="input.type" :style="input.style" :class="input.class" :value="input.label" :formaction="apiBaseUrl + input.formaction" hidden/> -->
+                <input v-if="i=='11'" :id="input.id" @mouseover="docEvent(11,0)" :type="input.type" :style="input.style" :class="input.class" :value="input.label" :formaction="apiBaseUrl + input.formaction" hidden/> 
+                <input v-else-if="i=='12'" :id="input.id" @mouseover="docEvent(12,0)" :type="input.type" :style="input.style" :class="input.class" :value="input.label" :formaction="apiBaseUrl + input.formaction" />                                                                                
+                <input v-else-if="i=='13'" :id="input.id" @mouseover="docEvent(13,0)" :type="input.type" :style="input.style" :class="input.class" :value="input.label" :formaction="apiBaseUrl + input.formaction"/>
                 </div>                                                             
               </div>                                                    
             </div>          

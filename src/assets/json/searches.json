@@ -448,7 +448,7 @@
                     "filter": "searchApps('Config','divSearchConfig','inpSearchConfig','filteredConfig')",
                     "tooltipTitle": "Display Configuration Options",
                     "tooltip": "Display/Edit all settings from the configuration file",
-                    "formaction": "http://localhost:3000/showConfig"
+                    "formaction": "https://episd-backend.onrender.com/showConfig"
                 }
             ]
         },
@@ -892,7 +892,8 @@
                     "filter": "searchApps('Import','divSearchImport','inpSearchImport','filteredImport')",
                     "tooltipTitle": "Import New Applications",
                     "tooltip": "Import all new applications which have been submitted and processed for review",
-                    "submitTo": "importApps=1"
+                    "submitTo": "/import",
+                    "formaction": "/import"
                 }
             ]
         },
@@ -921,7 +922,8 @@
                     "filter": "searchApps('Config','divSearchConfig','inpSearchConfig','filteredConfig')",
                     "tooltipTitle": "Display Configuration Options",
                     "tooltip": "Display/Edit all settings from the configuration file",
-                    "submitTo": "showConfig=1"
+                    "submitTo": "/showConfig",
+                    "formaction": "/showConfig"
                 }
             ]
         },
