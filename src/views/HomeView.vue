@@ -1641,11 +1641,19 @@ customers: {{ customers }}<br><br>
             document.getElementById("txtSelected").value = '';
             selected.value = [];
             
-            // Reload the applications data
-            const appsResponse = await fetch(API_BASE_URL + '/applications.json');
-            if (appsResponse.ok) {
-              jsonData.value = await appsResponse.json();
-              appCount.value = jsonData.value.Applications?.length || 0;
+            // Reload the applications data (don't let reload errors fail the whole operation)
+            try {
+              const appsResponse = await fetch(API_BASE_URL + '/applications.json');
+              if (appsResponse.ok) {
+                jsonData.value = await appsResponse.json();
+                appCount.value = jsonData.value.Applications?.length || 0;
+              } else {
+                console.warn('Could not reload applications data, refreshing page instead');
+                window.location.reload();
+              }
+            } catch (reloadError) {
+              console.warn('Error reloading applications data, refreshing page instead:', reloadError);
+              window.location.reload();
             }
           } else {
             alert(`Error: ${result.message}`);
