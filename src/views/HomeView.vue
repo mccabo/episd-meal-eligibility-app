@@ -317,13 +317,13 @@ customers: {{ customers }}<br><br>
       </div>
 
       <!-- Accordian button for Student Section -->
-      <div class="w-full" style="display: inline-flex;margin: auto;justify-content: left;border: solid black 0px;color: white;border-radius: 5px;
+      <div v-if="user!='System Administrator'" class="w-full" style="display: inline-flex;margin: auto;justify-content: left;border: solid black 0px;color: white;border-radius: 5px;
         margin-bottom: 5px">
         <input id="divApplicationInfo" type="button" class="btn" style="text-align: left;margin-left: 0px;font-size: 14px;font-weight: 600;
           ;color: white" value="Student Information"/>
       </div>
       <!-- Students Section -->
-      <div v-if="this.jsonData" class="divStudentWrapper hidden" id="divStudentData" style="display: flex;margin: auto;justify-content: left;
+      <div v-if="this.jsonData && user!='System Administrator'" class="divStudentWrapper hidden" id="divStudentData" style="display: flex;margin: auto;justify-content: left;
         border: solid rgb(0, 0, 0) 0px;background-color: rgb(255, 255, 255);overflow: auto;margin-top: 0px;border-radius: 10px">    
         <div id="divIdStudents" style="display: flex;margin: auto;justify-content: left;
           font-size: 14px;border: solid red 0px;margin-bottom: 5px;flex-direction: column;overflow-y: auto;max-height: 240px" class="w-full">    
