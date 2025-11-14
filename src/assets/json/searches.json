@@ -448,7 +448,7 @@
                     "filter": "searchApps('Config','divSearchConfig','inpSearchConfig','filteredConfig')",
                     "tooltipTitle": "Display Configuration Options",
                     "tooltip": "Display/Edit all settings from the configuration file",
-                    "formaction": "https://episd-backend.onrender.com/showConfig"
+                    "formaction": "/showConfig"
                 }
             ]
         },
