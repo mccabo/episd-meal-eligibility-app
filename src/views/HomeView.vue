@@ -816,9 +816,9 @@ customers: {{ customers }}<br><br>
           window.location.href = "http://localhost?importApps=1";          
         },
         showConfig() {
-          window.location.href = "http://localhost:3000/showConfig";
-          
-          //$.post("http://localhost:3000/showConfig", {
+          window.location.href = this.apiBaseUrl + "/showConfig";
+
+          //$.post(this.apiBaseUrl + "/showConfig", {
               //json_string: JSON.stringify({name:"John", phone number:"+410000000"})
           //});
         },
@@ -1130,7 +1130,9 @@ customers: {{ customers }}<br><br>
         return {
           reload: 1,
           jsonData: null,
-          error: null,          
+          error: null,
+          // API base URL - change based on deployment
+          apiBaseUrl: 'https://episd-backend.onrender.com',  // Change to http://localhost:3000 for local dev
           english: English,
           spanish: Spanish,
           selected: ref([]),
