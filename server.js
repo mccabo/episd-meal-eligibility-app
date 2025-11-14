@@ -102,6 +102,18 @@ app.use((req, res, next) => {
   next();
 });
 
+// Serve config.json for frontend
+app.get('/config.json', (req, res) => {
+  console.log('Serving config.json');
+  res.json(config);
+});
+
+// Serve applications.json for frontend
+app.get('/applications.json', (req, res) => {
+  console.log('Serving applications.json');
+  res.json(apps);
+});
+
 app.post('/default-action', (req, res) => {
   console.log('In default-action server function');
   console.log('req.url: ' + req.url);
