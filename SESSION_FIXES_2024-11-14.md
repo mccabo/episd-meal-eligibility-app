@@ -528,6 +528,43 @@ Configuration Files:
 
 ---
 
+## 8. Fixed API_BASE_URL Reference in Delete Function
+
+### Issue
+- After initial implementation, `deleteSelected` function threw error: `"apiBaseUrl is not defined"`
+- The function was trying to use `this.apiBaseUrl` within the `setup()` function
+- In Vue 3 Composition API's `setup()`, `this` context doesn't exist the same way as in Options API
+
+### Root Cause
+The `deleteSelected` function is defined in the `setup()` method (Composition API), but `apiBaseUrl` is defined in the `data()` option (Options API). You cannot use `this.apiBaseUrl` inside `setup()`.
+
+### Solution
+1. Added import statement at the top of HomeView.vue:
+   ```javascript
+   import API_BASE_URL from '@/config/api';
+   ```
+
+2. Updated both API calls in `deleteSelected` function:
+   - Changed from: `${this.apiBaseUrl}/deleteApplications`
+   - Changed to: `${API_BASE_URL}/deleteApplications`
+   - Also changed: `this.apiBaseUrl + '/applications.json'`
+   - To: `API_BASE_URL + '/applications.json'`
+
+### Files Modified
+- `src/views/HomeView.vue` (line 751: import, lines 1620 & 1645: API calls)
+
+### Commit
+- Message: "Fix: Import API_BASE_URL for deleteSelected function in setup()"
+- Hash: `85c4937`
+
+### Technical Note
+This is a common gotcha when mixing Vue 2 Options API with Vue 3 Composition API. The `setup()` function doesn't have access to `this` the way Options API methods do. When working in `setup()`, you must either:
+- Import constants directly (as done here)
+- Define reactive variables within `setup()` using `ref()` or `reactive()`
+- Pass data as parameters to functions
+
+---
+
 ## Session Summary
 
 **Date**: November 14, 2024  
