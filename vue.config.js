@@ -1,20 +1,20 @@
 const { defineConfig } = require('@vue/cli-service')
-
 module.exports = defineConfig({
   transpileDependencies: true,
-  devServer: {
-    port: 8081,
-    host: 'localhost',
-    open: true, // Automatically open browser
-  },
+  parallel: false, // Disable parallel builds to avoid worker memory issues
   configureWebpack: {
-    resolve: {
-      fallback: {
-        crypto: require.resolve('crypto-browserify'),
-        stream: require.resolve('stream-browserify'),
-        buffer: require.resolve('buffer/'),
-      },
-    },
-  },
+    optimization: {
+      minimize: true,
+      splitChunks: {
+        chunks: 'all',
+        cacheGroups: {
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendors',
+            chunks: 'all'
+          }
+        }
+      }
+    }
+  }
 })
-

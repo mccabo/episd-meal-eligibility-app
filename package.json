@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "node --max-old-space-size=8192 node_modules/@vue/cli-service/bin/vue-cli-service.js build",
     "hot": "mix watch --hot",
     "test": "jest",
     "test:watch": "jest --watch",
