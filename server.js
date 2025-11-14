@@ -253,7 +253,10 @@ app.get('/appIndex', (req, res) => {
       </body>
       </html>`;
   
-  res.writeHead(200, { 'Content-Type': 'text/html' });
+  res.writeHead(200, { 
+    'Content-Type': 'text/html',
+    'Permissions-Policy': 'fullscreen=(self)'
+  });
   res.write(htmlString);
   res.end();
 });
@@ -1367,6 +1370,10 @@ app.get('/showConfig', (req, res) => {
     </body>
   </html>`;
 
+  res.writeHead(200, { 
+    'Content-Type': 'text/html',
+    'Permissions-Policy': 'fullscreen=(self)'
+  });
   res.write(htmlString);
   res.end();
 });
@@ -1897,7 +1904,10 @@ app.get('/printbyId', (req, res) => {
   var appstring = req.query.frmData;
   var appArray = appstring ? appstring.split(',') : [];
   
-  res.writeHead(200, { 'Content-Type': 'text/html' });
+  res.writeHead(200, { 
+    'Content-Type': 'text/html',
+    'Permissions-Policy': 'fullscreen=(self)'
+  });
   res.write('<html><head><title>Print Preview</title>');
   res.write('<style>body { font-family: Arial; margin: 20px; } .notice { padding: 20px; background: #fff3cd; border: 1px solid #ffc107; margin: 20px 0; }</style>');
   res.write('</head><body>');
