@@ -2522,12 +2522,23 @@ app.post('/printbyId', (req, res) => {
 });
 
 app.post('/import', async (req, res) => {
-  // Get the directory where applications.json is located
-  var appsDirectory = require('path').dirname(appsPath);
-  var csvPath = require('path').join(appsDirectory, 'emails.csv');
-  
-  console.log('Looking for emails.csv at: ' + csvPath);
-  await processLineByLine(csvPath);
+  try {
+    // Get the directory where applications.json is located
+    var appsDirectory = require('path').dirname(appsPath);
+    var csvPath = require('path').join(appsDirectory, 'emails.csv');
+    
+    console.log('Looking for emails.csv at: ' + csvPath);
+    
+    // Check if CSV file exists
+    if (!fs.existsSync(csvPath)) {
+      console.error('CSV file not found at: ' + csvPath);
+      return res.status(400).json({ 
+        success: false, 
+        message: 'Import CSV file not found. This feature requires a SQL Server database and is only available in local development.' 
+      });
+    }
+    
+    await processLineByLine(csvPath);
 
   //console.log('email length: ' + emailArray.length);
 
@@ -2597,6 +2608,17 @@ app.post('/import', async (req, res) => {
     console.log('Updated emails.csv at: ' + csvPath + ' with new batch numbers');
   } else {
     console.log('No new batch numbers to assign - CSV file not modified');
+  }
+
+  // Check if we're in a production/cloud environment
+  const isProduction = process.env.NODE_ENV === 'production' || !process.env.NODE_ENV && !require('os').platform().includes('win32');
+  
+  if (isProduction) {
+    console.log('Import feature is not available in production - requires SQL Server database');
+    return res.status(501).json({ 
+      success: false, 
+      message: 'Import feature requires a local SQL Server database and is only available in development environment.' 
+    });
   }
 
   //var config = JSON.parse(fs.readFileSync('C:/EPISD/config.json', 'utf8'));
@@ -2993,6 +3015,15 @@ app.post('/import', async (req, res) => {
 
   res.send(htmlString);
   res.end();
+  
+  } catch (error) {
+    console.error('Error during import:', error);
+    res.status(500).json({ 
+      success: false, 
+      message: 'Import failed: ' + error.message,
+      error: error.toString()
+    });
+  }
 });
 
 app.post('/updatePrinted', (req, res) => {
