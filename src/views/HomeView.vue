@@ -1637,9 +1637,8 @@ customers: {{ customers }}<br><br>
           if (result.success) {
             alert(`Success! ${result.message}\n\nDeleted: ${result.deletedCount}\nRemaining: ${result.remainingCount}`);
             
-            // Clear the selected items
+            // Clear the selected items text field
             document.getElementById("txtSelected").value = '';
-            selected.value = [];
             
             // Reload the applications data (don't let reload errors fail the whole operation)
             try {
