@@ -1616,7 +1616,7 @@ customers: {{ customers }}<br><br>
         }
         
         try {
-          const response = await fetch(`${apiBaseUrl.value}/deleteApplications`, {
+          const response = await fetch(`${this.apiBaseUrl}/deleteApplications`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -1641,7 +1641,7 @@ customers: {{ customers }}<br><br>
             selected.value = [];
             
             // Reload the applications data
-            const appsResponse = await fetch(apiBaseUrl.value + '/applications.json');
+            const appsResponse = await fetch(this.apiBaseUrl + '/applications.json');
             if (appsResponse.ok) {
               jsonData.value = await appsResponse.json();
               appCount.value = jsonData.value.Applications?.length || 0;
