@@ -262,28 +262,28 @@ customers: {{ customers }}<br><br>
                 <td>                 
                   <input v-if="readonly=='true'" :id="'inpLanguage'+index" name="Language" :value="application.Language" 
                     style="border:solid black 0px;font-size: 14px;height: 10px" readonly>                 
-                  <input v-else @click="handleClick('inpLanguage'+index)" @keyup="handleKeyUp(application.Id,index,'language')" 
+                  <input v-else @click="handleClick('inpLanguage'+index)" @focus="handleClick('inpLanguage'+index)" @keyup="handleKeyUp(application.Id,index,'language')" 
                     @blur="handleBlur(application.Id,index,'language')" type="text" :id="'inpLanguage'+index" name="Language" :value="application.Language" 
                     style="border-radius: 8px;border:solid black 0px;font-size: 14px;height: 30px;" class="inpFields">                 
                 </td>            
                 <td>
                   <input v-if="readonly=='true'" :id="'inpFirstName'+index" name="FirsName" :value="application.Guardians[0].FirstName" 
                     style="border:solid black 0px;font-size: 14px;height: 10px" readonly>                
-                  <input v-else @click="handleClick('inpFirstName'+index)" @keyup="handleKeyUp(application.Id,index,'firstname')" 
+                  <input v-else @click="handleClick('inpFirstName'+index)" @focus="handleClick('inpFirstName'+index)" @keyup="handleKeyUp(application.Id,index,'firstname')" 
                     @blur="handleBlur(application.Id,index,'firstname')" type="text" :id="'inpFirstName'+index" name="FirstName" :value="application.Guardians[0].FirstName" 
                     style="border-radius: 8px;border:solid black 0px;font-size: 14px;height: 30px;" class="inpFields">                       
                 </td>            
                 <td>
                   <input v-if="readonly=='true'" :id="'inpLastName'+index" name="LastName" :value="application.Guardians[0].LastName" readonly 
                     style="border:solid black 0px;font-size: 14px;height: 10px">                
-                  <input v-else @click="handleClick('inpLastName'+index)" @keyup="handleKeyUp(application.Id,index,'lastname')" 
+                  <input v-else @click="handleClick('inpLastName'+index)" @focus="handleClick('inpLastName'+index)" @keyup="handleKeyUp(application.Id,index,'lastname')" 
                     @blur="handleBlur(application.Id,index,'lastname')" type="text" :id="'inpLastName'+index" name="LastName" :value="application.Guardians[0].LastName" 
                     style="border-radius: 8px;border:solid black 0px;font-size: 14px;height: 30px;" class="inpFields">                       
                 </td>
                 <td>
                   <input v-if="readonly=='true'" :id="'inpEmail'+index" name="Email" :value="application.Guardians[0].Email" readonly 
                     style="border:solid black 0px;font-size: 14px;height: 10px">                
-                  <input v-else @click="handleClick('inpEmail'+index)" @keyup="handleKeyUp(application.Id,index,'email')" 
+                  <input v-else @click="handleClick('inpEmail'+index)" @focus="handleClick('inpEmail'+index)" @keyup="handleKeyUp(application.Id,index,'email')" 
                     @blur="handleBlur(application.Id,index,'email')" type="text" :id="'inpEmail'+index" name="Email" :value="application.Guardians[0].Email" 
                     style="border-radius: 8px;border:solid black 0px;font-size: 14px;height: 30px;" class="inpFields">                      
                 </td>
@@ -309,7 +309,7 @@ customers: {{ customers }}<br><br>
         </div>    
       </div>     
           
-      <div v-if="user=='System Administrator'" style="display: flex;margin: auto;border: solid black 0px;justify-content: space-evenly;
+      <div v-if="user=='System Administrator' && showUpdateButton" style="display: flex;margin: auto;border: solid black 0px;justify-content: space-evenly;
         margin-bottom: 10px;width: 100%">             
         <input id="inpUpdateRow" name="inpUpdateRow" type="submit" class="w3-btn w3-blue inpUpdateRow" 
           style="display: flex;margin: auto;text-align: center;font-size: 18px;background-color: #F1F5F9;
@@ -1373,6 +1373,7 @@ customers: {{ customers }}<br><br>
       user = user.value.replace('Welcome ','')        
       var tester = ref("tester")
       let readonly = ref('true')
+      let showUpdateButton = ref(false)
       let appCount = ref(0);
 
       const customers = ref(Customers);
@@ -1390,6 +1391,7 @@ customers: {{ customers }}<br><br>
         //alert("fldid: "+fldid) 
         var curFld = $("#"+fldid)
         curFld.css('background-color','lightyellow')
+        showUpdateButton.value = true  // Show Update button when field gets focus
         $('input[type="text"]').on('click', function() {
         // Inside the handler, 'this' refers to the clicked input element
         // The .select() method selects all the text within the input field
@@ -1402,6 +1404,7 @@ customers: {{ customers }}<br><br>
 
       const handleBlur = (appid,index,fldname) => { 
         $('.inpFields').css('background-color','transparent')
+        showUpdateButton.value = false  // Hide Update button when field loses focus
         //alert("index: "+index) 
         var curLanguageId = "inpLanguage"+index 
         var curLanguageValue =  $("#"+curLanguageId).val()
@@ -1842,7 +1845,7 @@ customers: {{ customers }}<br><br>
         selectedPrint,searchtype,filteredtype,selectedId,selectedGuardian,printType,activeSet,selectedStudent,selectedCampus,selectedId,selectedSent,overIndex,activeIndex,
         english,spanish,sent,ids,guardians,searchFilters,students,campus,setLogoURL,selDoc,selectDate,docEvent,setDocumentation,setDocFlag,printSelected,deleteSelected,test,user,
         toggleEditLetter,toggleSearch,toggleUtilities,utilities,appId,email,appArray,printData,sendData,addSite,handleSubmit,
-        tester,readonly,handleClick,handleBlur,handleKeyUp,appCount,customers,sites,documentation,activeTab,tabs
+        tester,readonly,showUpdateButton,handleClick,handleBlur,handleKeyUp,appCount,customers,sites,documentation,activeTab,tabs
         }}}
 </script>
 
