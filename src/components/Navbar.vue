@@ -11,7 +11,7 @@
             </div>   
             <div style="display: flex; align-items: center; gap: 10px;">
               <label id="lblUser" class="w3-margin" for="user">Welcome {{ user.displayName }}</label>
-              <div v-if="user.displayName=='Marylou'" style="display: flex; align-items: center; gap: 10px;">
+              <div v-if="user.displayName=='Mary Lou' || user.displayName=='Marylou'" style="display: flex; align-items: center; gap: 10px;">
                 <router-link :to="{ name: 'Dashboard' }" class="btn btn-dashboard" title="Applications Dashboard">
                   <i class="pi pi-chart-line"></i> Dashboard
                 </router-link>
