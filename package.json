@@ -33,6 +33,7 @@
     "crypto-browserify": "^3.12.1",
     "dotenv": "^16.6.1",
     "downloads-folder": "^3.0.3",
+    "express": "^4.21.2",
     "firebase": "^10.1.0",
     "firebase-admin": "^12.7.0",
     "fs": "^0.0.1-security",

@@ -62,7 +62,7 @@ var appsPath = config.panels[6].fields[0].value;
 
 var apps = JSON.parse(fs.readFileSync(appsPath, 'utf8'));
 console.log('apps len:' + apps.Applications.length);
-var letters = JSON.parse(fs.readFileSync('C:/EPISD/letters.json', 'utf8'));
+var letters = JSON.parse(fs.readFileSync(path.join(__dirname, 'public', 'letters.json'), 'utf8'));
 
 var x = 0;
 

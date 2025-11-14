@@ -142,7 +142,7 @@
                     "class": "w3-input",
                     "field": "path",
                     "label": "PDF Path",
-                    "value": "C:/EPISD/Eligibility/Letters"
+                    "value": "./public/Letters"
                 },
                 {
                     "id": "26",
@@ -254,7 +254,7 @@
                     "class": "w3-input",
                     "field": "apps",
                     "label": "Applications File Path",
-                    "value": "D:/Projects/EPISD/deploy template/public/applications.json"
+                    "value": "./public/applications.json"
                 },
                 {
                     "id": "61",
@@ -286,7 +286,7 @@
                     "class": "w3-input",
                     "field": "emailFilePath",
                     "label": "Email File Path",
-                    "value": "C:/EPISD/email.csv"
+                    "value": "./public/emails.csv"
                 },
                 {
                     "id": "65",
@@ -307,5 +307,5 @@
             ]
         }
     ],
-    "appsPath": "C:/inetpub/wwwroot/applications.json"
+    "appsPath": "./public/applications.json"
 }
