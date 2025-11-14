@@ -390,7 +390,7 @@
                     "filter": "searchApps('PDFs','divSearchPDFs','inpSearchPDFs','filteredPDFs')",
                     "tooltipTitle": "Show 'Eligibility Letters'",
                     "tooltip": "Display eligibility letters in PDF format for all applications which have been selected",
-                    "formaction": "http://localhost:3000/appIndex?frmData=2025951"
+                    "formaction": "/appIndex?frmData=2025951"
                 }
             ]
         },
@@ -419,7 +419,7 @@
                     "filter": "searchApps('Import','divSearchImport','inpSearchImport','filteredImport')",
                     "tooltipTitle": "Import New Applications",
                     "tooltip": "Import all new applications which have been submitted and processed for review",
-                    "formaction": "http://localhost:3000/import"
+                    "formaction": "/import"
                 }
             ]
         },
