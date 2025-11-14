@@ -732,7 +732,7 @@ customers: {{ customers }}<br><br>
         <input id="inpShow" type="submit" value="Show Selected Letters" class="w3-btn w3-margin w-20rem" style="font-size: 24px;background-color: #0a58ca;color: white;border: solid black 1px" />              
         <input id="inpSend" type="submit" value="Send Selected Letters" class="w3-btn w3-margin w-20rem" style="font-size: 24px;background-color: #0a58ca;color: white;border: solid black 1px" />        
         <input id="inpUpdate" type="submit" value="Save Edited Row" class="w3-btn w3-margin w-20rem" style="font-size: 24px;background-color: #0a58ca;color: white;border: solid black 1px" />
-        <input v-if="user.displayName=='System Administrator'" id="inpDelete" @click="deleteSelected()" type="button" value="Delete Selected" class="w3-btn w3-margin w-20rem" style="font-size: 24px;background-color: #dc3545;color: white;border: solid black 1px" />        
+        <input v-if="user=='System Administrator'" id="inpDelete" @click="deleteSelected()" type="button" value="Delete Selected" class="w3-btn w3-margin w-20rem" style="font-size: 24px;background-color: #dc3545;color: white;border: solid black 1px" />        
       </div>            
     </div>  
 
