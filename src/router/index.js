@@ -15,6 +15,7 @@ import UserManagement from '../components/UserManagement.vue';
 import ReadMe from '../components/ReadMe.vue';
 import EditLetters from '../components/EditLetters.vue';
 import AIPrompt from '../components/AIPrompt.vue';
+import Business from '../views/Business.vue';
 // Training Components
 import TrainingView from '../views/TrainingView.vue';
 import AudioLearning from '../components/AudioLearning.vue';
@@ -125,6 +126,12 @@ const routes = [
     path: '/ai-prompt',
     name: 'AIPrompt',
     component: AIPrompt,
+    beforeEnter: requireAuth,
+  },
+  {
+    path: '/business',
+    name: 'Business',
+    component: Business,
     beforeEnter: requireAuth,
   },
   // Training Routes

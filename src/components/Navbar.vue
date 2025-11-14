@@ -21,6 +21,9 @@
                 <router-link :to="{ name: 'AIPrompt' }" class="btn btn-ai-prompt" title="AI Assistant">
                   <i class="pi pi-sparkles"></i> AI Prompt
                 </router-link>
+                <router-link :to="{ name: 'Business' }" class="btn btn-business" title="Business Proposal & ROI">
+                  <i class="pi pi-dollar"></i> Business
+                </router-link>
                 
                 <!-- Training Dropdown -->
                 <div class="training-dropdown" @mouseenter="showTrainingMenu = true" @mouseleave="showTrainingMenu = false">
@@ -597,6 +600,38 @@ input {
   font-size: 16px;
 }
 
+.btn-business {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+}
+
+.btn-business:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.5);
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+}
+
+.btn-business:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(16, 185, 129, 0.3);
+}
+
+.btn-business i {
+  font-size: 16px;
+}
+
 .btn-readme {
   background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
   color: white;
@@ -828,6 +863,7 @@ input {
   .btn-dashboard,
   .btn-image-recognition,
   .btn-ai-prompt,
+  .btn-business,
   .btn-readme,
   .btn-health,
   .btn-training {
@@ -840,6 +876,7 @@ input {
   .btn-dashboard i,
   .btn-image-recognition i,
   .btn-ai-prompt i,
+  .btn-business i,
   .btn-readme i,
   .btn-health i,
   .btn-training i {
@@ -871,6 +908,7 @@ input {
   .btn-dashboard,
   .btn-image-recognition,
   .btn-ai-prompt,
+  .btn-business,
   .btn-readme,
   .btn-health,
   .btn-training,
