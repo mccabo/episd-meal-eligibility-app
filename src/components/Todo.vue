@@ -261,6 +261,7 @@
 import { ref, computed, watch, onMounted } from 'vue'
 import { useToast } from 'primevue/usetoast'
 import Toast from 'primevue/toast'
+import API_BASE_URL from '@/config/api';
 
 export default {
   name: 'Todo',
@@ -389,7 +390,7 @@ export default {
       try {
         console.log('Attempting to load todos from server...')
         
-        const response = await fetch('http://localhost:3000/todos')
+        const response = await fetch(`${API_BASE_URL}/todos`)
         
         console.log('Response status:', response.status)
         
@@ -442,7 +443,7 @@ export default {
       try {
         console.log('Saving', todos.value.length, 'todos to server...')
         
-        const response = await fetch('http://localhost:3000/todos', {
+        const response = await fetch(`${API_BASE_URL}/todos`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

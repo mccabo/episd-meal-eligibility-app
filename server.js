@@ -1,6 +1,10 @@
 // Load environment variables from .env file
 require('dotenv').config();
 
+// Environment-based URLs
+const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:3000';
+const FRONTEND_URL = process.env.FRONTEND_URL || 'http://localhost:8081';
+
 const { exec } = require('child_process');
 const PDFDocument = require('pdfkit');
 const wkhtmltopdf = require('wkhtmltopdf');

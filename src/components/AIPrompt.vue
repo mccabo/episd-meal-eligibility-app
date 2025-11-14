@@ -107,6 +107,7 @@
 <script>
 import { ref } from 'vue';
 import axios from 'axios';
+import API_BASE_URL from '@/config/api';
 
 export default {
   name: 'AIPrompt',
@@ -168,7 +169,7 @@ export default {
 
       try {
         // Fetch the image through the server to avoid CORS issues
-        const response = await axios.post('http://localhost:3000/download-image', {
+        const response = await axios.post(`${API_BASE_URL}/download-image`, {
           imageUrl: imageUrl.value
         });
 
@@ -217,7 +218,7 @@ export default {
           payload.imageUrl = imageUrl.value;
         }
 
-        const response = await axios.post('http://localhost:3000/ai-prompt', payload);
+        const response = await axios.post(`${API_BASE_URL}/ai-prompt`, payload);
 
         if (response.data.success) {
           aiResponse.value = response.data.response;

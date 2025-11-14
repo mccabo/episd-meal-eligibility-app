@@ -900,25 +900,25 @@ customers: {{ customers }}<br><br>
           this.$nextTick(() => {
             const printButton = document.getElementById("inpPrint");          
             if(printButton) {
-              printButton.formAction= "http://localhost:3000/printbyId?frmData="+this.selected
+              printButton.formAction= this.apiBaseUrl + "/printbyId?frmData="+this.selected
             }
 
             //alert("add to selected")  
             const showButton = document.getElementById("inpShow");          
             if(showButton) {
-              showButton.formAction= "http://localhost:3000/appIndex?frmData="+this.selected
+              showButton.formAction= this.apiBaseUrl + "/appIndex?frmData="+this.selected
               //alert(showButton.formAction)
             }
 
             const sendButton = document.getElementById("inpSend");          
             if(sendButton) {
-              sendButton.formAction= "http://localhost:3000/email?frmData="+this.selected
+              sendButton.formAction= this.apiBaseUrl + "/email?frmData="+this.selected
               //sendButton.submit()
             }
 
             //const updateButton = document.getElementById("inpUpdate");          
             //if(updateButton) {
-            //  updateButton.formAction= "http://localhost:3000/saveEditedRow?appIds="+this.selected
+            //  updateButton.formAction= this.apiBaseUrl + "/saveEditedRow?appIds="+this.selected
             //}
           })
           
@@ -1062,25 +1062,25 @@ customers: {{ customers }}<br><br>
           this.$nextTick(() => {
             const printButton = document.getElementById("inpPrint");          
             if(printButton) {
-              printButton.formAction= "http://localhost:3000/printbyId?frmData="+this.selected
+              printButton.formAction= this.apiBaseUrl + "/printbyId?frmData="+this.selected
             }
 
             //alert("add to selected")  
             const showButton = document.getElementById("inpShow");          
             if(showButton) {
-              showButton.formAction= "http://localhost:3000/appIndex?frmData="+this.selected
+              showButton.formAction= this.apiBaseUrl + "/appIndex?frmData="+this.selected
               //alert(showButton.formAction)
             }
 
             const sendButton = document.getElementById("inpSend");          
             if(sendButton) {
-              sendButton.formAction= "http://localhost:3000/sendLetters?frmData="+this.selected
+              sendButton.formAction= this.apiBaseUrl + "/sendLetters?frmData="+this.selected
               //sendButton.submit()
             }
 
             //const updateButton = document.getElementById("inpUpdate");          
             //if(updateButton) {
-            //  updateButton.formAction= "http://localhost:3000/saveEditedRow?appIds="+this.selected
+            //  updateButton.formAction= this.apiBaseUrl + "/saveEditedRow?appIds="+this.selected
             //}
           })
         }       
@@ -1095,7 +1095,7 @@ customers: {{ customers }}<br><br>
           } else if(deployMethod == "prod") {
             response = await fetch('http://localhost:3600/config.json'); // Production environment
           } else if(deployMethod == "firebase") {
-            response = await fetch('https://episd-backend.onrender.com/config.json'); // Render backend
+            response = await fetch(this.apiBaseUrl + '/config.json'); // Render backend
           }
           
           if (!response.ok) {
@@ -1459,7 +1459,7 @@ customers: {{ customers }}<br><br>
         //var curValue = $("#"+fldid).val()        
         //console.log("curValue: "+curValue)
         const updateButton = document.getElementById("inpUpdateRow");          
-        updateButton.formAction = "http://localhost:3000/updateRow?appid="+appid+
+        updateButton.formAction = this.apiBaseUrl + "/updateRow?appid="+appid+
         "&language="+curLanguageValue+
         "&fname="+curFirstNameValue+
         "&lname="+curLastNameValue+
@@ -1476,11 +1476,11 @@ customers: {{ customers }}<br><br>
         var appid = JSON.stringify(appArray.value);
         //alert("appid: "+appid);
         // Example: Send data to an API
-        //frmMain.formAction("http://localhost:3000/appIndex?appArray="+appid)
+        //frmMain.formAction(this.apiBaseUrl + "/appIndex?appArray="+appid)
         var submitButton = document.getElementById("inpSubmit");
-        frmMain.action("http://localhost:3000/appIndex?appArray="+appid)
+        frmMain.action(this.apiBaseUrl + "/appIndex?appArray="+appid)
         frmMain.submit()
-         //axios.post('http://localhost:3000/appIndex?appArray='+appid)
+         //axios.post(this.apiBaseUrl + '/appIndex?appArray='+appid)
            //.then(response => { /* handle success */ })
            //.catch(error => { /* handle error */ });
 
@@ -1490,7 +1490,7 @@ customers: {{ customers }}<br><br>
         if(selectedIndexes!='') {
           var processArray = selectedIndexes.split(',');
           setTimeout(function() {
-            window.location.href = "http://localhost:3600?appIndex="+processArray;
+            window.location.href = this.apiBaseUrl + "?appIndex="+processArray;
           }, 300)
         }
         */
@@ -1534,7 +1534,7 @@ customers: {{ customers }}<br><br>
         const printButton = document.getElementById('inpPrint');
         
         //Set a new formaction URL dynamically to print letters             
-        printButton.formAction = 'http://localhost:3000/appIndex?frmData='+this.selected;
+        printButton.formAction = this.apiBaseUrl + '/appIndex?frmData='+this.selected;
         //Simulate a click on the button to trigger submission with the new formaction
         //printButton.click();        
       }
@@ -1569,7 +1569,7 @@ customers: {{ customers }}<br><br>
         //Create a variable to represent the Send button              
         const sendButton = document.getElementById('inpSend');
         //Set a new formaction URL dynamically to send emails             
-        sendButton.formAction = 'http://localhost:3000/email?appString='+appString;
+        sendButton.formAction = this.apiBaseUrl + '/email?appString='+appString;
         //Simulate a click on the button to trigger submission with the new formaction
         sendButton.click();        
       }
@@ -1620,14 +1620,14 @@ customers: {{ customers }}<br><br>
         var appData = JSON.parse(retrievedObjectApps);
         var appIndex = ""
         appIndex = activeIndex.value
-        window.location.href = "http://localhost:3000?emailSelected="+appIndex;}    
+        window.location.href = this.apiBaseUrl + "?emailSelected="+appIndex;}    
       //send emails for all selected rows
       const submitEmails = () => {        
         var appData = Applications;
         const elements = document.getElementsByClassName('select');
         var appIndexes = txtSelected.value  
         //alert("appIndexes: "+appIndexes);
-        window.location.href = "http://localhost:3000?emailSelected="+appIndexes;}      
+        window.location.href = this.apiBaseUrl + "?emailSelected="+appIndexes;}      
        //set current row as active/not active when clicked
       const setActive = (index) => {
         if(user !='System Administrator') {
@@ -1714,15 +1714,15 @@ customers: {{ customers }}<br><br>
           activeIndex.value = i        
           activeSet.value = 1
 
-          selDoc.value = "http://localhost:3600/Eligibility/Letters/Batch%20"+batchnum+"/EPISD%20-%20Meal%20Application_"+id+"_"+lname.replace(' ','%20').replace(' ','%20')+"_"+fname.replace(' ','%20').replace(' ','%20')+".pdf"
-          //selDoc.value = "http://localhost:3600/Eligibility/Letters/Batch%20"+"1"+"/EPISD - Meal Application_2025951_John Doe_Tommy.pdf"
+          selDoc.value = this.apiBaseUrl + "/Eligibility/Letters/Batch%20"+batchnum+"/EPISD%20-%20Meal%20Application_"+id+"_"+lname.replace(' ','%20').replace(' ','%20')+"_"+fname.replace(' ','%20').replace(' ','%20')+".pdf"
+          //selDoc.value = this.apiBaseUrl + "/Eligibility/Letters/Batch%20"+"1"+"/EPISD - Meal Application_2025951_John Doe_Tommy.pdf"
           //selDoc.value = "http://Localhos"
           //alert("selDoc.value: "+selDoc.value)
           
           //alert(isValidUrlFormat(selDoc.value)); // true        
 
           //alert("selDoc.value: "+selDoc.value)
-          //selDoc.value = "http://localhost:3600/Eligibility/Letters/Batch%203/EPISD%20-%20Meal%20Application_2025971_Taylor_Johny.pdf"
+          //selDoc.value = this.apiBaseUrl + "/Eligibility/Letters/Batch%203/EPISD%20-%20Meal%20Application_2025971_Taylor_Johny.pdf"
           //alert("selDoc.value: "+selDoc.value)
           
           $("#embDoc").removeClass("hidden")

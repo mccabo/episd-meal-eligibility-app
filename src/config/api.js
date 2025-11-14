@@ -4,7 +4,7 @@
 // Determine the API base URL based on environment
 const API_BASE_URL = process.env.VUE_APP_API_URL || 
   (process.env.NODE_ENV === 'production' 
-    ? 'https://YOUR-RENDER-URL.onrender.com'  // Replace with your Render URL after deployment
+    ? 'https://episd-backend.onrender.com'  // Render backend URL
     : 'http://localhost:3000');
 
 export default API_BASE_URL;

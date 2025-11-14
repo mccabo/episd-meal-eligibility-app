@@ -271,6 +271,7 @@
 <script>
 import { ref, computed, onMounted } from 'vue';
 import { useToast } from 'primevue/usetoast';
+import API_BASE_URL from '@/config/api';
 
 export default {
   name: 'ReadMe',
@@ -392,7 +393,7 @@ export default {
               
               // If not found, try the server endpoint that serves from docs folder
               if (!response.ok) {
-                response = await fetch(`http://localhost:3000/docs/${filename}`);
+                response = await fetch(`${API_BASE_URL}/docs/${filename}`);
               }
               
               if (!response.ok) {

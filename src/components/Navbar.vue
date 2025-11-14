@@ -87,6 +87,7 @@ import { useToast } from "primevue/usetoast";
 import useLocalAuth from '@/composables/useLocalAuth';
 import { English } from 'D:/EPISD/letters.json'
 import router from '../router'
+import API_BASE_URL from '@/config/api';
 
 export default {
   name: "apps",
@@ -315,7 +316,7 @@ export default {
       })
       
       try {
-        const response = await fetch('http://localhost:3000/health')
+        const response = await fetch(`${API_BASE_URL}/health`)
         
         if (response.ok) {
           const data = await response.json()

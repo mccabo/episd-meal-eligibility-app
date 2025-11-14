@@ -1,4 +1,5 @@
 import { ref, computed } from 'vue';
+import API_BASE_URL from '@/config/api';
 
 // Global state for authentication
 const currentUser = ref(null);
@@ -153,10 +154,10 @@ export default function useLocalAuth() {
       // Try to register via server endpoint first
       try {
         console.log('🔄 Attempting to register user via server API...');
-        console.log('📤 Request URL: http://localhost:3000/register-user');
+        console.log(`📤 Request URL: ${API_BASE_URL}/register-user`);
         console.log('📤 Request data:', { ...newUser, password: '***HIDDEN***' });
         
-        const response = await fetch('http://localhost:3000/register-user', {
+        const response = await fetch(`${API_BASE_URL}/register-user`, {
           method: 'POST',
           mode: 'cors',
           credentials: 'omit',

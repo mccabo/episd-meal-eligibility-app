@@ -158,6 +158,7 @@
 import { ref, onMounted } from 'vue';
 import { FilterMatchMode } from 'primevue/api';
 import useLocalAuth from '@/composables/useLocalAuth';
+import API_BASE_URL from '@/config/api';
 
 export default {
   name: 'UserManagement',
@@ -180,7 +181,7 @@ export default {
       try {
         // Try to load from server first (users.json via API)
         try {
-          const serverResponse = await fetch('http://localhost:3000/users');
+          const serverResponse = await fetch(`${API_BASE_URL}/users`);
           if (serverResponse.ok) {
             const serverData = await serverResponse.json();
             const usersFromServer = serverData.users.map(u => ({ ...u, source: 'Server' }));

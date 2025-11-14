@@ -244,6 +244,7 @@
 
 <script>
 import axios from 'axios';
+import API_BASE_URL from '@/config/api';
 
 export default {
   name: 'EditLetters',
@@ -342,7 +343,7 @@ export default {
     async loadLetters() {
       try {
         console.log('Loading letters...');
-        const response = await axios.get('http://localhost:3000/getLetters');
+        const response = await axios.get(`${API_BASE_URL}/getLetters`);
         if (response.data) {
           this.englishLetter = { ...response.data.English[0] };
           this.spanishLetter = { ...response.data.Spanish[0] };
@@ -603,7 +604,7 @@ export default {
 
         console.log('Data to save (with styles):', JSON.stringify(lettersData, null, 2));
 
-        const response = await axios.post('http://localhost:3000/saveLetters', lettersData);
+        const response = await axios.post(`${API_BASE_URL}/saveLetters`, lettersData);
         
         console.log('Save response:', response.data);
         
