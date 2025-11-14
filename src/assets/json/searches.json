@@ -392,6 +392,94 @@
                     "tooltip": "Displays tooltips for each field in the Search Section"
                 }
             ]
+        },
+        {
+            "id": "divPDFs",
+            "name": "divPDFs",
+            "label": "Show",
+            "divMain": "divMainPDFs",            
+            "divSearch": "divPDFs",
+            "divMainStyle": "display: block;margin: 5px auto;margin-left: 0px;margin-right: 25px;border: solid rgb(48, 178, 74) 0px;text-align: center;color: #0a58ca;font-weight: bold;font-size: 18px;",
+            "divSearchStyle": "display: flex;margin: 5px auto;border: solid rgb(0, 0, 0) 0px",
+            "divInput": "divFilter",
+            "FilterType": "TF",
+            "class": "",
+            "style": "display: block;margin: 0px auto;border: solid rgb(48, 178, 74) 0px;text-align: center;color: green;font-weight: bold;",
+            "inputs": [
+                {
+                    "id": "btnPDFs",
+                    "name": "btnPDFs",
+                    "value": "PDFs",
+                    "label": "PDFs",
+                    "type": "button",                    
+                    "class": "w3-btn",
+                    "placeholder": "",
+                    "style": "display: flex;margin: auto;margin-right: 5px;font-size: 18px;background-color: red;color: white;border: solid black 1px;border-radius: 5px",
+                    "filter": "searchApps('PDFs','divSearchPDFs','inpSearchPDFs','filteredPDFs')",
+                    "tooltipTitle": "Show 'Eligibility Letters'",
+                    "tooltip": "Display eligibility letters in PDF format for all applications which have been selected"
+                }
+            ]
+        },
+        {
+            "id": "divImport",
+            "name": "divImport",
+            "label": "Import",
+            "divMain": "divMainImport",            
+            "divSearch": "divImport",
+            "divMainStyle": "display: block;margin: 5px auto;margin-left: 0px;margin-right: 25px;border: solid rgb(48, 178, 74) 0px;text-align: center;color: #0a58ca;font-weight: bold;font-size: 18px;",
+            "divSearchStyle": "display: flex;margin: 5px auto;border: solid rgb(0, 0, 0) 0px",
+            "divInput": "divFilter",
+            "FilterType": "TF",
+            "class": "",
+            "style": "display: block;margin: 0px auto;border: solid rgb(48, 178, 74) 0px;text-align: center;color: green;font-weight: bold;",
+            "inputs": [
+                {
+                    "id": "btnImport",
+                    "name": "btnImport",
+                    "value": "Import",
+                    "label": "New Apps",
+                    "type": "submit",                    
+                    "class": "w3-btn",
+                    "placeholder": "",
+                    "style": "display: flex;margin: auto;margin-right: 5px;font-size: 18px;background-color: green;color: white;border: solid black 1px;border-radius: 5px",
+                    "filter": "searchApps('Import','divSearchImport','inpSearchImport','filteredImport')",
+                    "tooltipTitle": "Import New Applications",
+                    "tooltip": "Import all new applications which have been submitted and processed for review",
+                    "submitTo": "/import",
+                    "formaction": "/import"
+                }
+            ]
+        },
+        {
+            "id": "divConfig",
+            "name": "divConfig",
+            "label": "Show",
+            "divMain": "divMainConfig",            
+            "divSearch": "divConfig",
+            "divMainStyle": "display: block;margin: 5px auto;margin-left: 0px;margin-right: 25px;border: solid rgb(48, 178, 74) 0px;text-align: center;color: #0a58ca;font-weight: bold;font-size: 18px;",
+            "divSearchStyle": "display: flex;margin: 5px auto;border: solid rgb(0, 0, 0) 0px",
+            "divInput": "divFilter",
+            "FilterType": "TF",
+            "class": "",
+            "style": "display: block;margin: 0px auto;border: solid rgb(48, 178, 74) 0px;text-align: center;color: green;font-weight: bold;",
+            "inputs": [
+                {
+                    "id": "btnConfig",
+                    "name": "btnConfig",
+                    "value": "Config",
+                    "label": "Config",
+                    "type": "submit",                    
+                    "class": "w3-btn",
+                    "placeholder": "",
+                    "style": "display: flex;margin: auto;margin-right: 5px;font-size: 18px;background-color: purple;color: white;border: solid black 1px;border-radius: 5px",
+                    "filter": "searchApps('Config','divSearchConfig','inpSearchConfig','filteredConfig')",
+                    "tooltipTitle": "Display Configuration Options",
+                    "tooltip": "Display/Edit all settings from the configuration file",
+                    "submitTo": "/showConfig",
+                    "formaction": "/showConfig"
+                }
+            ]
         }        
     ],
     "AppHeaders": [
