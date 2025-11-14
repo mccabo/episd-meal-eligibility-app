@@ -13,25 +13,6 @@ customers: {{ customers }}<br><br>
         background-color: white" placeholder="logo url"/>
     </div>
    
-    <div v-if="user=='System Administrator'" id="divUtilitiesWrapper" class="divUtilitiesWrapper" style="display: flex;margin: auto;
-      justify-content: center;border: solid rgb(0, 0, 0) 0px;margin-left: -10px">     
-      <div style="display: flex;margin: auto;justify-content: center;border: solid black 0px" class="w-full">
-      <div style="display: flex;margin: auto;border: solid black 0px;justify-content: center" class="w-full">        
-          <div id="divUtilitiesMain" v-for="(utility,i) in utilities" :key="i" style="display: block;margin: 0px;border: solid black 0px;margin-top: 5px">                                   
-
-            <div :id="utility.id" class="w-full" style="display: flex;margin: auto;justify-content: center;text-align: center;
-              border:solid black 0px;color: #0a58ca;font-size: 18px;font-weight: 700;height: 15px">{{ utility.label }}</div>
-
-            <div style="display: flex;margin:auto;border: solid black 0px;width: 120px;height: 75px">               
-              <div v-for="(input,j) in utility.inputs" :key="j" :id="input.id" class="utilities" style="display: flex;margin:auto;border: solid black 0px;
-                width: 120px">                                                    
-                <input :id="input.id" @mouseover="docEvent(i,j)" :type="input.type" :style="input.style" :class="input.class" :value="input.label" :formaction="apiBaseUrl + input.formaction"/>
-              </div>                                                             
-            </div>                                                    
-          </div>          
-        </div>              
-      </div>    
-    </div>
     <!-- Navigation Tabs -->
     <div v-if="user=='System Administrator'" class="" style="display: flex;margin: auto;justify-content: center;border: solid black 0px;width: 100%;margin-top: 0px;margin-bottom: 5px;height: 60px">
       <div v-for="tab in tabs" :key="tab.id">
@@ -165,7 +146,7 @@ customers: {{ customers }}<br><br>
         <div style="display: flex;margin: auto;border: solid black 0px;justify-content: center;">
           <div style="display: flex;margin: auto;border: solid black 0px;justify-content: center;">
             <div id="divSearchMain" v-for="(searchFilter,i) in searchFilters" :key="i" :style="searchFilter.divMainStyle">          
-              <div v-if="(i!=8 && i<11)" :id="searchFilter.id" class="w-full">{{ searchFilter.label }}</div>            
+              <div v-if="(i!=8 && i<=11)" :id="searchFilter.id" class="w-full">{{ searchFilter.label }}</div>            
               <div :class="searchFilter.class" :style="searchFilter.divSearchStyle">
                 <div v-for="(input,j) in searchFilters[i].inputs" :key="j" :id="input.id" style="display: flex;margin: auto;justify-content: left;border: solid rgb(0, 0, 0) 0px" class="search">                          
                   <input v-if="i=='0' && j=='0'" :id="input.id" @mouseover="docEvent(0,0)" @click="searchApps('sentTrue','divSearchSent','inpSearchSent','filteredSentTrue','true')" :type="input.type" :style="input.style" :class="input.class" :value="input.label" />            
@@ -197,11 +178,7 @@ customers: {{ customers }}<br><br>
                   <input v-else-if="i=='9'" :id="input.id" @mouseover="docEvent(9,0)" @click="searchApps('batch','divSearchBatch','inpSearchBatch','filteredBatch','false')" @keyup="searchApps('batch','divSearchBatch','inpSearchBatch','filteredBatch','false')" maxlength="15" :type="input.type" :style="input.style" :class="input.class" :placeholder="input.placeholder" v-model="Batch"/>            
                   <input v-else-if="i=='10' && j=='0'" :id="input.id" @mouseover="docEvent(10,0)" @click="searchApps('english','divSearchEnglsih','inpSearchEnglsih','filteredEnglsih','false')" :type="input.type" :style="input.style" :class="input.class" :value="input.label" />                                                      
                   <input v-else-if="i=='10' && j=='1'" :id="input.id" @mouseover="docEvent(10,1)" @click="searchApps('spanish','divSearchSpanish','inpSearchSpanish','filteredSpanish','false')" :type="input.type" :style="input.style" :class="input.class" :value="input.label" />                                                      
-                  <!-- <input v-else-if="i=='11'" :id="input.id" @mouseover="docEvent(11,0)" @click="showPDFS()" :type="input.type" :style="input.style" :class="input.class" :value="input.label" />                                                                                
-                  <input v-else-if="i=='12'" :id="input.id" @mouseover="docEvent(12,0)" @click="importApps()" :type="input.type" :style="input.style" :class="input.class" :value="input.label" />                                                                                
-                  <input v-else-if="i=='13'" :id="input.id" @mouseover="docEvent(13,0)" @click="showConfig()" :type="input.type" :style="input.style" :class="input.class" :value="input.label" />                                                                                
-                  -->
-                  <input v-else-if="i=='14'" id="chkDocumentation" @mouseover="docEvent(14,0)" @click="setDocumentation()" :type="input.type" :style="input.style" :class="input.class" :value="input.label"/>                                                                                
+                  <input v-else-if="i=='11'" id="chkDocumentation" @mouseover="docEvent(11,0)" @click="setDocumentation()" :type="input.type" :style="input.style" :class="input.class" :value="input.label"/>
                 
                 </div>                                        
               </div>                     
