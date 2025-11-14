@@ -364,6 +364,34 @@
                     "tooltip": "Select all applications submitted in 'Spanish'"
                 }
             ]
+        },
+        {
+            "id": "divHelp",
+            "name": "divHelp",
+            "label": "ToolTips",
+            "divMain": "divMainHelp",            
+            "divSearch": "divHelp",
+            "divMainStyle": "",
+            "divSearchStyle": "display: flex;margin: 5px auto;border: solid rgb(0, 0, 0) 0px",
+            "divInput": "divFilter",
+            "FilterType": "TF",
+            "class": "",
+            "style": "display: block;margin: 0px auto;border: solid rgb(48, 178, 74) 0px;text-align: center;color: green;font-weight: bold;",
+            "inputs": [
+                {
+                    "id": "inpTest",
+                    "name": "inpHelp",
+                    "value": "Help",
+                    "label": "Help",
+                    "type": "checkbox",                    
+                    "class": "w3-check",
+                    "placeholder": "",
+                    "style": "border: solid black 1px;height: 100px",
+                    "filter": "searchApps('help','divSearchHelp','inpSearchHelp','filteredHelp')",
+                    "tooltipTitle": "Show Tooltips",
+                    "tooltip": "Displays tooltips for each field in the Search Section"
+                }
+            ]
         }        
     ],
     "AppHeaders": [
@@ -809,34 +837,6 @@
                     "tooltip": "Display/Edit all settings from the configuration file",
                     "submitTo": "/showConfig",
                     "formaction": "/showConfig"
-                }
-            ]
-        },
-        {
-            "id": "divHelp",
-            "name": "divHelp",
-            "label": "ToolTips",
-            "divMain": "divMainHelp",            
-            "divSearch": "divHelp",
-            "divMainStyle": "display: block;margin: 5px auto;margin-left: 0px;margin-right: 25px;border: solid rgb(48, 178, 74) 0px;text-align: center;color: #0a58ca;font-weight: bold;font-size: 18px;",
-            "divSearchStyle": "display: flex;margin: 5px auto;border: solid rgb(0, 0, 0) 0px",
-            "divInput": "divFilter",
-            "FilterType": "TF",
-            "class": "",
-            "style": "display: block;margin: 0px auto;border: solid rgb(48, 178, 74) 0px;text-align: center;color: green;font-weight: bold;",
-            "inputs": [
-                {
-                    "id": "inpTest",
-                    "name": "inpHelp",
-                    "value": "Help",
-                    "label": "Help",
-                    "type": "checkbox",                    
-                    "class": "w3-check",
-                    "placeholder": "",
-                    "style": "display: flex;margin: auto;margin-right: 5px;font-size: 18px;background-color: #0a58ca;;color: white;border: solid black 1px;border-radius: 5px",
-                    "filter": "searchApps('help','divSearchHelp','inpSearchHelp','filteredHelp')",
-                    "tooltipTitle": "Show Tooltips",
-                    "tooltip": "Displays tooltips for each field in the Search Section"
                 }
             ]
         }
