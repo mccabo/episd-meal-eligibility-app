@@ -14,7 +14,7 @@ customers: {{ customers }}<br><br>
     </div>
    
     <div v-if="user=='System Administrator'" id="divUtilitiesWrapper" class="divUtilitiesWrapper" style="display: flex;margin: auto;
-      justify-content: center;border: solid rgb(0, 0, 0) ;margin-left: -10px">     
+      justify-content: center;border: solid rgb(0, 0, 0) 0px;margin-left: -10px">     
       <div style="display: flex;margin: auto;justify-content: center;border: solid black 0px" class="w-full">
       <div style="display: flex;margin: auto;border: solid black 0px;justify-content: center" class="w-full">        
           <div id="divUtilitiesMain" v-for="(search,i) in searches" :key="i" style="display: block;margin: 0px;border: solid black 0px;margin-top: 5px">                                   
@@ -50,7 +50,7 @@ customers: {{ customers }}<br><br>
       </div>    
     </div>
     <!-- Navigation Tabs -->
-    <div v-if="user=='Marylou'" class="" style="display: flex;margin: auto;justify-content: center;border: solid black 0px;width: 100%;margin-top: 0px;margin-bottom: 5px;height: 60px">
+    <div v-if="user=='System Administrator'" class="" style="display: flex;margin: auto;justify-content: center;border: solid black 0px;width: 100%;margin-top: 0px;margin-bottom: 5px;height: 60px">
       <div v-for="tab in tabs" :key="tab.id">
         <button v-if="tab.id === 'print'"          
           @click="activeTab = tab.id"
@@ -142,13 +142,13 @@ customers: {{ customers }}<br><br>
 
     <div v-if="activeTab === 'applications'" class="tab-panel">    
       <!-- Accordian button for Utility Section -->
-      <div v-if="user=='Marylou'" class="w-full" style="display: inline-flex;margin: auto;justify-content: left;color: white;
+      <div v-if="user=='System Administrator'" class="w-full" style="display: inline-flex;margin: auto;justify-content: left;color: white;
         border-radius: 5px;margin-bottom: 5px">
         <input id="divUtilities" @click="toggleUtilities()" type="button" class="btn" style="text-align: left;margin-left: 0px;font-size: 14px;
           font-weight: 600;color: white" value="Utilities"/>
       </div>
       <!-- Utility Section -->
-      <div v-if="user=='Marylou'" id="divUtilitiesWrapper" class="divUtilitiesWrapper" style="display: flex;margin: auto;
+      <div v-if="user=='System Administrator'" id="divUtilitiesWrapper" class="divUtilitiesWrapper" style="display: flex;margin: auto;
         justify-content: center;border: solid rgb(0, 0, 0) 0px;">     
         <div style="display: flex;margin: auto;justify-content: center;border: solid black 0px" class="w-full">
         <div style="display: flex;margin: auto;border: solid black 0px;justify-content: center" class="w-full">        
@@ -1087,13 +1087,15 @@ customers: {{ customers }}<br><br>
       },
       async created() {        
         var endpoint = ''
-        var deployMethod = "dev"
+        var deployMethod = "firebase"
         try {
           let response = ''
           if(deployMethod == "dev") {
-            response = await fetch('http://localhost:8081/config.json'); // Replace with your URL
+            response = await fetch('http://localhost:8081/config.json'); // Dev environment
           } else if(deployMethod == "prod") {
-            response = await fetch('http://localhost:3600/config.json'); // Replace with your URL
+            response = await fetch('http://localhost:3600/config.json'); // Production environment
+          } else if(deployMethod == "firebase") {
+            response = await fetch('https://episd-backend.onrender.com/config.json'); // Render backend
           }
           
           if (!response.ok) {
@@ -1409,7 +1411,7 @@ customers: {{ customers }}<br><br>
       const customers = ref(Customers);
       const sites = ref(Sites);
 
-      if(user=="Marylou") {
+      if(user=="System Administrator") {
         readonly = 'false'
       }
       //const obj = reactive(Applications)
@@ -1626,7 +1628,7 @@ customers: {{ customers }}<br><br>
         window.location.href = "http://localhost:3000?emailSelected="+appIndexes;}      
        //set current row as active/not active when clicked
       const setActive = (index) => {
-        if(user !='Marylou') {
+        if(user !='System Administrator') {
           //alert("index: "+index)
           if(index==-1) {          
             activeSet.value = 0
@@ -1644,7 +1646,7 @@ customers: {{ customers }}<br><br>
       
       //Display Student information when hovering over an app or an app is made active by lcicking on it
       const setOver = (index) => {
-        if(user !='Marylou') {        
+        if(user !='System Administrator') {        
           overIndex.value = index
           if(activeSet.value == 0 ) {
             activeIndex.value = index} else {}          
@@ -1658,7 +1660,7 @@ customers: {{ customers }}<br><br>
       
       //Stop Displaying Student information when leaving a row and disable the Printe/Send buttons for that row
       const onLeave = (index) => {
-        if(user !='Marylou') {     
+        if(user !='System Administrator') {     
           if(activeSet.value == 0 ) {
             overIndex.value = null                
             $(".divStudentWrapper").addClass("hidden") 
@@ -1703,7 +1705,7 @@ customers: {{ customers }}<br><br>
 
       //Perform duties for active row ie/: enable print/send/ display pdf
       const onActive = (i,id,lname,fname,batchnum) => {
-        if(user !='Marylou') {
+        if(user !='System Administrator') {
           //alert("id: "+id)
           //alert("lname: "+lname)
           //alert("batchnum: "+batchnum)
