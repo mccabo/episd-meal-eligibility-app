@@ -794,8 +794,8 @@ customers: {{ customers }}<br><br>
   import { useToast } from "primevue/usetoast";
   //import { Applications } from 'C:/inetpub/wwwroot/applications.json'  
   import { Test } from 'C:/EPISD/test/applications.json'  
-  import { Searches } from 'C:/EPISD/searches.json'
-  import { Utilities } from 'C:/EPISD/searches.json'
+  import { Searches } from '../assets/json/searches.json'
+  import { Utilities } from '../assets/json/searches.json'
   import { English } from 'C:/EPISD/letters.json'
   import { Spanish } from 'C:/EPISD/letters.json'
   import { Sites } from 'C:/EPISD/sites.json'
