@@ -395,64 +395,6 @@
             ]
         },
         {
-            "id": "divImport",
-            "name": "divImport",
-            "label": "Import",
-            "divMain": "divMainImport",            
-            "divSearch": "divImport",
-            "divMainStyle": "",
-            "divSearchStyle": "display: flex;margin: 5px auto;border: solid rgb(0, 0, 0) 0px",
-            "divInput": "divFilter",
-            "FilterType": "TF",
-            "class": "",
-            "style": "display: block;margin: 0px auto;border: solid rgb(48, 178, 74) 0px;text-align: center;color: green;font-weight: bold;",
-            "inputs": [
-                {
-                    "id": "btnImport",
-                    "name": "btnImport",
-                    "value": "Import",
-                    "label": "Apps",
-                    "type": "submit",                    
-                    "class": "w3-btn",
-                    "placeholder": "",
-                    "style": "display: flex;margin: auto;width: 100px;font-size: 18px;background-color: #F1F5F9;color: black;border: solid black 1px;border-radius: 5px",
-                    "filter": "searchApps('Import','divSearchImport','inpSearchImport','filteredImport')",
-                    "tooltipTitle": "Import New Applications",
-                    "tooltip": "Import all new applications which have been submitted and processed for review",
-                    "formaction": "/import"
-                }
-            ]
-        },
-        {
-            "id": "divConfig",
-            "name": "divConfig",
-            "label": "Show",
-            "divMain": "divMainConfig",            
-            "divSearch": "divConfig",
-            "divMainStyle": "",
-            "divSearchStyle": "display: flex;margin: 5px auto;border: solid rgb(0, 0, 0) 0px",
-            "divInput": "divFilter",
-            "FilterType": "TF",
-            "class": "",
-            "style": "display: block;margin: 0px auto;border: solid rgb(48, 178, 74) 0px;text-align: center;color: green;font-weight: bold;",
-            "inputs": [
-                {
-                    "id": "btnConfig",
-                    "name": "btnConfig",
-                    "value": "Config",
-                    "label": "Config",
-                    "type": "submit",                    
-                    "class": "w3-btn",
-                    "placeholder": "",
-                    "style": "display: flex;margin: auto;width: 100px;font-size: 18px;background-color: #F1F5F9;color: black;border: solid black 1px;border-radius: 5px",
-                    "filter": "searchApps('Config','divSearchConfig','inpSearchConfig','filteredConfig')",
-                    "tooltipTitle": "Display Configuration Options",
-                    "tooltip": "Display/Edit all settings from the configuration file",
-                    "formaction": "/showConfig"
-                }
-            ]
-        },
-        {
             "id": "divHelp",
             "name": "divHelp",
             "label": "ToolTips",
