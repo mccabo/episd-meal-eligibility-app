@@ -915,6 +915,344 @@ app.post('/showConfig', (req, res) => {
   res.end();
 });
 
+// GET version of showConfig for direct URL access
+app.get('/showConfig', (req, res) => {
+  console.log('req.url: ' + req.url);
+  console.log('In showConfig server function (GET)');
+  var htmlString = `<!DOCTYPE html>
+  <html lang="">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>EPSID Config</title>
+  
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="**** PrimeVue is an open source UI library for Vue featuring a rich set of 80+ components, a theme designer, various theme alternatives such as Material, Bootstrap, Tailwind, premium templates and professional support. In addition, it integrates with PrimeBlock, which has 400+ ready to use UI blocks to build spectacular applications in no time." />
+    <!-- Added to show icons in the editor -->
+    <link rel="stylesheet" href="https://unpkg.com/primeicons@6.0.1/primeicons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+    <script src="https://unpkg.com/musicgenres-json@latest/dist/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
+    <script src="https://unpkg.com/vue@2.4.4/dist/vue.js"></script>
+    <script language="javascript" src="https://maps.google.com/maps/api/js?sensor=false"></script>				
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.0.272/jspdf.debug.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+      
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+      integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  
+    <title>Config EPISD</title>
+    <script> 		
+
+      if (document.readyState === 'complete') {
+        console.log('ready');
+        initializePage();
+      } else {    
+        document.addEventListener('readystatechange', () => {
+          console.log('ready');
+          if (document.readyState === 'complete') {
+            initializePage();
+          }
+        });
+      }
+      
+      function initializePage() {
+        console.log('initializePage');
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+          event.preventDefault(); // Prevent default form submission
+
+          const form = event.target;
+          const formData = new FormData(form); // Create FormData object from the form          
+
+          var queryString = $('#myForm').serialize();
+          myForm.action = "http://localhost:3000/updateConfig?formData="+queryString;
+          form.submit();
+
+          // Iterate over key-value pairs
+          for (const [key, value] of formData.entries()) {
+              console.log('key:', key);
+              console.log('value:', value);
+          }
+
+          //var queryString = encodeURIComponent($('#myForm').serialize());
+          
+          console.log("queryString: "+queryString)
+
+          // Get specific values
+          //const username = formData.get('username');
+          //console.log('Username:', username);
+        });
+      }
+
+      function getPanelValue() {
+        alert("getPanelValue");
+      } 
+
+      function updateConfig(i,panel) {
+        alert("i: "+i);
+        var form =document.getElementById("myForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        var formData = new FormData(form);
+          // output as an object
+          console.log(Object.fromEntries(formData));
+
+          // ...or iterate through the name-value pairs
+          for (var pair of formData.entries()) {
+            console.log(pair[0] + ": " + pair[1]);
+          }
+        });
+      }
+
+      function updateConfigx(i,panel) {
+        //alert("i: "+i);
+        //alert("panel: "+panel);
+        var formActionPath = "";
+
+        let curPanelLabel = '';
+        const elements = document.getElementsByTagName("label");
+
+        elements.forEach((element, index) => {
+          // Access the background style property and set a color
+          element.style.background = 'lightyellow';          
+        });
+
+        for (let i = 0; i < elements.length; i++) {
+          //alert(elements[i].id);
+          elements[i].style.background = 'lightgreen'; // Modify element style 
+          curPanelLabel =elements[i].innerHTML;                                  
+        }        
+        
+        //const myForm = document.getElementById("myForm");
+        //myForm.action = "http://localhost:3000/updateConfig?value="+elements;
+
+        // To submit the form
+        //myForm.submit();        
+      }
+    
+      function setODBCTrusted() {
+        //alert('setTrusted');
+        var userAccount = document.getElementById('divSQLAccount');  
+        var trustedCB = document.getElementById('chkTrusted');
+        if (trustedCB.checked == true){
+          userAccount.style.display = 'none';
+        } else {  
+          userAccount.style.display = 'block';
+        } 
+      }
+
+      function setPrintTrusted() {
+        alert('setPrintTrusted');
+      }
+
+      function setSMTPTrusted() {
+        alert('setSMTPTrusted');
+        var emailAccount = document.getElementById('divEmailAccount');  
+        var emailUser = document.getElementById('emailUser');  
+        var emailPassword = document.getElementById('emailPassword');  
+        var emailCheckBox = document.getElementById('chkSecure');
+        if (emailCheckBox.checked == true){
+          emailAccount.style.display = 'none';
+        } else {  
+          emailAccount.style.display = 'block';
+        } 
+      }
+
+      function setAPITrusted() {
+        alert('setAPITrusted');
+      }
+
+    </script>
+    <style>
+      nav {
+        border: solid black 0px;
+        width: 100%;
+      }
+
+      .header {
+        border: solid black 0px;
+        display: flex;
+        margin: auto;
+        justify-content: space-between;
+        width: 100%;
+        padding: 5px;
+      }
+
+      button {
+        width: 100px;
+        height: 50px;
+        font-size: 20px;
+      }
+
+      .w3-btn {
+        border-radius: 4px;
+      }
+
+      img {
+          width: 25%;
+          height: auto;
+        }
+        button {
+          border-radius: 4px;
+        }
+        .title {
+          border: solid black 0px;
+          border-radius: 4px;
+          text-align: center;
+          font-size: 40px;
+        }
+
+      div {
+        border: solid black 0px;
+      }
+
+      .img {
+          width: 58%;
+        }
+
+      @media only screen and (max-width: 600px) {
+        img {
+          width: 50%;
+          height: auto;
+        }
+
+        .img {
+          width: 100%;
+        }
+
+        button {
+          width: 75px;
+          height: 40px;
+          font-size: 14px;
+        }
+
+        .title {
+          border: solid black 0px;
+          border-radius: 4px;
+          text-align: center;
+          font-size: 10px;
+          width: 100%;
+        }
+
+        .logout {
+          width: 70px;
+          height: 30px;
+          font-size: 10px;
+          margin-top: 10px
+        }
+      }
+
+      .signup-login {
+        display: flex;
+        margin: auto;
+        justify-content: center;
+      }
+      input {
+        border: 1px solid transparent;
+        padding: 0px; 
+        width: 25px;
+        background-color: transparent;
+      }
+    </style>
+    </head>
+    <body>
+        <div id="divNav" class="" style="display: flex;justify-content: center;border: solid black 0px;float: auto;margin-top: 13px;margin-left: 1px">                  
+          <div id="divImage" style="display: block;width: 99%;border: solid rgb(167, 31, 31) 0px">                  
+            <nav>                           
+              <div class="create-logout" v-if="user">                
+                <div class="header">
+                  <div>
+                    <img src="http://localhost:3600/episdlogo.jpg" style="width: 25%">
+                  </div>        
+                  <div>          
+                    <button class="btn btn-primary logout" @click="handleClick">Logout</button>
+                  </div>
+                </div>
+                <div class="title w-full" style="display: flex;justify-content: center;margin-bottom: 10px">
+                  <div id="divConfig" class="title" style="font-size: 34px;font-weight: 600;color: black;width: 100%">          
+                    Eligibility Letter Configuration Utility
+                  </div>                        
+                </div>
+                <div id="status" style="display: flex;margin: auto;justify-content: center;text-align: center"></div>                                        
+              </div>
+            </nav>              
+          </div>                  
+        </div> 
+        <div class="w3-margin" style="display: flex;justify-content: center;border: solid black 0px;width: 100%;float: auto">             
+          <form id="myForm" action="/default-action" method="POST" style="border: solid black 0px;width: 100%;max-width: none;">
+            <div style="display: inline-flex;margin: auto;border: solid green 0px;width: 98%;margin-left: 15px;justify-content: center">`;
+  for (var i = 0; i < config.panels.length; i++) {
+    htmlString +=
+      `
+    <div class="" style="border: solid black 3px;width: 700px;padding: 20px;border-radius: 10px;margin: 5px" ` +
+      config.panels[i].hidden +
+      `>
+    <input id="panelLbl` +
+      i +
+      `" value="` +
+      config.panels[i].panel +
+      `"  name="panelLbl` +
+      i +
+      `" class="panel" style="margin-left: 0px;font-weight: 575;background-color: white;color: purple;font-size:20px;width: 100%;border: solid black 0px;text-align: center" contenteditable />      
+      <div style="display: flex;margin: auto;justify-content: center">
+      <input type="submit" value="Submit" class="btn btn-primary w3-margin" style="width: 100px">         
+      <button hidden id="btnUpdate" type="button" class="btn btn-primary w3-margin ` +
+      config.panels[i].panel +
+      `" style="width: 100px;height: 35px">Update</button>
+    </div>   
+    `;
+    for (var j = 0; j < config.panels[i].fields.length; j++) {
+      htmlString +=
+        `
+      <div style="margin-bottom: 20px">
+        <input id="lbl` +
+        i +
+        j +
+        `" name="lbl` +
+        i +
+        j +
+        `" value="` +
+        config.panels[i].fields[j].label +
+        `" style="display: flex;margin: auto;color: purple;font-size: 20px;font-weight: 700;width: 100%;border: solid black 0px;height: 35px;
+          padding-left: 10px;margin-bottom: 5px" contenteditable />
+      <input id="fld` +
+        i +
+        j +
+        `" name="fld` +
+        i +
+        j +
+        `" type="` +
+        config.panels[i].fields[j].type +
+        `" class="` +
+        config.panels[i].fields[j].class +
+        `" value="` +
+        config.panels[i].fields[j].value +
+        `" style="color: blue;font-size: 20px;border: solid grey 1px;padding-left: 10px;border-radius: 8px" checked>
+                      </div>`;
+    }
+    htmlString += `
+                </div>`;
+  }
+  htmlString += `
+          </form>   
+        </div>
+    </body>
+  </html>`;
+
+  res.write(htmlString);
+  res.end();
+});
+
 app.post('/updateSearches', (req, res) => {
   console.log('In updateSearches server function');
   console.log('req.url: ' + req.url);
