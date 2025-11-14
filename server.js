@@ -1782,7 +1782,12 @@ app.post('/printbyId', (req, res) => {
   var fileName = '';
   var dest = '';
   //wkhtmltopdf --enable-local-file-access input.html output.pdf
-  wkhtmltopdf.command = 'C:/Program Files/wkhtmltopdf/bin/wkhtmltopdf.exe'; // For Windows
+  // Use platform-specific path
+  if (process.platform === 'win32') {
+    wkhtmltopdf.command = 'C:/Program Files/wkhtmltopdf/bin/wkhtmltopdf.exe';
+  } else {
+    wkhtmltopdf.command = 'wkhtmltopdf'; // For Linux (Render)
+  }
 
   const htmlContent = `
         <!DOCTYPE html>
