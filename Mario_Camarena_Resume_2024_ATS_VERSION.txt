@@ -1,0 +1,228 @@
+MARIO CAMARENA
+Full-Stack Solutions Developer | Cloud Architecture | EdTech Specialist
+
+Email: mvc57@att.net
+Phone: 760-685-2739
+Location: Oceanside, CA 92057
+LinkedIn: linkedin.com/in/mariocamarena
+GitHub: github.com/mariocamarena
+Portfolio: mariocamarena.dev
+
+================================================================================
+PROFESSIONAL SUMMARY
+================================================================================
+
+Full-Stack Solutions Developer with 15+ years of experience delivering end-to-end enterprise applications from concept through cloud deployment. Specialized in modernizing legacy systems with cloud-native architecture while maintaining focus on ROI and stakeholder value. Proven expertise in education technology, government sector applications, and automating complex workflows that reduce processing time by up to 75%.
+
+Core Competencies: Vue.js, Node.js, Express, Cloud Deployment (Firebase, AWS, Render), SQL Server, RESTful APIs, PDF Generation, Email Automation, Workflow Optimization, Technical Leadership, Business Process Analysis
+
+================================================================================
+FEATURED ACCOMPLISHMENT
+================================================================================
+
+EPISD MEAL ELIGIBILITY APPLICATION SYSTEM
+Role: Lead Developer & Architect | 2023-2024
+Tech Stack: Vue.js 3, Node.js, Express, MSSQL, Firebase, Render.com
+
+Architected and deployed full-stack automated meal eligibility system processing 500+ applications monthly
+
+BUSINESS IMPACT:
+- 75% reduction in processing time (4 hours to 1 hour per batch)
+- 100% elimination of manual data entry errors
+- 500+ applications/month processed automatically
+- Real-time email notifications with PDF eligibility letters
+- $40K+ annual savings in administrative labor costs
+
+TECHNICAL HIGHLIGHTS:
+- Vue.js 3 frontend with role-based access control
+- Node.js/Express backend with RESTful API (3800+ lines)
+- SQL Server integration with Windows authentication
+- Automated PDF generation and email system
+- Multi-environment cloud deployment (Firebase + Render.com)
+- CI/CD pipeline with Git integration
+
+================================================================================
+TECHNICAL EXPERTISE
+================================================================================
+
+FRONTEND DEVELOPMENT
+Vue.js 3 (Composition & Options API), JavaScript (ES6+), TypeScript, HTML5, CSS3, Bootstrap 4/5, W3.CSS, jQuery, AJAX, Responsive Design, Single Page Applications, Vue Router, State Management
+
+BACKEND DEVELOPMENT
+Node.js, Express.js, C#/.NET (MVC5, WPF, ASP.NET), VB.NET, RESTful APIs, WebSockets, Server-Side Rendering, Microservices Architecture
+
+DATABASE & DATA
+SQL Server (MSSQL), MongoDB, Oracle, Access, SSIS/ETL, Query Optimization, Database Design, Data Migration, JSON/XML Processing, CSV Parsing
+
+CLOUD & DEVOPS
+Firebase Hosting, Render.com, AWS (learning), Azure (learning), Git/GitHub, CI/CD Pipelines, Environment Configuration, Build Optimization, IIS, Tomcat, Performance Tuning
+
+INTEGRATION & AUTOMATION
+PDF Generation (wkhtmltopdf), Email Automation, Workflow Engines (HP BPA/BPM, LiquidOffice), Document Management Systems (InVision, DocLink, Worksite), RightFax Integration, Fax Automation
+
+BUSINESS PROCESS & METHODOLOGY
+Agile/SCRUM, Requirements Gathering, Workflow Modeling, User Experience Design, Technical Leadership, Remote Team Management, User Acceptance Testing, Documentation
+
+================================================================================
+PROFESSIONAL EXPERIENCE
+================================================================================
+
+INDEPENDENT FULL-STACK DEVELOPER | El Paso, TX (Remote)
+Senior Solutions Developer | February 2024 - Present
+
+- Architected production-grade education technology application processing 500+ meal eligibility applications monthly with 75% time reduction
+- Designed responsive Vue.js 3 interfaces with role-based access control, improving administrator efficiency by 60%
+- Built scalable Node.js/Express backend with RESTful API supporting 10K+ requests/month with 99.9% uptime
+- Implemented automated PDF generation and email notification system, eliminating 100% of manual processing errors
+- Orchestrated multi-environment cloud deployment (Firebase + Render.com) with zero-downtime releases
+- Integrated legacy SQL Server systems with modern cloud architecture maintaining data integrity
+
+--------------------------------------------------------------------------------
+
+INFOSYS AT MOLINA HEALTHCARE | Long Beach, CA (Remote)
+SSIS Developer | June 2019 - February 2024
+
+- Developed and maintained 20+ SSIS ETL packages processing 100K+ healthcare records daily for QNXT data integration
+- Automated data collection from multiple sources (Excel, email, SQL, APIs), reducing manual data entry by 85%
+- Wrote complex SQL scripts for rate validation and data transformation, ensuring 99.8% data accuracy
+- Created data pipelines feeding Tableau and Power BI dashboards viewed by 200+ business users
+- Troubleshot production ETL failures within SLA, maintaining 99.5% package success rate
+- Adapted ETL packages to handle unexpected data format changes with zero business disruption
+
+KEY ACHIEVEMENT: Designed automated validation system that caught $2M+ in potential rate discrepancies before production deployment
+
+--------------------------------------------------------------------------------
+
+INFOSYS AT SOUTHERN CALIFORNIA EDISON (SCE) | Rosemead, CA
+Technical Lead | September 2018 - June 2019
+
+- Led cross-functional team of 8 developers (local + offshore) modernizing legacy Energy Trading Market application
+- Defined technical architecture for greenfield application replacing 15-year-old legacy system
+- Conducted code reviews and mentored junior developers on modern .NET practices
+- Managed sprint planning, daily standups, and technical deliverables using Agile/SCRUM
+- Coordinated with offshore team across time zones ensuring alignment and timely delivery
+
+KEY ACHIEVEMENT: Delivered Phase 1 (authentication and dashboard) 2 weeks ahead of schedule with zero critical defects
+
+--------------------------------------------------------------------------------
+
+WORD & BROWN | Orange, CA
+.NET Developer / Integration Specialist | November 2011 - May 2018
+
+- Architected enterprise document management ecosystem supporting 500+ employees across 5 integrated systems
+- Designed custom ASP.NET/MVC5 interfaces for Daily Build Process management, improving operations efficiency by 70%
+- Developed automated email attachment routing system that reduced staffing from 4 FTEs to 1 FTE, saving $180K+ annually
+- Managed IIS/Tomcat web servers and SQL Server databases with 99.9% uptime across all environments
+- Led SQL Server migration from 2003 to 2008 with zero data loss and minimal downtime
+- Created Adobe PDF eForms with embedded business rules, reducing form completion errors by 65%
+- Integrated HP BPA workflows with document management systems
+- Administered Active Directory groups/roles/permissions for 500+ users
+
+KEY ACHIEVEMENTS:
+- Built Daily Build Process converting CSV to DMS format, processing 10K+ records nightly with 99.7% success
+- Automated fax/email attachment system handling 200+ documents daily
+
+--------------------------------------------------------------------------------
+
+MULTIPLAN | Waltham, MA
+Senior Application Architect & Developer | May 2010 - December 2011
+
+- Led 3-person team developing custom FileBound applications for $3B claims processing operation
+- Designed "Initial Application Pre-screening" eForms processing 5K+ applications monthly
+- Built "QA Proofing" eForms with dynamic checklist generation, reducing review time by 50%
+- Integrated RightFax, email, and printing capabilities into eForms workflow
+- Developed dynamic credentialing letters with XML/XSLT/JavaScript automatically listing missing requirements
+- Supported UAT achieving 98% pass rate on first iteration
+
+KEY ACHIEVEMENT: Automated physician credentialing process reduced cycle time from 45 days to 18 days
+
+--------------------------------------------------------------------------------
+
+ADVANCED BUSINESS TECHNOLOGIES | Oceanside, CA
+Senior Developer | July 2003 - April 2010
+
+- Principal developer of Free and Reduced Price School Meal Application system deployed to 50+ school districts nationwide
+- Designed LiquidOffice eForms with BPM workflow routing and JavaScript business rule enforcement
+- Optimized SQL queries reducing form completion time from 8 seconds to under 2 seconds
+- Implemented workflow queue management with exception handling
+- Integrated document archiving with Documentum Application Extender
+- Developed custom time tracking system for major school district (10K+ employees)
+
+KEY ACHIEVEMENT: Meal application system processed 100K+ applications annually with 99.2% accuracy
+
+--------------------------------------------------------------------------------
+
+CARDIFF SOFTWARE | Vista, CA
+Technical Support Engineer | June 1998 - June 2003
+
+- Provided technical support for TELEform and LiquidOffice content management solutions
+- Supported integration with third-party databases (SQL Server, Oracle, Access) and DMS (FileNet, Alchemy)
+- Designed custom forms for Fortune 500 clients across 10+ industries
+- Achieved 95% customer satisfaction rating with under 4-hour average response time
+
+--------------------------------------------------------------------------------
+
+HEWLETT-PACKARD | El Paso, TX & Sacramento, CA
+Customer Service Engineer | May 1982 - June 1992
+
+- Installed and tested medical equipment and software for HP Medical Solutions Division
+- Trained technical and administrative staff at hospitals, clinics, and medical offices
+- Maintained 98% first-time fix rate for complex medical systems installations
+
+================================================================================
+EDUCATION
+================================================================================
+
+Computer Science | Hancock College, Santa Maria, CA
+Computer Science | Palomar College, San Marcos, CA
+
+================================================================================
+CERTIFICATIONS
+================================================================================
+
+AWS Solutions Architect Associate (In Progress - Expected January 2025)
+Agile/SCRUM Methodology
+SQL Server Administration
+Active Directory Management
+Document Management Systems (TELEform, LiquidOffice, FileBound)
+
+================================================================================
+NOTABLE ACHIEVEMENTS
+================================================================================
+
+AUTOMATION & EFFICIENCY:
+- Reduced meal eligibility processing time by 75% through full-stack automation (EPISD)
+- Cut email attachment processing from 4 FTEs to 1 FTE (Word & Brown)
+- Decreased physician credentialing cycle time from 45 days to 18 days (Multiplan)
+- Optimized database queries from 8 seconds to under 2 seconds (ABT)
+
+COST SAVINGS & ROI:
+- Generated $180K+ annual savings through email automation (Word & Brown)
+- Delivered $40K+ annual savings in administrative costs (EPISD)
+- Prevented $2M+ in rate discrepancies through validation automation (Molina)
+
+SYSTEM INTEGRATION:
+- Integrated 6 enterprise systems into unified workflow (Word & Brown)
+- Modernized legacy SQL Server to cloud-native architecture with zero downtime (EPISD)
+- Deployed meal application system to 50+ school districts nationwide (ABT)
+
+TECHNICAL LEADERSHIP:
+- Led 8-person cross-functional team modernizing trading platform (SCE)
+- Mentored junior developers on modern .NET, Vue.js, and cloud deployment
+- Conducted technical workshops for business stakeholders
+
+================================================================================
+LANGUAGES
+================================================================================
+
+English: Fluent (Native)
+Spanish: Fluent (Bilingual)
+
+================================================================================
+KEYWORDS FOR ATS
+================================================================================
+
+Full-Stack Developer, Solutions Developer, Software Engineer, Technical Lead, Vue.js, Vue 3, JavaScript, TypeScript, Node.js, Express.js, RESTful API, Microservices, C#, .NET, ASP.NET, MVC, WPF, SQL Server, MSSQL, Database Design, ETL, SSIS, MongoDB, Oracle, Cloud Computing, Firebase, AWS, Azure, Render, Git, GitHub, CI/CD, DevOps, Docker, Agile, SCRUM, Technical Leadership, Software Architecture, System Integration, PDF Generation, Email Automation, Workflow Automation, Document Management, Education Technology, EdTech, Healthcare IT, Government Sector, Business Process Optimization, Frontend Development, Backend Development, HTML5, CSS3, Bootstrap, Responsive Design, Single Page Application, SPA, API Integration, JSON, XML, AJAX, jQuery, IIS, Tomcat, Active Directory, Performance Optimization, Legacy Modernization, Remote Work, Team Leadership
+
+================================================================================
+
