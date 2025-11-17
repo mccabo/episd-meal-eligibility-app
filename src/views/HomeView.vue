@@ -751,7 +751,7 @@ customers: {{ customers }}<br><br>
   import API_BASE_URL from '@/config/api';
   import { useToast } from "primevue/usetoast";
   //import { Applications } from 'C:/inetpub/wwwroot/applications.json'  
-  import { Test } from 'C:/EPISD/test/applications.json'  
+  //import { Test } from 'C:/EPISD/test/applications.json' // Removed - using API instead
   import { SearchFilters } from '../assets/json/searches.json'
   import { Utilities } from '../assets/json/searches.json'
   import { English } from 'C:/EPISD/letters.json'
@@ -770,8 +770,35 @@ customers: {{ customers }}<br><br>
         this.id = uniqueId()        
       },    
       methods: {          
-        importApps() {
-          window.location.href = "http://localhost?importApps=1";          
+        async importApps() {
+          try {
+            // Show loading indicator
+            this.toast.add({ 
+              severity: 'info', 
+              summary: 'Import Started', 
+              detail: 'Processing applications...', 
+              life: 3000 
+            });
+
+            // Make POST request to import endpoint
+            const response = await axios.post(this.apiBaseUrl + "/import");
+            
+            // The server returns HTML, so we'll display it
+            if (response.data) {
+              // Open the response HTML in the same window
+              document.open();
+              document.write(response.data);
+              document.close();
+            }
+          } catch (error) {
+            console.error('Import error:', error);
+            this.toast.add({ 
+              severity: 'error', 
+              summary: 'Import Failed', 
+              detail: error.response?.data?.message || 'An error occurred during import', 
+              life: 5000 
+            });
+          }
         },
         showConfig() {
           window.location.href = this.apiBaseUrl + "/showConfig";
@@ -1347,7 +1374,7 @@ customers: {{ customers }}<br><br>
       //const serverData = this.serverData
       const toast = useToast()      
       //const applications = reactive(this.jsonData)
-      const test = ref(Test)
+      //const test = ref(Test) // Removed - using jsonData from API instead
       const searchFilters = ref(SearchFilters)    
       const utilities = ref(Utilities)    
       const documentation = ref(Documentation)    
@@ -1851,7 +1878,7 @@ customers: {{ customers }}<br><br>
         }]);
       return { printLetter,onLeave,submitEmail,submitEmails,setOver,setActive,toggleAppInfo,toggleStudentInfo,onActive,searchApps,selectedStatus,status,selectedReason,reasons,
         selectedPrint,searchtype,filteredtype,selectedId,selectedGuardian,printType,activeSet,selectedStudent,selectedCampus,selectedId,selectedSent,overIndex,activeIndex,
-        english,spanish,sent,ids,guardians,searchFilters,students,campus,setLogoURL,selDoc,selectDate,docEvent,setDocumentation,setDocFlag,printSelected,deleteSelected,test,user,
+        english,spanish,sent,ids,guardians,searchFilters,students,campus,setLogoURL,selDoc,selectDate,docEvent,setDocumentation,setDocFlag,printSelected,deleteSelected,user,
         toggleEditLetter,toggleSearch,toggleUtilities,utilities,appId,email,appArray,printData,sendData,addSite,handleSubmit,
         tester,readonly,showUpdateButton,handleClick,handleBlur,handleKeyUp,appCount,customers,sites,documentation,activeTab,tabs
         }}}

@@ -1,0 +1,690 @@
+{
+    "Applications": [
+        {
+            "Date": "10/12/2025",
+            "Index": "0",
+            "Id": "2025951",
+            "BatchNum": "1",
+            "Language": "English",
+            "Filename": "EPISD - Meal Application",
+            "Selected": "false",
+            "Sent": "true",
+            "Printed": "true",
+            "Guardians": [
+                {
+                    "Id": "2025951",
+                    "FirstName": "Tom",
+                    "LastName": "John Doe",
+                    "Address": "",
+                    "City": "",
+                    "State": "",
+                    "Zip": "",
+                    "Phone": "",
+                    "Email": "mvc757@gmail.com"
+                }
+            ],
+            "Students": [
+                {
+                    "Id": "000001",
+                    "FirstName": "Nancy",
+                    "LastName": "Doe",
+                    "Campus": "Coronado High School"
+                },
+                {
+                    "Id": "000002",
+                    "FirstName": "Billy",
+                    "LastName": "Doe",
+                    "Campus": "Coronado High School"
+                }
+            ],
+            "Status": [
+                {
+                    "Checked": "true",
+                    "Status": "Approved for free meals.",
+                    "MobileStatus": "Approved for free meals"
+                },
+                {
+                    "Checked": "false",
+                    "Status": "Approved for reduced-price meals for breakfast at a cost of $0.00; for lunch at a cost of $0.40; and afterschool snack at a cost of $0.00.",
+                    "MobileStatus": "Approved for reduced-price meals"
+                },
+                {
+                    "Checked": "false",
+                    "Status": "Denied for the following reason(s):",
+                    "MobileStatus": "Denied"
+                }
+            ],
+            "Reasons": [
+                {
+                    "Checked": "false",
+                    "Reason": "Income over the allowable amount.",
+                    "MobileReason": "Income over the allowable amount"
+                },
+                {
+                    "Checked": "false",
+                    "Reason": "Incomplete application, please complete the forms attached to provide the needed information.",
+                    "MobileReason": "Incomplete application"
+                }
+            ]
+        },
+        {
+            "Date": "10/12/2025",
+            "Index": "1",
+            "Id": "2025952",
+            "BatchNum": "1",
+            "Language": "English",
+            "Filename": "EPISD - Meal Application",
+            "Selected": "false",
+            "Sent": "false",
+            "Printed": "true",
+            "Guardians": [
+                {
+                    "Id": "2025952",
+                    "FirstName": "Mary",
+                    "LastName": "Smith",
+                    "Address": "",
+                    "City": "",
+                    "State": "",
+                    "Zip": "",
+                    "Phone": "",
+                    "Email": "mvc757@gmail.com"
+                }
+            ],
+            "Students": [
+                {
+                    "Id": "100001",
+                    "FirstName": "Sally",
+                    "LastName": "Smith",
+                    "Campus": "Belair High School"
+                },
+                {
+                    "Id": "100002",
+                    "FirstName": "Debbie",
+                    "LastName": "Smith",
+                    "Campus": "Belair High School"
+                }
+            ],
+            "Status": [
+                {
+                    "Checked": "true",
+                    "Status": "Approved for free meals.",
+                    "MobileStatus": "Approved for free meals"
+                },
+                {
+                    "Checked": "false",
+                    "Status": "Approved for reduced-price meals for breakfast at a cost of $0.00; for lunch at a cost of $0.40; and afterschool snack at a cost of $0.00.",
+                    "MobileStatus": "Approved for reduced-price meals"
+                },
+                {
+                    "Checked": "false",
+                    "Status": "Denied for the following reason(s):",
+                    "MobileStatus": "Denied"
+                }
+            ],
+            "Reasons": [
+                {
+                    "Checked": "false",
+                    "Reason": "Income over the allowable amount.",
+                    "MobileReason": "Income over the allowable amount"
+                },
+                {
+                    "Checked": "false",
+                    "Reason": "Incomplete application, please complete the forms attached to provide the needed information.",
+                    "MobileReason": "Incomplete application"
+                }
+            ]
+        },
+        {
+            "Date": "11/3/2025",
+            "Index": "2",
+            "Id": "2025953",
+            "BatchNum": "2",
+            "Language": "English",
+            "Filename": "EPISD - Meal Application",
+            "Selected": "false",
+            "Sent": "false",
+            "Printed": "false",
+            "Guardians": [
+                {
+                    "Id": "2025953",
+                    "FirstName": "Mike",
+                    "LastName": "Jones",
+                    "Address": "",
+                    "City": "",
+                    "State": "",
+                    "Zip": "",
+                    "Phone": "",
+                    "Email": "mikejones@gmail.com"
+                }
+            ],
+            "Students": [
+                {
+                    "Id": "200001",
+                    "FirstName": "Michael",
+                    "LastName": "Jones",
+                    "Campus": "Washington Elementary School"
+                }
+            ],
+            "Status": [
+                {
+                    "Checked": "false",
+                    "Status": "Approved for free meals.",
+                    "MobileStatus": "Approved for free meals"
+                },
+                {
+                    "Checked": "true",
+                    "Status": "Approved for reduced-price meals for breakfast at a cost of $0.00; for lunch at a cost of $0.40; and afterschool snack at a cost of $0.00.",
+                    "MobileStatus": "Approved for reduced-price meals"
+                },
+                {
+                    "Checked": "false",
+                    "Status": "Denied for the following reason(s):",
+                    "MobileStatus": "Denied"
+                }
+            ],
+            "Reasons": [
+                {
+                    "Checked": "false",
+                    "Reason": "Income over the allowable amount.",
+                    "MobileReason": "Income over the allowable amount"
+                },
+                {
+                    "Checked": "false",
+                    "Reason": "Incomplete application, please complete the forms attached to provide the needed information.",
+                    "MobileReason": "Incomplete application"
+                }
+            ]
+        },
+        {
+            "Index": "3",
+            "Id": "2025961",
+            "BatchNum": "2",
+            "Language": "Spanish",
+            "Filename": "EPISD - Meal Application",
+            "Selected": "false",
+            "Sent": "false",
+            "Printed": "false",
+            "Guardians": [
+                {
+                    "Id": "2025961",
+                    "FirstName": "Maria",
+                    "LastName": "Gomez",
+                    "Address": "",
+                    "City": "",
+                    "State": "",
+                    "Zip": "",
+                    "Phone": "",
+                    "Email": "mariagomez@gmail.com"
+                }
+            ],
+            "Students": [
+                {
+                    "Id": "300001",
+                    "FirstName": "Jay",
+                    "LastName": "Gomez",
+                    "Campus": "Lincoln Middle School"
+                }
+            ],
+            "Status": [
+                {
+                    "Checked": "false",
+                    "Status": "Aprovada para comidas gratis.",
+                    "MobileStatus": "Aprovada para comidas gratis"
+                },
+                {
+                    "Checked": "false",
+                    "Status": "Aprovada para comidas a precio reducido para almuerzos a un costo de $0.40; desayuno a un costo $0,00; merienda para despues de la escuela (si esta disponble) a un costo de $0.00.",
+                    "MobileStatus": "Aprovado para comida a precio reducido"
+                },
+                {
+                    "Checked": "true",
+                    "Status": "Negada por la(s) siguiente(s) razon(es):",
+                    "MobileStatus": "Negada"
+                }
+            ],
+            "Reasons": [
+                {
+                    "Checked": "true",
+                    "Reason": "Su ingreso sobrepasa la cantidad permitida.",
+                    "MobileReason": "Su ingreso sobrepasa la cantidad permitida."
+                },
+                {
+                    "Checked": "false",
+                    "Reason": "Su solicitud esta incompleta. Por favor conplete los documentos adjuntos para proporcionar la informacion necesaria.",
+                    "MobileReason": "Su solicitud esta incompleta."
+                }
+            ]
+        },
+        {
+            "Date": "11/3/2025",
+            "Index": "4",
+            "Id": "2025962",
+            "BatchNum": "3",
+            "Language": "English",
+            "Filename": "EPISD - Meal Application",
+            "Selected": "false",
+            "Sent": "false",
+            "Printed": "false",
+            "Guardians": [
+                {
+                    "Id": "2025962",
+                    "FirstName": "Jessie",
+                    "LastName": "James Leija",
+                    "Address": "",
+                    "City": "",
+                    "State": "",
+                    "Zip": "",
+                    "Phone": "",
+                    "Email": "jessiejames@gmail.com"
+                }
+            ],
+            "Students": [
+                {
+                    "Id": "400001",
+                    "FirstName": "Donna",
+                    "LastName": "James",
+                    "Campus": "Kennedy Middle School"
+                }
+            ],
+            "Status": [
+                {
+                    "Checked": "true",
+                    "Status": "Approved for free meals.",
+                    "MobileStatus": "Approved for free meals"
+                },
+                {
+                    "Checked": "false",
+                    "Status": "Approved for reduced-price meals for breakfast at a cost of $0.00; for lunch at a cost of $0.40; and afterschool snack at a cost of $0.00.",
+                    "MobileStatus": "Approved for reduced-price meals"
+                },
+                {
+                    "Checked": "false",
+                    "Status": "Denied for the following reason(s):",
+                    "MobileStatus": "Denied"
+                }
+            ],
+            "Reasons": [
+                {
+                    "Checked": "false",
+                    "Reason": "Income over the allowable amount.",
+                    "MobileReason": "Income over the allowable amount"
+                },
+                {
+                    "Checked": "false",
+                    "Reason": "Incomplete application, please complete the forms attached to provide the needed information.",
+                    "MobileReason": "Incomplete application"
+                }
+            ]
+        },
+        {
+            "Date": "11/3/2025",
+            "Index": "5",
+            "Id": "2025971",
+            "BatchNum": "3",
+            "Language": "English",
+            "Filename": "EPISD - Meal Application",
+            "Selected": "false",
+            "Sent": "false",
+            "Printed": "false",
+            "Guardians": [
+                {
+                    "Id": "2025971",
+                    "FirstName": "Johny",
+                    "LastName": "Taylor",
+                    "Address": "",
+                    "City": "",
+                    "State": "",
+                    "Zip": "",
+                    "Phone": "",
+                    "Email": "johnytaylor@gmail.com"
+                }
+            ],
+            "Students": [
+                {
+                    "Id": "500001",
+                    "FirstName": "Sammy",
+                    "LastName": "Taylor",
+                    "Campus": "Austin High School"
+                },
+                {
+                    "Id": "500002",
+                    "FirstName": "Vincent",
+                    "LastName": "Taylor",
+                    "Campus": "Austin High School"
+                }
+            ],
+            "Status": [
+                {
+                    "Checked": "false",
+                    "Status": "Approved for free meals.",
+                    "MobileStatus": "Approved for free meals"
+                },
+                {
+                    "Checked": "true",
+                    "Status": "Approved for reduced-price meals for breakfast at a cost of $0.00; for lunch at a cost of $0.40; and afterschool snack at a cost of $0.00.",
+                    "MobileStatus": "Approved for reduced-price meals"
+                },
+                {
+                    "Checked": "false",
+                    "Status": "Denied for the following reason(s):",
+                    "MobileStatus": "Denied"
+                }
+            ],
+            "Reasons": [
+                {
+                    "Checked": "false",
+                    "Reason": "Income over the allowable amount.",
+                    "MobileReason": "Income over the allowable amount"
+                },
+                {
+                    "Checked": "false",
+                    "Reason": "Incomplete application, please complete the forms attached to provide the needed information.",
+                    "MobileReason": "Incomplete application"
+                }
+            ]
+        },
+        {
+            "Index": "6",
+            "Id": "2025972",
+            "BatchNum": "4",
+            "Language": "Spanish",
+            "Filename": "EPISD - Meal Application",
+            "Selected": "false",
+            "Sent": "false",
+            "Printed": "false",
+            "Guardians": [
+                {
+                    "Id": "2025972",
+                    "FirstName": "Luis",
+                    "LastName": "Lopez",
+                    "Address": "",
+                    "City": "",
+                    "State": "",
+                    "Zip": "",
+                    "Phone": "",
+                    "Email": "luislopez@gmail.com"
+                }
+            ],
+            "Students": [
+                {
+                    "Id": "600001",
+                    "FirstName": "Ismael",
+                    "LastName": "Lopez",
+                    "Campus": "Washington Elementary School"
+                }
+            ],
+            "Status": [
+                {
+                    "Checked": "true",
+                    "Status": "Aprovada para comidas gratis.",
+                    "MobileStatus": "Aprovada para comidas gratis"
+                },
+                {
+                    "Checked": "false",
+                    "Status": "Aprovada para comidas a precio reducido para almuerzos a un costo de $0.40; desayuno a un costo $0,00; merienda para despues de la escuela (si esta disponble) a un costo de $0.00.",
+                    "MobileStatus": "Aprovado para comida a precio reducido"
+                },
+                {
+                    "Checked": "false",
+                    "Status": "Negada por la(s) siguiente(s) razon(es):",
+                    "MobileStatus": "Negada"
+                }
+            ],
+            "Reasons": [
+                {
+                    "Checked": "false",
+                    "Reason": "Su ingreso sobrepasa la cantidad permitida.",
+                    "MobileReason": "Su ingreso sobrepasa la cantidad permitida."
+                },
+                {
+                    "Checked": "false",
+                    "Reason": "Su solicitud esta incompleta. Por favor conplete los documentos adjuntos para proporcionar la informacion necesaria.",
+                    "MobileReason": "Su solicitud esta incompleta."
+                }
+            ]
+        },
+        {
+            "Date": "11/3/2025",
+            "Index": "7",
+            "Id": "2025973",
+            "BatchNum": "4",
+            "Language": "English",
+            "Filename": "EPISD - Meal Application",
+            "Selected": "false",
+            "Sent": "false",
+            "Printed": "false",
+            "Guardians": [
+                {
+                    "Id": "2025973",
+                    "FirstName": "Lorna",
+                    "LastName": "Wayne",
+                    "Address": "",
+                    "City": "",
+                    "State": "",
+                    "Zip": "",
+                    "Phone": "",
+                    "Email": "lornawayne@gmail.com"
+                }
+            ],
+            "Students": [
+                {
+                    "Id": "700001",
+                    "FirstName": "Max",
+                    "LastName": "Wayne",
+                    "Campus": "Washington Elementary School"
+                }
+            ],
+            "Status": [
+                {
+                    "Checked": "true",
+                    "Status": "Approved for free meals.",
+                    "MobileStatus": "Approved for free meals"
+                },
+                {
+                    "Checked": "false",
+                    "Status": "Approved for reduced-price meals for breakfast at a cost of $0.00; for lunch at a cost of $0.40; and afterschool snack at a cost of $0.00.",
+                    "MobileStatus": "Approved for reduced-price meals"
+                },
+                {
+                    "Checked": "false",
+                    "Status": "Denied for the following reason(s):",
+                    "MobileStatus": "Denied"
+                }
+            ],
+            "Reasons": [
+                {
+                    "Checked": "false",
+                    "Reason": "Income over the allowable amount.",
+                    "MobileReason": "Income over the allowable amount"
+                },
+                {
+                    "Checked": "false",
+                    "Reason": "Incomplete application, please complete the forms attached to provide the needed information.",
+                    "MobileReason": "Incomplete application"
+                }
+            ]
+        },
+        {
+            "Date": "11/3/2025",
+            "Index": "8",
+            "Id": "2025974",
+            "BatchNum": "5",
+            "Language": "English",
+            "Filename": "EPISD - Meal Application",
+            "Selected": "false",
+            "Sent": "false",
+            "Printed": "false",
+            "Guardians": [
+                {
+                    "Id": "2025974",
+                    "FirstName": "Bat",
+                    "LastName": "Man",
+                    "Address": "",
+                    "City": "",
+                    "State": "",
+                    "Zip": "",
+                    "Phone": "",
+                    "Email": "batman@gmail.com"
+                }
+            ],
+            "Students": [
+                {
+                    "Id": "800001",
+                    "FirstName": "Big",
+                    "LastName": "Man",
+                    "Campus": "Belair High School"
+                }
+            ],
+            "Status": [
+                {
+                    "Checked": "true",
+                    "Status": "Approved for free meals.",
+                    "MobileStatus": "Approved for free meals"
+                },
+                {
+                    "Checked": "false",
+                    "Status": "Approved for reduced-price meals for breakfast at a cost of $0.00; for lunch at a cost of $0.40; and afterschool snack at a cost of $0.00.",
+                    "MobileStatus": "Approved for reduced-price meals"
+                },
+                {
+                    "Checked": "false",
+                    "Status": "Denied for the following reason(s):",
+                    "MobileStatus": "Denied"
+                }
+            ],
+            "Reasons": [
+                {
+                    "Checked": "false",
+                    "Reason": "Income over the allowable amount.",
+                    "MobileReason": "Income over the allowable amount"
+                },
+                {
+                    "Checked": "false",
+                    "Reason": "Incomplete application, please complete the forms attached to provide the needed information.",
+                    "MobileReason": "Incomplete application"
+                }
+            ]
+        },
+        {
+            "Date": "11/3/2025",
+            "Index": "9",
+            "Id": "2025975",
+            "BatchNum": "6",
+            "Language": "English",
+            "Filename": "EPISD - Meal Application",
+            "Selected": "false",
+            "Sent": "false",
+            "Printed": "false",
+            "Guardians": [
+                {
+                    "Id": "2025975",
+                    "FirstName": "Hello",
+                    "LastName": "World",
+                    "Address": "",
+                    "City": "",
+                    "State": "",
+                    "Zip": "",
+                    "Phone": "",
+                    "Email": "helloworldn@gmail.com"
+                }
+            ],
+            "Students": [
+                {
+                    "Id": "900001",
+                    "FirstName": "Small",
+                    "LastName": "World",
+                    "Campus": "Coronado High School"
+                }
+            ],
+            "Status": [
+                {
+                    "Checked": "true",
+                    "Status": "Approved for free meals.",
+                    "MobileStatus": "Approved for free meals"
+                },
+                {
+                    "Checked": "false",
+                    "Status": "Approved for reduced-price meals for breakfast at a cost of $0.00; for lunch at a cost of $0.40; and afterschool snack at a cost of $0.00.",
+                    "MobileStatus": "Approved for reduced-price meals"
+                },
+                {
+                    "Checked": "false",
+                    "Status": "Denied for the following reason(s):",
+                    "MobileStatus": "Denied"
+                }
+            ],
+            "Reasons": [
+                {
+                    "Checked": "false",
+                    "Reason": "Income over the allowable amount.",
+                    "MobileReason": "Income over the allowable amount"
+                },
+                {
+                    "Checked": "false",
+                    "Reason": "Incomplete application, please complete the forms attached to provide the needed information.",
+                    "MobileReason": "Incomplete application"
+                }
+            ]
+        },
+        {
+            "Index": "10",
+            "Id": "2025976",
+            "BatchNum": "7",
+            "Language": "Spanish",
+            "Filename": "EPISD - Meal Application",
+            "Selected": "false",
+            "Sent": "false",
+            "Printed": "false",
+            "Guardians": [
+                {
+                    "Id": "2025976",
+                    "FirstName": "New",
+                    "LastName": "App",
+                    "Address": "",
+                    "City": "",
+                    "State": "",
+                    "Zip": "",
+                    "Phone": "",
+                    "Email": "newapp@gmail.com"
+                }
+            ],
+            "Students": [
+                {
+                    "Id": "1000001",
+                    "FirstName": "Little",
+                    "LastName": "App",
+                    "Campus": "Austin High School"
+                }
+            ],
+            "Status": [
+                {
+                    "Checked": "false",
+                    "Status": "Aprovada para comidas gratis.",
+                    "MobileStatus": "Aprovada para comidas gratis"
+                },
+                {
+                    "Checked": "false",
+                    "Status": "Aprovada para comidas a precio reducido para almuerzos a un costo de $0.40; desayuno a un costo $0,00; merienda para despues de la escuela (si esta disponble) a un costo de $0.00.",
+                    "MobileStatus": "Aprovado para comida a precio reducido"
+                },
+                {
+                    "Checked": "true",
+                    "Status": "Negada por la(s) siguiente(s) razon(es):",
+                    "MobileStatus": "Negada"
+                }
+            ],
+            "Reasons": [
+                {
+                    "Checked": "true",
+                    "Reason": "Su ingreso sobrepasa la cantidad permitida.",
+                    "MobileReason": "Su ingreso sobrepasa la cantidad permitida."
+                },
+                {
+                    "Checked": "false",
+                    "Reason": "Su solicitud esta incompleta. Por favor conplete los documentos adjuntos para proporcionar la informacion necesaria.",
+                    "MobileReason": "Su solicitud esta incompleta."
+                }
+            ]
+        }
+    ]
+}

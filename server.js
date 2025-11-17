@@ -2523,21 +2523,38 @@ app.post('/printbyId', (req, res) => {
 
 app.post('/import', async (req, res) => {
   try {
+    console.log('\n=== Starting Import Process ===');
+    console.log('appsPath from config: ' + appsPath);
+    console.log('Current working directory: ' + process.cwd());
+    
     // Get the directory where applications.json is located
     var appsDirectory = require('path').dirname(appsPath);
     var csvPath = require('path').join(appsDirectory, 'emails.csv');
+    var sqlAppsPath = require('path').join(appsDirectory, 'sqlApps.json');
     
+    console.log('Resolved appsDirectory: ' + appsDirectory);
     console.log('Looking for emails.csv at: ' + csvPath);
+    console.log('Looking for sqlApps.json at: ' + sqlAppsPath);
+    console.log('Will save to applications.json at: ' + appsPath);
     
-    // Check if CSV file exists
+    // Check if required files exist
     if (!fs.existsSync(csvPath)) {
       console.error('CSV file not found at: ' + csvPath);
       return res.status(400).json({ 
         success: false, 
-        message: 'Import CSV file not found. This feature requires a SQL Server database and is only available in local development.' 
+        message: 'Import CSV file (emails.csv) not found.' 
       });
     }
     
+    if (!fs.existsSync(sqlAppsPath)) {
+      console.error('SQL Apps file not found at: ' + sqlAppsPath);
+      return res.status(400).json({ 
+        success: false, 
+        message: 'Source applications file (sqlApps.json) not found.' 
+      });
+    }
+    
+    // Read and process the CSV file
     await processLineByLine(csvPath);
 
   //console.log('email length: ' + emailArray.length);
@@ -2610,89 +2627,157 @@ app.post('/import', async (req, res) => {
     console.log('No new batch numbers to assign - CSV file not modified');
   }
 
-  // Check if we're in a production/cloud environment
-  const isProduction = process.env.NODE_ENV === 'production' || !require('os').platform().includes('win32');
+  // === NEW IMPORT LOGIC ===
+  // Read sqlApps.json (source of new applications)
+  console.log('\nReading source applications from sqlApps.json...');
+  const sqlApps = JSON.parse(fs.readFileSync(sqlAppsPath, 'utf8'));
   
-  if (isProduction) {
-    // Use test/demo applications file instead of SQL Server for production
-    console.log('Production mode: Using test applications file instead of SQL Server');
-    
-    const testAppsPath = path.join(__dirname, 'public', 'test', 'applications.json');
-    
-    if (!fs.existsSync(testAppsPath)) {
-      console.error('Test applications file not found at: ' + testAppsPath);
-      return res.status(400).json({ 
-        success: false, 
-        message: 'Test applications file not found at: ' + testAppsPath 
-      });
-    }
-    
-    try {
-      // Read test applications
-      const testApps = JSON.parse(fs.readFileSync(testAppsPath, 'utf8'));
-      
-      if (!testApps || !testApps.Applications || !Array.isArray(testApps.Applications)) {
-        return res.status(400).json({ 
-          success: false, 
-          message: 'Invalid test applications file format' 
-        });
-      }
-      
-      // Add new applications from test file to main applications file
-      let addedCount = 0;
-      
-      for (let i = 0; i < testApps.Applications.length; i++) {
-        const testApp = testApps.Applications[i];
-        
-        // Check if application already exists
-        const exists = apps.Applications.some(app => app.Id === testApp.Id);
-        
-        if (!exists) {
-          apps.Applications.push(testApp);
-          addedCount++;
-          console.log('Added application: ' + testApp.Id);
-        } else {
-          console.log('Skipped existing application: ' + testApp.Id);
-        }
-      }
-      
-      // Save updated applications
-      fs.writeFileSync(appsPath, JSON.stringify(apps, null, 4), 'utf8');
-      console.log('Import complete: Added ' + addedCount + ' new applications');
-      
-      // Return success response with redirect
-      const htmlString =
-        `<!DOCTYPE html>
-        <html lang="">
-          <head>
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
-            <script> 		
-                var delayInMilliseconds = 3000; //3 seconds
-                setTimeout(function() {
-                  window.location.replace("${FRONTEND_URL}");            
-                }, delayInMilliseconds);
-            </script>
-          </head>
-          <body>          
-            <div class="w3-container">    
-              <div class="w3-panel w3-card w3-green"><p style="font-size: 20px; padding: 10px;">Import Successful!</p></div>
-              <div class="w3-panel w3-card-2"><p>Added ${addedCount} new application(s) from test file.</p></div>
-              <div class="w3-panel w3-card-2"><p>Redirecting to application...</p></div>
-            </div>
-          </body>
-        </html>`;
-      
-      return res.send(htmlString);
-      
-    } catch (error) {
-      console.error('Error importing test applications:', error);
-      return res.status(500).json({ 
-        success: false, 
-        message: 'Failed to import test applications: ' + error.message 
-      });
-    }
+  if (!sqlApps || !sqlApps.Applications || !Array.isArray(sqlApps.Applications)) {
+    return res.status(400).json({ 
+      success: false, 
+      message: 'Invalid sqlApps.json file format' 
+    });
   }
+  
+  console.log('Found ' + sqlApps.Applications.length + ' applications in sqlApps.json');
+  
+  // Create a Set of App IDs from emails.csv for quick lookup
+  const csvAppIds = new Set();
+  const csvAppData = {}; // Store date and batch number for each app
+  
+  for (var i = 0; i < emailArray.length; i++) {
+    var parts = emailArray[i].split(',');
+    var appId = parts[0].trim();
+    var appDate = parts[1].trim(); // Date from CSV
+    var batchNum = parts[5] ? parts[5].trim() : ''; // Batch number from CSV
+    
+    csvAppIds.add(appId);
+    csvAppData[appId] = {
+      date: appDate,
+      batchNum: batchNum
+    };
+    
+    console.log('CSV contains App ID: ' + appId + ' (Date: ' + appDate + ', Batch: ' + batchNum + ')');
+  }
+  
+  console.log('\nTotal App IDs in CSV: ' + csvAppIds.size);
+  
+  // Create a Set of existing App IDs in applications.json for quick lookup
+  const existingAppIds = new Set();
+  for (var j = 0; j < apps.Applications.length; j++) {
+    existingAppIds.add(apps.Applications[j].Id.trim());
+  }
+  
+  console.log('Existing applications in applications.json: ' + existingAppIds.size);
+  
+  // Filter and import applications
+  let addedCount = 0;
+  let skippedExisting = 0;
+  let skippedNotInCSV = 0;
+  
+  console.log('\nProcessing applications from sqlApps.json...');
+  
+  for (var k = 0; k < sqlApps.Applications.length; k++) {
+    const sqlApp = sqlApps.Applications[k];
+    const appId = sqlApp.Id.trim();
+    
+    // Check if app is in CSV
+    if (!csvAppIds.has(appId)) {
+      console.log('  Skipped (not in CSV): ' + appId);
+      skippedNotInCSV++;
+      continue;
+    }
+    
+    // Check if app already exists in applications.json
+    if (existingAppIds.has(appId)) {
+      console.log('  Skipped (already exists): ' + appId);
+      skippedExisting++;
+      continue;
+    }
+    
+    // This is a new application - add it!
+    // Update the Date and BatchNum from CSV data
+    const csvData = csvAppData[appId];
+    
+    // Create a copy of the app and update its properties
+    const newApp = JSON.parse(JSON.stringify(sqlApp)); // Deep clone
+    
+    // Convert CSV date format (10-12-2025) to application format (10/12/2025)
+    newApp.Date = csvData.date.replace(/-/g, '/');
+    newApp.BatchNum = csvData.batchNum;
+    
+    // Add index based on current array length
+    newApp.Index = apps.Applications.length.toString();
+    
+    // Reset flags for new import
+    newApp.Selected = "false";
+    newApp.Sent = "false";
+    newApp.Printed = "false";
+    
+    apps.Applications.push(newApp);
+    addedCount++;
+    
+    console.log('  ✓ Added: ' + appId + ' (Date: ' + newApp.Date + ', Batch: ' + newApp.BatchNum + ')');
+  }
+  
+  // Save updated applications.json
+  console.log('\nSaving updated applications.json...');
+  fs.writeFileSync(appsPath, JSON.stringify(apps, null, 4), 'utf8');
+  
+  console.log('\n=== Import Complete ===');
+  console.log('Total in CSV: ' + csvAppIds.size);
+  console.log('Added: ' + addedCount);
+  console.log('Skipped (already exist): ' + skippedExisting);
+  console.log('Skipped (not in CSV): ' + skippedNotInCSV);
+  console.log('New total applications: ' + apps.Applications.length);
+  
+  // Return success response with redirect
+  const htmlString =
+    `<!DOCTYPE html>
+    <html lang="">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+        <script> 		
+            var delayInMilliseconds = 3000; //3 seconds
+            setTimeout(function() {
+              window.location.replace("${FRONTEND_URL}");            
+            }, delayInMilliseconds);
+        </script>
+      </head>
+      <body>          
+        <div class="w3-container">    
+          <div class="w3-panel w3-card w3-green"><p style="font-size: 20px; padding: 10px;">Import Successful!</p></div>
+          <div class="w3-panel w3-card-2"><p><strong>Added ${addedCount} new application(s) from sqlApps.json</strong></p></div>
+          <div class="w3-panel w3-card-2">
+            <p>• Applications in CSV: ${csvAppIds.size}</p>
+            <p>• Skipped (already exist): ${skippedExisting}</p>
+            <p>• Skipped (not in CSV): ${skippedNotInCSV}</p>
+            <p>• Total applications now: ${apps.Applications.length}</p>
+          </div>
+          <div class="w3-panel w3-card-2"><p>Redirecting to application...</p></div>
+        </div>
+      </body>
+    </html>`;
+  
+  return res.send(htmlString);
+  
+  } catch (error) {
+    console.error('\n!!! Error during import !!!');
+    console.error('Error message:', error.message);
+    console.error('Error stack:', error.stack);
+    
+    return res.status(500).json({ 
+      success: false, 
+      message: 'Import failed: ' + error.message,
+      error: error.toString()
+    });
+  }
+});
+
+/* === OLD SQL SERVER IMPORT CODE (NO LONGER USED) ===
+   The import process now uses sqlApps.json instead of connecting to SQL Server.
+   This code is kept for reference but is no longer executed.
 
   //var config = JSON.parse(fs.readFileSync('C:/EPISD/config.json', 'utf8'));
   //var server = config.panels[0].fields[0].value;
@@ -2715,7 +2800,6 @@ app.post('/import', async (req, res) => {
     },
   });
 
-  /*
   //console.log('database: ' + database);
   //console.log('server: ' + server);
   //console.log('driver: ' + driver);
@@ -2723,7 +2807,6 @@ app.post('/import', async (req, res) => {
 
   var siteID = 0;
   var siteName = 0;
-  */
 
   conn.connect().then(() => {
     var newApps = [];
@@ -2825,10 +2908,10 @@ app.post('/import', async (req, res) => {
           for (var x = 0; x < emailArray.length; x++) {
             //console.log('emailArray: ' + emailArray[x]);
             //console.log('emailArray)[0]: ' + emailArray[x].split(',')[0]);
-            /*console.log(
-              'newApps[i].ApplicationID.trim(): ' +
-                newApps[i].ApplicationID.trim()
-            );*/
+            //console.log(
+            //  'newApps[i].ApplicationID.trim(): ' +
+            //    newApps[i].ApplicationID.trim()
+            //);
             if (
               emailArray[x].split(',')[0] == newApps[i].ApplicationID.trim()
             ) {
@@ -2851,14 +2934,12 @@ app.post('/import', async (req, res) => {
           //console.log('gNameArray: ' + gNameArray);
           //console.log('gNameArray len: ' + gNameArray.length);
 
-          /*
-          var gfName = toTitleCase(
-            newApps[i].Guardian.trim().split(' ')[0]
-          );
-          var glName = toTitleCase(
-            newApps[i].Guardian.trim().split(' ')[1]
-          );
-          */
+          //var gfName = toTitleCase(
+          //  newApps[i].Guardian.trim().split(' ')[0]
+          //);
+          //var glName = toTitleCase(
+          //  newApps[i].Guardian.trim().split(' ')[1]
+          //);
 
           var gfName = gNameArray[0];
           var glName = '';
@@ -3098,6 +3179,9 @@ app.post('/import', async (req, res) => {
     });
   }
 });
+
+   === END OF OLD SQL SERVER IMPORT CODE ===
+*/
 
 app.post('/updatePrinted', (req, res) => {
   //var requrl = req.url.split('?')[1];
