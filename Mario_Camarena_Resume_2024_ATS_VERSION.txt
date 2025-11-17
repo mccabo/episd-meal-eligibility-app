@@ -1,5 +1,5 @@
 MARIO CAMARENA
-Full-Stack Solutions Developer | Cloud Architecture | EdTech Specialist
+Full-Stack Solutions Developer | AI Integration | Cloud Architecture | EdTech Specialist
 
 Email: mvc57@att.net
 Phone: 760-685-2739
@@ -12,9 +12,9 @@ Portfolio: mariocamarena.dev
 PROFESSIONAL SUMMARY
 ================================================================================
 
-Full-Stack Solutions Developer with 15+ years of experience delivering end-to-end enterprise applications from concept through cloud deployment. Specialized in modernizing legacy systems with cloud-native architecture while maintaining focus on ROI and stakeholder value. Proven expertise in education technology, government sector applications, and automating complex workflows that reduce processing time by up to 75%.
+Full-Stack Solutions Developer with 15+ years of experience delivering end-to-end enterprise applications with AI/ML integration from concept through cloud deployment. Specialized in modernizing legacy systems with cloud-native architecture and OpenAI GPT-4o APIs while maintaining focus on ROI and stakeholder value. Proven expertise in education technology, government sector applications, and automating complex workflows with artificial intelligence that reduce processing time by up to 75%.
 
-Core Competencies: Vue.js, Node.js, Express, Cloud Deployment (Firebase, AWS, Render), SQL Server, RESTful APIs, PDF Generation, Email Automation, Workflow Optimization, Technical Leadership, Business Process Analysis
+Core Competencies: AI/ML Integration (OpenAI GPT-4o, GPT-3.5-turbo), Vue.js, Node.js, Express, Cloud Deployment (Firebase, AWS, Render), SQL Server, RESTful APIs, Intelligent Automation, PDF Generation, Email Automation, Workflow Optimization, Technical Leadership, Business Process Analysis, Natural Language Processing, Image Recognition
 
 ================================================================================
 FEATURED ACCOMPLISHMENT
@@ -22,28 +22,35 @@ FEATURED ACCOMPLISHMENT
 
 EPISD MEAL ELIGIBILITY APPLICATION SYSTEM
 Role: Lead Developer & Architect | 2023-2024
-Tech Stack: Vue.js 3, Node.js, Express, MSSQL, Firebase, Render.com
+Tech Stack: Vue.js 3, Node.js, OpenAI GPT-4o, Express, MSSQL, Firebase, Render.com
 
-Architected and deployed full-stack automated meal eligibility system processing 500+ applications monthly
+Architected and deployed full-stack automated meal eligibility system with AI integration processing 500+ applications monthly
 
 BUSINESS IMPACT:
 - 75% reduction in processing time (4 hours to 1 hour per batch)
 - 100% elimination of manual data entry errors
-- 500+ applications/month processed automatically
+- 500+ applications/month processed automatically with AI assistance
 - Real-time email notifications with PDF eligibility letters
 - $40K+ annual savings in administrative labor costs
+- AI-powered intelligent document analysis and image recognition
 
 TECHNICAL HIGHLIGHTS:
+- OpenAI GPT-4o API integration for intelligent document analysis
+- GPT-4o Vision API for automated image recognition and processing
+- AI-assisted response generation using GPT-3.5-turbo
 - Vue.js 3 frontend with role-based access control
 - Node.js/Express backend with RESTful API (3800+ lines)
 - SQL Server integration with Windows authentication
-- Automated PDF generation and email system
+- Automated PDF generation and AI-enhanced email system
 - Multi-environment cloud deployment (Firebase + Render.com)
 - CI/CD pipeline with Git integration
 
 ================================================================================
 TECHNICAL EXPERTISE
 ================================================================================
+
+AI & MACHINE LEARNING
+OpenAI API Integration (GPT-4o, GPT-3.5-turbo, GPT-4o Vision), Natural Language Processing (NLP), Image Recognition, Computer Vision, Prompt Engineering, AI-Assisted Automation, LangChain, Vector Databases, Intelligent Document Analysis, AI Response Generation, Machine Learning APIs, Artificial Intelligence Integration
 
 FRONTEND DEVELOPMENT
 Vue.js 3 (Composition & Options API), JavaScript (ES6+), TypeScript, HTML5, CSS3, Bootstrap 4/5, W3.CSS, jQuery, AJAX, Responsive Design, Single Page Applications, Vue Router, State Management
@@ -70,10 +77,12 @@ PROFESSIONAL EXPERIENCE
 INDEPENDENT FULL-STACK DEVELOPER | El Paso, TX (Remote)
 Senior Solutions Developer | February 2024 - Present
 
+- Integrated OpenAI GPT-4o and Vision APIs into production education application enabling intelligent document analysis and automated AI response generation
+- Implemented AI-powered image recognition system using GPT-4o Vision for automated document processing and classification
 - Architected production-grade education technology application processing 500+ meal eligibility applications monthly with 75% time reduction
 - Designed responsive Vue.js 3 interfaces with role-based access control, improving administrator efficiency by 60%
 - Built scalable Node.js/Express backend with RESTful API supporting 10K+ requests/month with 99.9% uptime
-- Implemented automated PDF generation and email notification system, eliminating 100% of manual processing errors
+- Implemented AI-assisted automated PDF generation and email notification system, eliminating 100% of manual processing errors
 - Orchestrated multi-environment cloud deployment (Firebase + Render.com) with zero-downtime releases
 - Integrated legacy SQL Server systems with modern cloud architecture maintaining data integrity
 
@@ -222,7 +231,7 @@ Spanish: Fluent (Bilingual)
 KEYWORDS FOR ATS
 ================================================================================
 
-Full-Stack Developer, Solutions Developer, Software Engineer, Technical Lead, Vue.js, Vue 3, JavaScript, TypeScript, Node.js, Express.js, RESTful API, Microservices, C#, .NET, ASP.NET, MVC, WPF, SQL Server, MSSQL, Database Design, ETL, SSIS, MongoDB, Oracle, Cloud Computing, Firebase, AWS, Azure, Render, Git, GitHub, CI/CD, DevOps, Docker, Agile, SCRUM, Technical Leadership, Software Architecture, System Integration, PDF Generation, Email Automation, Workflow Automation, Document Management, Education Technology, EdTech, Healthcare IT, Government Sector, Business Process Optimization, Frontend Development, Backend Development, HTML5, CSS3, Bootstrap, Responsive Design, Single Page Application, SPA, API Integration, JSON, XML, AJAX, jQuery, IIS, Tomcat, Active Directory, Performance Optimization, Legacy Modernization, Remote Work, Team Leadership
+AI Integration, Artificial Intelligence, Machine Learning, OpenAI, GPT-4o, GPT-3.5-turbo, GPT-4 Vision, Natural Language Processing, NLP, Image Recognition, Computer Vision, Prompt Engineering, AI Automation, LangChain, Vector Databases, Intelligent Automation, AI API Integration, Machine Learning APIs, Full-Stack Developer, Solutions Developer, Software Engineer, Technical Lead, Vue.js, Vue 3, JavaScript, TypeScript, Node.js, Express.js, RESTful API, Microservices, C#, .NET, ASP.NET, MVC, WPF, SQL Server, MSSQL, Database Design, ETL, SSIS, MongoDB, Oracle, Cloud Computing, Firebase, AWS, Azure, Render, Git, GitHub, CI/CD, DevOps, Docker, Agile, SCRUM, Technical Leadership, Software Architecture, System Integration, PDF Generation, Email Automation, Workflow Automation, Document Management, Education Technology, EdTech, Healthcare IT, Government Sector, Business Process Optimization, Frontend Development, Backend Development, HTML5, CSS3, Bootstrap, Responsive Design, Single Page Application, SPA, API Integration, JSON, XML, AJAX, jQuery, IIS, Tomcat, Active Directory, Performance Optimization, Legacy Modernization, Remote Work, Team Leadership
 
 ================================================================================
 

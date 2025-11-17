@@ -1,5 +1,5 @@
 # MARIO CAMARENA
-**Full-Stack Solutions Developer | Cloud Architecture | EdTech Specialist**
+**Full-Stack Solutions Developer | AI Integration | Cloud Architecture | EdTech Specialist**
 
 📧 mvc57@att.net | 📱 760-685-2739 | 📍 Oceanside, CA 92057  
 🔗 LinkedIn: [linkedin.com/in/mariocamarena](#) | 💻 GitHub: [github.com/mariocamarena](#) | 🌐 Portfolio: [mariocamarena.dev](#)
@@ -8,9 +8,9 @@
 
 ## PROFESSIONAL SUMMARY
 
-Full-Stack Solutions Developer with **15+ years** of experience delivering end-to-end enterprise applications from concept through cloud deployment. Specialized in modernizing legacy systems with cloud-native architecture while maintaining focus on ROI and stakeholder value. Proven expertise in education technology, government sector applications, and automating complex workflows that reduce processing time by up to 75%.
+Full-Stack Solutions Developer with **15+ years** of experience delivering end-to-end enterprise applications with **AI/ML integration** from concept through cloud deployment. Specialized in modernizing legacy systems with cloud-native architecture and **OpenAI GPT-4o APIs** while maintaining focus on ROI and stakeholder value. Proven expertise in education technology, government sector applications, and automating complex workflows that reduce processing time by up to 75%.
 
-**Core Competencies:** Vue.js • Node.js/Express • Cloud Deployment (Firebase, AWS, Render) • SQL Server • RESTful APIs • PDF Generation • Email Automation • Workflow Optimization • Technical Leadership • Business Process Analysis
+**Core Competencies:** AI/ML Integration (OpenAI GPT-4o) • Vue.js • Node.js/Express • Cloud Deployment (Firebase, AWS, Render) • SQL Server • RESTful APIs • Intelligent Automation • PDF Generation • Workflow Optimization • Technical Leadership • Business Process Analysis
 
 ---
 
@@ -21,13 +21,15 @@ Full-Stack Solutions Developer with **15+ years** of experience delivering end-t
 
 **Challenge:** Manual meal eligibility processing required 4+ hours per batch, with frequent errors and delayed parent notifications.
 
-**Solution:** Architected and deployed a full-stack automated system with:
+**Solution:** Architected and deployed a full-stack automated system with **AI-powered features**:
 - Vue.js 3 frontend with role-based access control (admin/student views)
 - Node.js/Express backend with RESTful API (3800+ lines)
+- **OpenAI GPT-4o integration** for intelligent document analysis and response generation
+- **GPT-4o Vision API** for image recognition and processing
 - SQL Server integration with Windows authentication
 - Automated PDF generation using wkhtmltopdf
 - Multi-environment deployment (Firebase Hosting + Render.com backend)
-- Email automation with attachment handling
+- AI-assisted email automation with attachment handling
 
 **Business Impact:**
 - ✅ **75% reduction** in processing time (4 hours → 1 hour per batch)
@@ -46,6 +48,9 @@ Full-Stack Solutions Developer with **15+ years** of experience delivering end-t
 ---
 
 ## TECHNICAL EXPERTISE
+
+### **AI & Machine Learning** ⭐ NEW
+OpenAI API Integration (GPT-4o, GPT-3.5-turbo) • GPT-4o Vision API • Natural Language Processing • Image Recognition • Prompt Engineering • AI-Assisted Automation • LangChain • Vector Databases • AI Response Generation • Intelligent Document Analysis
 
 ### **Frontend Development**
 Vue.js 3 (Composition & Options API) • JavaScript (ES6+) • TypeScript • HTML5 • CSS3 • Bootstrap 4/5 • W3.CSS • jQuery • AJAX • Responsive Design • Single Page Applications (SPA) • Vue Router • State Management
@@ -72,10 +77,12 @@ Agile/SCRUM • Requirements Gathering • Workflow Modeling • User Experience
 ### **Independent Full-Stack Developer** | El Paso, TX (Remote)
 **Senior Solutions Developer** | *February 2024 – Present*
 
+- **Integrated OpenAI GPT-4o and Vision APIs** into production education application, enabling intelligent document analysis and automated response generation
 - Architected and deployed production-grade education technology application processing 500+ meal eligibility applications monthly with 75% time reduction
+- **Implemented AI-powered image recognition system** using GPT-4o Vision for automated document processing
 - Designed responsive Vue.js 3 interfaces with role-based access control, improving administrator efficiency by 60%
 - Built scalable Node.js/Express backend with RESTful API supporting 10K+ requests/month with 99.9% uptime
-- Implemented automated PDF generation and email notification system, eliminating 100% of manual processing errors
+- Implemented AI-assisted automated PDF generation and email notification system, eliminating 100% of manual processing errors
 - Orchestrated multi-environment cloud deployment strategy (Firebase + Render.com) with zero-downtime releases
 - Integrated legacy SQL Server systems with modern cloud architecture, maintaining data integrity across environments
 
@@ -175,6 +182,8 @@ Agile/SCRUM • Requirements Gathering • Workflow Modeling • User Experience
 ## CERTIFICATIONS & PROFESSIONAL DEVELOPMENT
 
 - **AWS Solutions Architect Associate** *(In Progress - Expected Jan 2025)*
+- **OpenAI API Integration & GPT-4o** *(Production Implementation - 2024)*
+- **AI/ML Development** *(Ongoing - Prompt Engineering, LangChain)*
 - Agile/SCRUM Methodology
 - SQL Server Administration
 - Active Directory Management
@@ -233,10 +242,11 @@ Agile/SCRUM • Requirements Gathering • Workflow Modeling • User Experience
 
 ## TECHNICAL PROJECTS PORTFOLIO
 
-### **1. EPISD Meal Eligibility System** | *Vue.js 3, Node.js, MSSQL, Firebase*
-Full-stack application automating meal eligibility processing with PDF generation and email notifications
+### **1. EPISD Meal Eligibility System** | *Vue.js 3, Node.js, OpenAI GPT-4o, MSSQL, Firebase*
+Full-stack application with **AI integration** automating meal eligibility processing with intelligent document analysis, PDF generation, and email notifications
 - **Live Demo:** [episd-meal-app.web.app](#)
-- **Impact:** 75% time reduction, 500+ applications/month
+- **AI Features:** GPT-4o Vision for image recognition, GPT-3.5-turbo for response generation
+- **Impact:** 75% time reduction, 500+ applications/month, AI-powered document processing
 
 ### **2. Email Attachment Automation System** | *C#, WPF, SQL Server, RightFax*
 Enterprise automation routing 200+ daily email attachments with print/fax/copy logic
